@@ -12,3 +12,8 @@ description: "Micro- and macroeconomics concepts"
 
 # Prerequisites
 
+A series of notes to support economic literacy for everyday citizens. Through these notes, it is hoped that one will be able to comprehend and use basic economic concepts and economic systems.
+With the aid of notes, one should be able to: (a) explain  macroeconomic challenges and current and future economical trends; (b) calculate and interpret macroeconomic statistics (e.g.GDP, unemployment rates, inflation and poverty rates); and (c) analyze and evaluate the use of monetary and fiscal policy to stabilize the economy (e.g.taxing policies).
+
+
+
