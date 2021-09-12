@@ -12,8 +12,13 @@ description: "Micro- and macroeconomics concepts"
 
 # Prerequisites
 
-A series of notes to support economic literacy for everyday citizens. Through these notes, it is hoped that one will be able to comprehend and use basic economic concepts and economic systems.
-With the aid of notes, one should be able to: (a) explain  macroeconomic challenges and current and future economical trends; (b) calculate and interpret macroeconomic statistics (e.g.GDP, unemployment rates, inflation and poverty rates); and (c) analyze and evaluate the use of monetary and fiscal policy to stabilize the economy (e.g.taxing policies).
+A series of notes to from several courses on economic literacy, econometrics and its applications. Through these notes, it is hoped that one will be able to comprehend and use basic econometric concepts and their applications. 
+Econometrics skills are valuable for economics, business and financial analyses, enabling us to assess the effects of different factors on the variables of interest, and how to make meaningful conclusions from various sets of data.
+
+With the aid of notes, one should be able to: 
+(a) explain  macroeconomic challenges and current and future economical trends;   
+(b) calculate and interpret macroeconomic statistics (e.g.GDP, unemployment rates, inflation and poverty rates); and   
+(c) analyze and evaluate the use of monetary and fiscal policy to stabilize the economy (e.g.taxing policies).  
 
 
 

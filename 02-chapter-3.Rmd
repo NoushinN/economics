@@ -1,0 +1,10 @@
+## Ordinary Least Squares (OLS) for a simple linear regression 
+
+OLS helps answer the question of what is the effect of a variable X on Y, how to predict Y based on X, and how to forecast future values for future periods. 
+OLS helps to estimate unknown parameters for a subset of a population (i.e. sample) and minimize errors/disturbances through minimizing the sum of squared residuals.
+
+### Types of data suitable for econometric analyses
+1. cross sectional data
+2. time series data
+3. panel data
+
