@@ -1,13 +1,20 @@
 ## Ordinary Least Squares (OLS) for a simple linear regression 
 
-OLS helps answer the question of what is the effect of a variable X on Y, how to predict Y based on X, and how to forecast future values for future periods. 
+OLS helps answer the question of what is the effect of a variable X (independant/explanatory) on Y (dependant), how to conditionally predict Y based on X, and how to forecast values for future periods. 
 OLS helps to estimate unknown parameters for a subset of a population (i.e. sample) and minimize errors/disturbances through minimizing the sum of squared residuals.
 A residual is the difference between actual value of an observation (Y) and its predicted value (Y hat). There are mathematical proofs that show OLS estimators are unbiased and derive variance and co-variance of OLS estimates.
 
-The assumptions of OLS estimates are that variables have homoskedasticity (i.e. error variation is constant across all observations). Second, we assume that estimates have zero covariance and independent variables are uncorrelated (i.e. are random). Third, we assume that the estimates are consitent across all variables.
+The assumptions of OLS estimates are that variables have homoskedasticity (i.e. error variation is constant across all observations). Second, we assume that estimates have zero covariance and independent variables are uncorrelated (i.e. are random). Third, we assume that the estimates are consistant across all variables, or normal. Fourth, we assume that there are no breaks in the data and stationarity holds. 
+That is, we assume a flat series, without trend, constant variance over time, a constant autocorrelation structure over time and no periodic fluctuations (seasonality).
+
 These assumptions help get the best efficiency for the OLS model. Otherwise, we need to correct for estimates.
 
-Variation analysis can be done through total sum of squares and coefficient of determination (R squared) or ESS/TSS or 1-RSS/TSS. R squared shows the variance of Y explained by variance of X. The higher the R squared (0<R<1), the better the regression.
+## Evaluation of the OLS model
+
+Quality of fit or variation analysis can be done through calculating total sum of squares and coefficient of determination (R squared) or ESS/TSS or 1-RSS/TSS. R squared shows the variance of Y explained by variance of X. The higher the R squared (0<R<1), the better the regression.
+
+Other tests of null hypothesis and significance include T and F tests. The F-test can be applied on the large sampled population. The T-test is used to compare the means of two different sets. The difference between the t-test and f-test is that t-test is used to test the hypothesis whether the given mean is significantly different from the sample mean or not. On the other hand, an F-test is used to compare the two standard deviations of two samples and check the variability.
+
 
 
 ### Types of data suitable for econometric analyses
