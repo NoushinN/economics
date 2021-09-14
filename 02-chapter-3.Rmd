@@ -2,6 +2,13 @@
 
 OLS helps answer the question of what is the effect of a variable X on Y, how to predict Y based on X, and how to forecast future values for future periods. 
 OLS helps to estimate unknown parameters for a subset of a population (i.e. sample) and minimize errors/disturbances through minimizing the sum of squared residuals.
+A residual is the difference between actual value of an observation (Y) and its predicted value (Y hat). There are mathematical proofs that show OLS estimators are unbiased and derive variance and co-variance of OLS estimates.
+
+The assumptions of OLS estimates are that variables have homoskedasticity (i.e. error variation is constant across all observations). Second, we assume that estimates have zero covariance and independent variables are uncorrelated (i.e. are random). Third, we assume that the estimates are consitent across all variables.
+These assumptions help get the best efficiency for the OLS model. Otherwise, we need to correct for estimates.
+
+Variation analysis can be done through total sum of squares and coefficient of determination (R squared) or ESS/TSS or 1-RSS/TSS. R squared shows the variance of Y explained by variance of X. The higher the R squared (0<R<1), the better the regression.
+
 
 ### Types of data suitable for econometric analyses
 1. cross sectional data
