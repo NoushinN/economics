@@ -9,12 +9,35 @@ That is, we assume a flat series, without trend, constant variance over time, a 
 
 These assumptions help get the best efficiency for the OLS model. Otherwise, we need to correct for estimates.
 
-## Evaluation of the OLS model
+## Interpretation of the OLS model outputs
+
+### R-squared: 
+It signifies the “percentage variation in dependent that is explained by independent variables”. Here, 73.2% variation in y is explained by X1, X2, X3, X4 and X5. This statistic has a drawback, it increases with the number of predictors(dependent variables) increase. Therefore, it becomes inconclusive in case when it is to be decided whether additional variable is adding to the predictability power of the regression.
+
+### Adj. R-squared: 
+This is the modified version of R-squared which is adjusted for the number of variables in the regression. It increases only when an additional variable adds to the explanatory power to the regression.
+
+### Prob(F-Statistic): 
+This tells the overall significance of the regression. This is to assess the significance level of all the variables together unlike the t-statistic that measures it for individual variables. The null hypothesis under this is “all the regression coefficients are equal to zero”. Prob(F-statistics) depicts the probability of null hypothesis being true. As per the above results, probability is close to zero. This implies that overall the regressions is meaningful.
+
+### AIC/BIC: 
+It stands for Akaike’s Information Criteria and is used for model selection. It penalizes the errors mode in case a new variable is added to the regression equation. It is calculated as number of parameters minus the likelihood of the overall model. A lower AIC implies a better model. Whereas, BIC stands for Bayesian information criteria and is a variant of AIC where penalties are made more severe.
+
+### Prob(Omnibus): 
+One of the assumptions of OLS is that the errors are normally distributed. Omnibus test is performed in order to check this. Here, the null hypothesis is that the errors are normally distributed. Prob(Omnibus) is supposed to be close to the 1 in order for it to satisfy the OLS assumption. In this case Prob(Omnibus) is 0.062, which implies that the OLS assumption is not satisfied. Due to this, the coefficients estimated out of it are not Best Linear Unbiased Estimators(BLUE).
+
+### Durbin-watson: 
+Another assumption of OLS is of homoscedasticity. This implies that the variance of errors is constant. A value between 1 to 2 is preferred. Here, it is ~1.8 implying that the regression results are reliable from the interpretation side of this metric.
+
+### Prob(Jarque-Bera): 
+It i in line with the Omnibus test. It is also performed for the distribution analysis of the regression errors. It is supposed to agree with the results of Omnibus test. A large value of JB test indicates that the errors are not normally distributed.
+
+
+## Evaluation/diagnosis of the OLS model
 
 Quality of fit or variation analysis can be done through calculating total sum of squares and coefficient of determination (R squared) or ESS/TSS or 1-RSS/TSS. R squared shows the variance of Y explained by variance of X. The higher the R squared (0<R<1), the better the regression.
 
 Other tests of null hypothesis and significance include T and F tests. The F-test can be applied on the large sampled population. The T-test is used to compare the means of two different sets. The difference between the t-test and f-test is that t-test is used to test the hypothesis whether the given mean is significantly different from the sample mean or not. On the other hand, an F-test is used to compare the two standard deviations of two samples and check the variability.
-
 
 
 ### Types of data suitable for econometric analyses
