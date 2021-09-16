@@ -45,3 +45,8 @@ Other tests of null hypothesis and significance include T and F tests. The F-tes
 2. time series data
 3. panel data
 
+
+
+## References
+
+[Statistics: How Should I interpret results of OLS?](https://jyotiyadav99111.medium.com/statistics-how-should-i-interpret-results-of-ols-3bde1ebeec01)
