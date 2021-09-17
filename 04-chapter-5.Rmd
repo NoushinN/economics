@@ -1,0 +1,193 @@
+## Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)
+
+Time series is a set of observations on the values that a variable takes at different times. Such data may be collected at regular time intervals (hourly, daily, weekly, monthly,  quarterly, or annually). Some examples include salaries, GDP, government budget, etc.
+
+Time series are used in statistics, econometrics, mathematical finance, weather forecasting, earthquake prediction and many other applications.
+
+## Box-Jenkins models (Auto-Regressive Integrated Moving Average)
+
+The acronym ARIMA stands for Auto-Regressive Integrated Moving Average. Lags of the stationarized series in the forecasting equation are called “autoregressive” terms, lags of the forecast errors are called “moving average” terms, and a time series which needs to be differenced to be made stationary is said to be an “integrated” version of a stationary series. Random-walk and random-trend models, autoregressive models, and exponential smoothing models are all special cases of ARIMA models.
+
+A nonseasonal ARIMA model is classified as an “ARIMA(p,d,q)” model, where:
+
+p is the number of autoregressive terms, d is the number of nonseasonal differences needed for stationarity, and q is the number of lagged forecast errors in the prediction equation.
+
+Box and Jenkins popularized an approach that combines the moving average and the autoregressive approaches in the book “Time Series Analysis: Forecasting and Control” (Box, Jenkins, and Reinsel, 1994).
+
+Although both autoregressive and moving average approaches were already known (and were originally investigated by Yule), the contribution of Box and Jenkins was in developing a systematic methodology for identifying and estimating models that could incorporate both approaches. This makes Box-Jenkins models a powerful class of models.
+
+An autoregressive model is simply a linear regression of the current value of the series against one or more prior values of the series. The value of p is called the order of the AR model.
+
+AR models can be analyzed with one of various methods, including standard linear least squares techniques. They also have a straightforward interpretation.
+
+A moving average (MA) model is conceptually a linear regression of the current value of the series against the white noise or random shocks of one or more prior values of the series. The random shocks at each point are assumed to come from the same distribution, typically a normal distribution, with location at zero and constant scale. The distinction in this model is that these random shocks are propogated to future values of the time series. Fitting the MA estimates is more complicated than with AR models because the error terms are not observable.
+
+The Box-Jenkins ARMA model is a combination of the AR and MA models
+
+Typically, effective fitting of Box-Jenkins models requires at least a moderately long series. Chatfield (1996) recommends at least 50 observations. Many others would recommend at least 100 observations.
+
+
+``` {R Load Time Seriese Data}
+library(quantmod)
+library(ggplot2)
+library(forecast)
+library(tseries)
+amzn.tkr = getSymbols("AMZN",from = as.Date("2017-01-04"), to = as.Date("2017-10-27"),auto.assign = F)
+
+chartSeries(amzn.tkr)
+
+
+df = data.frame(date = index(amzn.tkr), amzn.tkr, row.names=NULL)
+```
+
+
+``` {R plot Time Seriese Data}
+ggplot(df, aes(df$date, df$AMZN.Adjusted)) + geom_line() + scale_x_date('Month/2017')  + ylab("AMZN Adjusted Stock Price") +
+  xlab("") + labs(title = "Amazone Stock Price")
+
+
+MA(q) : Visulize Moving Average
+df$ma7 = ma(df$AMZN.Adjusted, order=7) 
+df$ma30 = ma(df$AMZN.Adjusted, order=30)
+
+
+ggplot() +
+  geom_line(data = df, aes(x = df$date, y = df$AMZN.Adjusted, colour = "Daily Price")) +
+  geom_line(data = df, aes(x = df$date, y = df$ma7,   colour = "Weekly Moving Average"))  +
+  geom_line(data = df, aes(x = df$date, y = df$ma30, colour = "Monthly Moving Average"))  +
+  ylab('AMZN Stock Price')
+
+
+```
+
+STL() : Decomposite Moving Average
+stl() in R is an algorithm that was developed to help to divide up a time series into three components namely: the trend, seasonality and remainder.
+
+A time series decomposition is a mathematical procedure which transform a time series into multiple different time series. The original time series is often computed (decompose) into 3 sub-time series: Seasonal: patterns that repeat with fixed period of time. A website might receive more visit during weekends. This is a seasonality of 7 days. Trend: the underlying trend of the metrics. A website who gain in popularity should have a general trend who go up. Random: (also call “noise”, “Irregular” or “Remainder”) Is the residuals of the time series after allocation into the seasonal and trends time series.
+
+``` {R STL test}
+price_ma = ts(na.omit(df$ma7), frequency=30)
+decomp = stl(price_ma, s.window="periodic")
+deseasonal_ma <- seasadj(decomp)
+plot(decomp)
+
+```
+Test Stationary or Non-stationary
+The null hypothesis assumes that the series is non-stationary (mean does not stay constant). ADF procedure tests whether the change in Y can be explained by lagged value and a linear trend. If contribution of the lagged value to the change in Y is non-significant and there is a presence of a trend component, the series is non-stationary and null hypothesis will not be rejected.
+
+A formal ADF test does not reject the null hypothesis of non-stationarity, confirming our visual inspection
+
+Usually, non-stationary series can be corrected by a simple transformation such as differencing. Differencing the series can help in removing its trend or cycles. The idea behind differencing is that, if the original data series does not have constant properties over time, then the change from one period to another might.
+
+The difference is calculated by subtracting one period’s values from the previous period’s values:Higher order differences are calculated in a similar fashion.The number of differences performed is represented by the d component of ARIMA.
+
+Autocorrelation plots (also known as ACF or the auto correlation function) are a useful visual tool in determining whether a series is stationary. These plots can also help to choose the order parameters for ARIMA model. If the series is correlated with its lags then, generally, there are some trend or seasonal components and therefore its statistical properties are not constant over time.
+
+``` {R ADF test}
+adf.test(price_ma, alternative = "stationary")
+
+
+# ACF and PACF tests
+Acf(df$ma7, main='')
+
+Pacf(df$ma7, main='')
+```
+
+Analyze Auto-Correlation ACF and Find q in MA(q): q is the number of lagged forecast errors in the prediction equation. Autocorrelation plots(ACF) display correlation between a series and its lags. In addition to suggesting the order of differencing, ACF plots can help in determining the order of the M A (q) model.
+
+
+
+Analyze Partial Correlation PACF and Find p in AR(p): p is the number of autoregressive terms
+Partial autocorrelation plots (PACF), as the name suggests, display correlation between a variable and its lags that is not explained by previous lags. PACF plots are useful when determining the order of the AR(p) model.
+
+
+
+R plots 95% significance boundaries as blue dotted lines. There are significant autocorrelations with many lags in our bike series, as shown by the ACF plot. However, this could be due to carry-over correlation from the first or early lags, since the PACF plot only shows a spike at lags 1
+Therefore, We can start with the order of d = 1 and re-evaluate whether further differencing is needed.
+
+
+``` {R difference seasonal data}
+
+df_d1 = diff(deseasonal_ma, differences = 1)
+plot(df_d1)
+
+
+adf.test(df_d1, alternative = "stationary")
+
+
+## Analyze ACF and PACF and Start with d=1
+Acf(df_d1, main='ACF for Differenced Series')
+
+Pacf(df_d1, main='PACF for Differenced Series')
+
+
+## Now let’s fit a model. The forecast package allows the user to explicitly specify the order of the model using the arima() function, or automatically generate a set of optimal (p, d, q) using auto.arima().
+
+auto.arima(deseasonal_ma, seasonal=FALSE)
+
+```
+
+##  Augmented Dickey-Fuller Test
+
+Spikes at particular lags of the differenced series can help inform the choice of p or q for our model. There are significant auto correlations at lag 1-5, 7-11, 17-19, 31-37, 41-46,51-54 Partial correlation plots show a significant spike at lag 1, 5, 6, 8, 15, 31 and 60 This suggests that we might want to test models with AR or MA components of order 1, 5, or 8.
+
+
+Forecasting Equation
+The forecasting equation is constructed as follows. First, let y denote the dth difference of Y, which means:
+
+If d=0: yt = Yt
+
+If d=1: yt = Yt - Yt-1
+
+If d=2: yt = (Yt - Yt-1) - (Yt-1 - Yt-2) = Yt - 2Yt-1 + Yt-2
+
+To identify the appropriate ARIMA model for Y, you begin by determining the order of differencing (d) needing to stationarize the series and remove the gross features of seasonality, perhaps in conjunction with a variance-stabilizing transformation such as logging or deflating.
+
+So now we have fitted a model that can produce a forecast, but does it make sense? Can we trust this model? We can start by examining ACF and PACF plots for model residuals. If model order parameters and structure are correctly specified, we would expect no significant autocorrelations present.
+
+``` {R auto arima modelling}
+
+## First Cut Fit: Auto define order(p,d,q)
+fit<-auto.arima(deseasonal_ma, seasonal=FALSE)
+tsdisplay(residuals(fit), lag.max=45, main='(2,1,4) Model Residuals')
+
+
+
+fit2 <- arima(deseasonal_ma, order=c(29,1,29))
+tsdisplay(residuals(fit2), lag.max=45, main='(29,1,29) Model Residuals')
+
+
+Forecast from the Fit model
+Forecast without Seasonal Components
+fcast <- forecast(fit2, h=30)
+plot(fcast)
+
+
+
+## Forecast with Seasonal Components
+fit_w_seasonality = auto.arima(deseasonal_ma, seasonal=TRUE)
+fit_w_seasonality
+
+seas_fcast <- forecast(fit_w_seasonality, h=30)
+plot(seas_fcast)
+
+
+tsdisplay(residuals(fit_w_seasonality), lag.max=15, main='Seasonal Model Residuals')
+
+
+```
+
+Modified Forecast: User define order(p,d,q)
+There is a clear pattern present in ACF/PACF and model residuals plots repeating at lag 7. This suggests that our model may be better off with a different specification, such as p = 7 or q = 7.
+
+However, the blue line representing forecast seems very naive: It goes close to a straight line fairly soon, which seems unlikely given past behavior of the series.
+
+How can we improve the forecast and iterate on this model? One simple change is to add back the seasonal component we extracted earlier. Another approach would be to allow for (P, D, Q) components to be included to the model, which is a default in the auto.arima() function.
+
+
+
+We can notice the same evidence of higher order is present in the auto correlations with lag 7, which suggests that a higher-order component might be needed: Now what? After an initial naive model is built, it’s natural to wonder how to improve on it. Other forecasting techniques, such as exponential smoothing, would help make the model more accurate using a weighted combinations of seasonality, trend, and historical values to make predictions.
+
+## References:
+
+- Mathematical structure of ARIMA models can be found: http://people.duke.edu/~rnau/Mathematical_structure_of_ARIMA_models--Robert_Nau.pdf.
