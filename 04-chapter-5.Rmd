@@ -4,6 +4,31 @@ Time series is a set of observations on the values that a variable takes at diff
 
 Time series are used in statistics, econometrics, mathematical finance, weather forecasting, earthquake prediction and many other applications.
 
+A time series data can be classified into trend, seasonal, cyclical or random components.
+
+A Trend is a long term smooth pattern that usually persists. A seasonal pattern, on the other hand, apprears in a regular interval at different frequencies of occurence. Cyclical patterns repeats beyond a frequency of occurence (e.g. wavelike). Random components refer to time series with none of the three patterns mentioned.
+
+Visualizing a time series data is the first step in determining the best model to use, such as univariate or multivariate modelling. If a time series is purely random (white noise), then the future forecast of such series isn't possible.
+
+## Autoregressive (AR) Model
+An AR(p) model is one in which Yt depends only on its own past values. 
+
+## A Moving Average (MA) Model
+A MA(q) model is one when Yt depends only on the random error terms which follow awhite noise process
+
+## Autoregressive Moving Average Model
+There are situations where the time series may be presented as a mix of both AR and MA models (ARMA (p,q))
+
+## Stationarity
+A time series is said to be 'stationary' if the marginal distribution of Y at time t is the same as at any other point in time. It implies that the mean, variance, and covariance of the series Y are time invariant. 
+A series could also be weakly stationary or covariance stationaory.
+
+A series which is non-stationary can be made stationary after differencing. A series which is stationary after being differentiated is said to be integrated of order 1 and is denoted by I(1).
+
+Classical econometric theories assume that variables are stationary. Non-stationary time series modeling can result in autocorrelation and spurious regression therefore the first step is to transform the data to stationary series.
+
+The next step is the estimation and forecasting of univariate time-series models which can be carried out using Box-Jenkins methodology to identify (ACF(p) and pACF(q)), estimate (maximum likelihood), and perform diagnostic (AIC, BIC, SBIC) checking for stationarity of variables.
+
 ## Box-Jenkins models (Auto-Regressive Integrated Moving Average)
 
 The acronym ARIMA stands for Auto-Regressive Integrated Moving Average. Lags of the stationarized series in the forecasting equation are called “autoregressive” terms, lags of the forecast errors are called “moving average” terms, and a time series which needs to be differenced to be made stationary is said to be an “integrated” version of a stationary series. Random-walk and random-trend models, autoregressive models, and exponential smoothing models are all special cases of ARIMA models.
