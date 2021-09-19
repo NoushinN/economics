@@ -60,3 +60,8 @@ Perfect competition is the ideal market with many suppliers and many buyers whic
 There are various ways for markets to fail. Monopsony and monopolistic competition markets are more stable. The perfect competition market is more volatile in an imprefect world. Market imprefections can be due to skill differences, luck, accumulation by capital owners through mergers and take-overs.
 
 
+### Types of data suitable for econometric analyses
+1. cross sectional data
+2. time series data
+3. panel data
+
