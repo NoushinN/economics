@@ -1,0 +1,428 @@
+## Interrupted time series analysis
+
+Load required R packages
+
+```{r libraries, echo = FALSE}
+
+# list libraries
+packages <- c("data.table", "tidyverse", "ggpubr", "here", "purrr",
+              "broom", "lubridate", "readr", "wesanderson", "nlme", "broom",
+              "tidytext", "readxl", "table1", "lmtest", "zoo", "stargazer",
+              "janitor", "GGally", "tseries", "xts", "forecast")
+
+# install libraries
+lapply(packages, library, character.only = TRUE)
+
+```
+
+
+# Simple Interrupted Time Series (ITS) Example in R
+
+Here, we make an example dataset for a simple interrupted time series analysis to estimate the effect of an intervention over time. There are 50 patients with health test score data collected over a period of time. In the first half of time there was no intervention and for the final half there was a policy change intervention. 
+
+The `test` field is a dependent variable that could represent a standardized health test score.  
+
+To analyze if the intervention is having an effect, we have a dummy coded `policy` variable where 0 is placed for the first half when the intervention did not take place and 1 for the final half when the policy change did take place. We can analyze if the dependent variable scores are larger relative to the years when the intervention took place by analyzing the relationship between the `policy` intervention variable and the dependent variable (`test`). 
+
+
+```{r data}
+
+# Make data for time series analysis
+set.seed(123)
+patientID = rep(1:300,1)
+policy = c(rep(0,150), rep(1,150))
+test = c(rnorm(150), abs(rnorm(150)*4))
+
+itsData = cbind(patientID, policy, test)
+itsData = as.data.frame(itsData)
+
+itsData$dates <- seq.Date(from = as.Date('2000-01-01'), by = 'month', length.out = 300)
+
+# We can also make a time series class from the dataframe by using the zoo library. 
+# declaring the data as time series (using zoo)
+dates <- seq.Date(from = as.Date('2000-01-01'), by = 'month', length.out = 300)
+tsdata <- zoo(cbind(itsData, dates))
+
+
+```
+
+
+Once a data frame is available, the first step is to visually inspect the data by plotting it to identify unusual observations and understand patterns. In the plots, look for outliers, linearity, co-interventions (e.g. some other variables contributing to scores), and other data quality issues.
+
+```{r visualize data}
+
+# plot the data
+plot(itsData$dates, itsData$test,
+     ylim = c(-5,15), type = "l",
+     col = "red", xaxt = "n")
+
+# Add x-axis year labels
+axis(1, at=1:300, labels=itsData$dates)
+axis(1, xaxp=c(0, 150, 300), las=2)
+axis(1,at=c(1,5,10,25),labels=c("2000","2005","2010","2025"))
+
+# Add in the points for the figure
+points(itsData$dates, itsData$test,
+       col="red",
+       pch=20)
+
+# Label the policy change
+abline(v=0,lty="dotted")
+
+```
+
+
+After visualizing the data, if two or more variables are not evenly distributed across the parameters, we end up with data points close to one another. To fix this, we can transform the data so it is more evenly distributed across the graph. Common transformations include natural and base ten logarithmic, square root, cube root and inverse transformations. The policy and test relationship is already linear but it can be strengthened using a square root transformation.
+
+
+# Linear Regression Modeling for ITSA
+We first run a simple ordinary least squares (OLS) linear regression model to determine whether the intervention is effective. With this model, we can estimate the pre-intervention trend (control group) and compare that with the post-intervention data (policy/treatment group). 
+In this simulated example, the regression coefficient for the policy variable has a statistically significant p-value meaning that the intervention is having a non-zero increase in the patient’s dependent variable.
+
+```{r model}
+
+# Model 
+model1 = lm(test ~ policy, data = itsData)
+
+# see summary of model output
+summary(model1)
+
+# confidence intervals for coefficients
+confint(model1)
+
+# Or use stargazer to tabulate model output
+stargazer(model1, itsData,type = 'text', title="Model output", align=TRUE, out = 'adh.txt')
+```
+
+
+
+```{r sqrt model}
+
+# Squareroot Model 
+model2 = lm(sqrt(test) ~ policy, data = itsData)
+
+# see summary of model output
+summary(model2)
+
+# confidence intervals for coefficients
+confint(model2)
+
+# Or use stargazer 
+stargazer(model2, itsData,type = 'text', title="Model output", align=TRUE, out = 'adh.txt')
+```
+
+
+We can add additional dependent variable to the model (e.g. adding the dates).
+
+```{r additional dependent variable}
+
+# additional dependent variable  
+model3 = lm(test ~ policy + dates, data = itsData)
+
+# see summary of model output
+summary(model3)
+
+# confidence intervals for coefficients
+confint(model3)
+
+# Or use stargazer 
+stargazer(model3, itsData,type = 'text', title="Model output", align=TRUE, out = 'adh.txt')
+```
+
+# Model comparison and visualization
+
+We can compare models using anova function and visualize the model fits pior to optimization. When given a sequence of model objects, ‘anova’ tests the models against one another in the order specified.
+As you can see, the result shows a Df of 297 for model 2 (indicating that the transformed model has one less parameter), and a non-significant p-value (> .001). This means that adding the transformation to the model did lead to a an improved fit over the model 1 but is still not significant. Therefore, transformation is not necessary at this point.
+
+
+
+```{r compare and visualize models}
+
+# Compare Models 
+
+anova(model1, model2)
+
+
+
+# Produce the plot, first plotting the raw data points
+plot(itsData$dates, itsData$test,
+     ylab="Test scores",
+     xlab="Period",
+     pch=20,
+     col="pink")
+
+
+# Add line indicating policy pattern change
+abline(v=itsData$dates[150],lty=2)
+
+
+# Plot the first line segment
+lines(itsData$dates[1:150], fitted(model1)[1:150], col="red",lwd=2)
+
+# Plot the second line segment
+lines(itsData$dates[150:300], fitted(model1)[150:300], col="red",lwd=2)
+
+
+```
+
+
+# Model considerations
+
+Following modeling, we need to consider some basic principles of time series model testing that can help improve our ITS model. Specifically, a regression model is **not** well suited for ITS when the following conditions appear:
+
+## Autocorrelation
+Correlation between a process and itself in prior periods.
+Models help us predict correlation between different variables and whether data points are truly independent. Correlation, in turn, is how two variables vary linearly with one another. Autocorrelation is how a set of time-series data varies linearly with itself at different points in time based on a lag of one or more periods. That is, a serial correlation between the values of a process at different times, as a function of time lag and breaks the assumption that observations are random and independent. 
+
+## Seasonality
+Period variation that occurs in fixed intervals
+
+## Stationarity
+The other core concept to understand when modeling time-series data is stationarity. Stationarity means that mean and variance are constant over time though it’s not always present.
+Stationarity is especially important for ITS because it is much easier to identify a discontinuity in the data in a stationary process than in a nonstationary process. To identify a nonstationary process in the data, it generally takes a much longer pre-treatment period than post-treatment period, which may or may or may not be available in the data. This approach may lead to errors as well, since theoretically the design is only defined around the cut point.
+
+We can check for autocorrelation by visualizing the “residuals” in a model to check what is left over after fitting a model.
+
+```{r visualize models}
+
+# check residuals
+checkresiduals(model1)
+CV(model1) ##correlation of variation
+fitted(model1)
+
+
+#produce residual vs. fitted plot
+res <- resid(model1)
+
+#create Q-Q plot for residuals
+qqnorm(res)
+
+#add a straight diagonal line to the plot
+qqline(res) 
+
+#Create density plot of residuals
+plot(density(res))
+
+```
+
+
+The existence of autocorrelation in the residuals of a model is a sign that the model may be unsound. Autocorrelation can also be diagnosed using a correlogram (ACF/PACF plot) and be tested using the Durbin-Watson test. This means that the data is correlated with itself (i.e., we have autocorrelation/serial correlation).
+
+We can look for the following scenarios in autocorrelation plots ![matrix](autocorrelation_models.png). For example, a spike in the PACF at 5 and exponential decay in the ACF, which are suggestive of an AR(5) and MA(0) function underlying the data generation process.
+
+
+```{r check acf}
+
+# check for full and partial autocorrelation 
+acf(residuals(model1))
+acf(residuals(model1), type = 'partial')
+
+
+acf(residuals(model2))
+acf(residuals(model2), type = 'partial')
+
+
+# Durbin-watson test, 12 time periods to check for seasonality
+car::dwt(model1,max.lag=12,alternative="two.sided")
+
+```
+
+There are 4 things about the acf plot that are noteworthy:
+
+1. the ACF at lag 0 equals 1 by default (i.e., the correlation of a time series with itself) and is plotted as a reference point;
+2. the x-axis has values for lags, which is caused by R using the year index as the lag rather than the month
+3. the horizontal blue lines are the approximate 95% CI’s
+4. there autocorrelation lags are not very high and fall within 95% CI’s
+
+
+The Durbin Watson (DW) statistic is a test for autocorrelation in a regression model's output. The DW statistic ranges from zero to four, with a value of 2.0 indicating zero autocorrelation. Values below 2.0 mean there is positive autocorrelation and above 2.0 indicates negative autocorrelation.
+
+
+# Model optimization with ARIMA
+
+There are two ways to correct for autocorrelation in ITS design: (1) robust standard errors on the OLS estimates or (2) use of a time-series model (e.g. autoregressive 'integrated' moving average (ARIMA)) to fit the data.
+
+The most common approach to dealing with autocorrelation in an ITS design is to use a time-series model like an ARMA/ARIMA. The ARMA/ARIMA model is a model with two core components: an autoregression (AR) model and a moving average (MA) model.
+
+The model is AR if the ACF trails off after a lag and has a hard cut-off in the PACF after a lag. This lag is taken as the value for p. The model is MA if the PACF trails off after a lag and has a hard cut-off in the ACF after the lag. This lag value is taken as the value for q. The model is a mix of AR and MA if both the ACF and PACF trail off.
+
+An autoregression model is a linear regression where we predict series values based on the lagged values of the series itself. In an AR(1) model, we model one period lag. In an AR(2) model, we model two period lags. In the moving average model, we model the future value of the series based on the average of prior values. Thus, an MA(1) model uses one past observation and an MA(2) model uses the average of two past observations. The difference between the ARMA and ARIMA is the “I”—that is, the integrated component indicates that data is replaced with the difference between itself and previous values.
+
+
+
+```{r nlme model}
+
+library(nlme)
+
+## fit gls model regression
+gls_model <- gls(test ~ policy, 
+                 data = itsData,
+                 correlation = corARMA(p=5, q = 1, form = ~dates), #autocorrelation p=5; moving average q=1
+                 method = "ML")
+
+# Two useful areas to investigate diagnostics are Overfitting & Residual Errors.
+
+summary(gls_model) ## check model output
+car::qqPlot(residuals(gls_model)) ## to look at residual errors
+
+
+```
+
+Plotting the results from the gls models:
+
+```{r plotting gls model results}
+
+# Produce the plot, first plotting the raw data points
+plot(itsData$dates, itsData$test,
+     ylab="Test scores",
+     xlab="Period",
+     pch=20,
+     col="pink")
+
+# And the counterfactual (from updated model)
+segments(1,
+         gls_model$coef[1]+gls_model$coef[2],
+         300,
+         gls_model$coef[1]+gls_model$coef[2]*300,
+         lty=2,
+         lwd=2,
+         col='blue')
+
+
+# Add line indicating policy pattern change
+abline(v=itsData$dates[150],lty=2)
+
+
+# Plot the first line segment (from updated model)
+lines(itsData$dates[1:150], fitted(gls_model)[1:150], col="red",lwd=2)
+
+# Plot the second line segment (from updated model)
+lines(itsData$dates[150:300], fitted(gls_model)[150:300], col="red",lwd=2)
+
+##############################################
+# Predict absolute and relative changes
+##############################################
+
+# Predicted value at 25 years after the policy change
+pred <- fitted(model1)[175]
+
+# Then estimate the counterfactual at the same time point
+cfac <- model1$coef[1] + model1$coef[2]*175
+
+# Absolute change at 25 years
+pred - cfac
+# Relative change at 25 years
+(pred - cfac) / cfac
+
+```
+
+
+## Visualizing Moving Average (q)/stationarity
+A time series decomposition is a mathematical procedure which transform a time series into multiple different time series. The original time series is often computed (decompose) into 3 sub-time series: Seasonal: patterns that repeat with fixed period of time. A website might receive more visit during weekends. This is a seasonality of 7 days. Trend: the underlying trend of the metrics. A website who gain in popularity should have a general trend who go up. Random: (also call “noise”, “Irregular” or “Remainder”) Is the residuals of the time series after allocation into the seasonal and trends time series.
+
+q is the number of lagged forecast errors in the prediction equation and p is the number of autoregressive terms.
+Autocorrelation plot (ACF) displays correlation between a series and its lags. In addition to suggesting the order of differencing, ACF plots can help in determining the order of the MA (q) model. 
+Partial autocorrelation plot (PACF), as the name suggests, displays correlation between a variable and its lags that is not explained by previous lags. PACF plots are useful when determining the order of the AR(p) model.
+
+
+The null hypothesis assumes that the series is non-stationary (mean does not stay constant). Augmented Dickey-Fuller Test (ADF) procedure tests whether the change in Y can be explained by lagged value and a linear trend. If contribution of the lagged value to the change in Y is non-significant and there is a presence of a trend component, the series is non-stationary and null hypothesis will not be rejected.
+
+Usually, non-stationary series can be corrected by a simple transformation such as differencing. Differencing the series can help in removing its trend or cycles. The idea behind differencing is that, if the original data series does not have constant properties over time, then the change from one period to another might.
+
+The difference is calculated by subtracting one period’s values from the previous period’s values:Higher order differences are calculated in a similar fashion.The number of differences performed is represented by the d component of ARIMA.
+
+```{r Visulize Moving Average}
+
+## MA(q)
+itsData$ma7 = ma(itsData$test, order=7) ##This is a seasonality of 7 days
+itsData$ma30 = ma(itsData$test, order=30) ##This is a seasonality of 30 days
+
+
+data_ma = ts(na.omit(itsData$ma7), frequency=30)
+
+
+## test stationarity
+adf.test(data_ma, alternative = "stationary")
+
+
+## Analyze Auto-Correlation ACF and Find q in MA(q)
+Acf(itsData$ma7, main='')
+
+## Analyze Partial Correlation PACF and Find p in AR(p)
+Pacf(itsData$ma7, main='')
+
+```
+
+
+## Model optimization with auto.ARIMA 
+
+Auto ARIMA takes into account AIC (Akaike Information Criterion) and BIC (Bayesian Information Criterion) values to determine the best combination of parameters. AIC and BIC values are estimators to compare models. The lower these values, the better is the model. Auto.arima combines unit root tests, minimisation of the AICc and MLE to obtain an ARIMA model.
+
+ARIMA models can be expressed in two forms: Non-seasonal models where the model exhibits an order in the form of (p,d,q) where:
+p = The order of the Auto Regressive Model, d = The order of differencing, q = The order of the Moving Average.
+
+Seasonal ARIMA models take into account the seasonality in the data and does the same ARIMA steps but on the seasonal pattern. So, if the data has a seasonal pattern every quarter then the model will get an order for (p,d,q) for all the points and a (P,D,Q) for each quarter.
+
+For ARIMA to perform at its best it needs the data to be stationary. That means that the mean and variance are constant over the entire set. Differencing is used to transform the data so that it is stationary.
+
+
+```{r forecasting with auto-arima}
+
+## stl() in R is an algorithm that was developed to help to divide up a time series into three components namely: the trend, seasonality and remainder.
+decomp <- stl(data_ma, s.window="periodic")
+deseasonal_ma <- seasadj(decomp)
+plot(decomp)
+
+
+# Auto define order(p,d,q)
+fit<-auto.arima(deseasonal_ma, seasonal=FALSE)
+tsdisplay(residuals(fit), lag.max=45, main='(2,1,4) Model Residuals')
+
+
+# Modified Forecast: User define order(p,d,q)
+fit2 <- arima(deseasonal_ma, order=c(29,1,29))
+tsdisplay(residuals(fit2), lag.max=45, main='(29,1,29) Model Residuals')
+
+
+# Forecast from the Fit model: Forecast without Seasonal Components
+fcast <- forecast(fit2, h=30)
+plot(fcast)
+
+
+# Forecast with Seasonal Components
+fit_w_seasonality <- auto.arima(deseasonal_ma, seasonal=TRUE)
+fit_w_seasonality
+
+
+seas_fcast <- forecast(fit_w_seasonality, h=30)
+plot(seas_fcast)
+
+# Differencing 
+df_d1 = diff(deseasonal_ma, differences = 1) ##spikes at particular lags of the differenced series can help inform the choice of p or q for our model
+adf.test(df_d1, alternative = "stationary")
+adf.test(itsData$test, alternative = "stationary")
+
+plot(df_d1)
+adf.test(df_d1, alternative = "stationary")
+
+
+## Analyze ACF and PACF and Start with d=1
+Acf(df_d1, main='ACF for Differenced Series')
+Pacf(df_d1, main='PACF for Differenced Series')
+
+
+
+```
+
+In this case, auto.arima has picked ARIMA(0,1,0) for the model.
+
+### References:
+- Schaffer, A.L., Dobbins, T.A. & Pearson, SA. Interrupted time series analysis using autoregressive integrated moving average (ARIMA) models: a guide for evaluating large-scale health interventions. BMC Med Res Methodol 21, 58 (2021). https://doi.org/10.1186/s12874-021-01235-8
+- Kontopantelis E, Doran T, Springate D A, Buchan I, Reeves D. Regression based quasi-experimental approach when randomisation is not an option: interrupted time series analysis BMJ 2015; 350 :h2750 doi:10.1136/bmj.h2750
+- Hudson, J., Fielding, S. & Ramsay, C.R. Methodology and reporting characteristics of studies using interrupted time series design in healthcare. BMC Med Res Methodol 19, 137 (2019). https://doi.org/10.1186/s12874-019-0777-x
+- Policy Analysis Using Interrupted Time Series, Michael Law. https://learning.edx.org/course/course-v1:UBCx+ITSx+1T2017/home
+- ARIMA Model – Complete Guide to Time Series Forecasting in Python: https://www.machinelearningplus.com/time-series/arima-model-time-series-forecasting-python/
+- ARIMA models for time series forecasting: https://people.duke.edu/~rnau/411arim.htm
+- Box-Jenkins Modeling: https://robjhyndman.com/papers/BoxJenkins.pdf
+- ARIMA Time Series Analysis: Forecasting: https://rpubs.com/JanpuHou/325096
+- Time series analysis with auto arima in R: https://towardsdatascience.com/time-series-analysis-with-auto-arima-in-r-2b220b20e8ab
