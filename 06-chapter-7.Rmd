@@ -426,3 +426,4 @@ In this case, auto.arima has picked ARIMA(0,1,0) for the model.
 - Box-Jenkins Modeling: https://robjhyndman.com/papers/BoxJenkins.pdf
 - ARIMA Time Series Analysis: Forecasting: https://rpubs.com/JanpuHou/325096
 - Time series analysis with auto arima in R: https://towardsdatascience.com/time-series-analysis-with-auto-arima-in-r-2b220b20e8ab
+- Forecasting: Principles and Practice: https://otexts.com/fpp2/
