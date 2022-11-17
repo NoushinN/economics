@@ -1,3 +1,37 @@
-## Classification and Representations
+# Classification and Representations
+## How to perform Interrupted time series analysis (ITSA)
 
-Logistic regression is another algorithm for classification when Y is either 0 and 1.
+### What is ITSA
+Interrupted time series analysis is a quasi-experimental design that can evaluate an intervention effect, using longitudinal data. 
+
+### Why use ITSA
+Randomized controlled trials (RCTs) are considered the gold standard when evaluating the causal effects of healthcare policy interventions. When RCTs cannot be used, e.g. is costly or ethically difficult to implement, the interrupted time series analysis (ITSA) is a possible alternative and the ‘next best’ option. In this way, ITSA is one of the strongest quasi-experimental designs that can be used to evaluate the impact of policy interventions. The aim of this document is to describe how ITSA designs are set up, applied, and reported.
+
+### Requirements for ITSA design
+A minimum of two data points is required to design an ITSA, (a) pre-intervention and (b) post-intervention data. There are no restrictions on participants, cohort characteristics, or types of outcome. Prior to performing an ITSA, data needs to be cleaned and transformed (e.g. considerations on format, imputation, missingness). Data can also be summarized using appropriate summary statistics prior to ITSA. After implementing an ITSA model, testing (null and alternative hypothesis) is performed to test acceptability of claims or premises. 
+
+### Approaches
+
+#### Basic
+In its simplest form, an ITSA is modelled using a regression model (such as linear, logistic, or Poisson). The regression coefficients estimate (a) the pre-intervention slope [trend for the outcome before the intervention], (b) the change in level at the intervention point [change in level that can be attributed to the intervention, between the time points immediately before and immediately after the intervention, and accounting for the pre-intervention trend], and (c) the change in slope from pre-intervention to post-intervention [the difference between the pre-intervention and post-intervention slopes]. 
+The key assumption is that without the intervention, the pre-intervention trend would continue unchanged into the post-intervention period and there are no external factors systematically affecting the trends (counter factual).
+Other assumptions include: (1) pre-intervention trends are assumed to be linear. Linearity of trends over time needs to be evaluated and confirmed firstly through visualization and secondly with appropriate statistical tools for the ITSA results to have any credence. However, validating linearity can be a problem when there are only few pre-intervention time points and is impossible with only two; (2) the ITS model estimates have not been controlled for covariates. The models assume that the characteristics of the populations remain unchanged throughout the study period and changes in the population base that might explain changes in the outcome are not accounted for; (3) there is no comparator against which to adjust the results for changes that should not be attributed to the intervention itself.
+
+#### Advanced
+With some modelling changes one can evaluate whether the intervention varies in relation to population characteristics. To accomplish this, we can include “interaction terms” between the covariate (characteristics) of interest and the three ITS components relating to the pre-intervention slope, level change, and change in slope. A separate model needs to be executed for each covariate of interest.
+In addition, the estimated pre-intervention slope can be used to compute predictions of what the value of the outcome would have been at post-intervention time points if the intervention had not taken place. The comparison between predictions and observations not only applies to the advanced models, where both main and interaction effects estimates need to be considered, but to simple models as well. 
+
+#### Expert
+More flexible modelling options are possible in which we can overcome some of the limitations in the basic and advanced designs.
+Using regression modelling we can evaluate the relations between the outcome and covariates of interest (for example, patient age and sex), to obtain estimates that are adjusted for population changes, at specific time points. For example, to calculate the adjusted increase in the outcome above the projected trend, in the first post-intervention year. However, the modelling complexities are formidable and involve numerous steps. 
+An alternative modelling approach can additionally incorporate “control” factors into the analyses. We can group the indicators by process and analyze them as separate groups. A multilevel mixed effects regression can be used to model performance on all indicators over time, controlled for covariates of interest and including an interaction term between time and indicators, but excluding post-intervention observations for the withdrawn indicators. 
+Predictions and their standard errors are then obtained from the model, for the withdrawn indicators post-intervention and for each practice. 
+
+
+## References
+•	Schaffer, A.L., Dobbins, T.A. & Pearson, SA. Interrupted time series analysis using autoregressive integrated moving average (ARIMA) models: a guide for evaluating large-scale health interventions. BMC Med Res Methodol 21, 58 (2021). https://doi.org/10.1186/s12874-021-01235-8
+•	Kontopantelis E, Doran T, Springate D A, Buchan I, Reeves D. Regression based quasi-experimental approach when randomisation is not an option: interrupted time series analysis BMJ 2015; 350 :h2750 doi:10.1136/bmj.h2750
+•	Hudson, J., Fielding, S. & Ramsay, C.R. Methodology and reporting characteristics of studies using interrupted time series design in healthcare. BMC Med Res Methodol 19, 137 (2019). https://doi.org/10.1186/s12874-019-0777-x
+•	
+
+
