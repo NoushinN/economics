@@ -27,11 +27,58 @@ Using regression modelling we can evaluate the relations between the outcome and
 An alternative modelling approach can additionally incorporate “control” factors into the analyses. We can group the indicators by process and analyze them as separate groups. A multilevel mixed effects regression can be used to model performance on all indicators over time, controlled for covariates of interest and including an interaction term between time and indicators, but excluding post-intervention observations for the withdrawn indicators. 
 Predictions and their standard errors are then obtained from the model, for the withdrawn indicators post-intervention and for each practice. 
 
+#--------------------------------------------------------------------------
 
+# Code example
+
+list libraries
+packages <- c("data.table", "tidyverse", "ggpubr", "here", "purrr",
+              "broom", "lubridate", "readr", "wesanderson", "CausalImpact",
+              "tidytext", "readxl", "table1", "lmtest", "zoo",
+              "janitor", "GGally", "tseries", "xts", "forecast")
+
+# install libraries
+lapply(packages, library, character.only = TRUE)
+
+# load data and transform
+here::here()
+df <- read.csv("CausalExercise.csv")
+
+time.points <- seq.Date(as.Date("2020-02-07"), by = 1, length.out = 44)
+
+# declare time series variables
+
+score <- ts(df$IBCL)
+gpa <- ts(df$US10Year)
+age <- ts(df$VIX)
+
+data <- zoo(cbind(score,gpa,age), time.points)
+head(data)
+
+# set pre and post intervention
+pre.period <- as.Date(c("2020-02-07", "2020-03-13"))
+post.period <- as.Date(c("2020-03-14", "2020-03-21"))
+
+
+# Visualize the data
+# Formulate a model
+
+lm_model <- lm(ibcl ~ u10yr + vix, data = data)
+
+# determine causal impact
+
+impact <- CausalImpact(data, pre.period, post.period)
+summary(impact, "report")
+summary(impact)
+plot(impact)
+
+#--------------------------------------------------------------------------
+
+ 
 ## References
 •	Schaffer, A.L., Dobbins, T.A. & Pearson, SA. Interrupted time series analysis using autoregressive integrated moving average (ARIMA) models: a guide for evaluating large-scale health interventions. BMC Med Res Methodol 21, 58 (2021). https://doi.org/10.1186/s12874-021-01235-8
 •	Kontopantelis E, Doran T, Springate D A, Buchan I, Reeves D. Regression based quasi-experimental approach when randomisation is not an option: interrupted time series analysis BMJ 2015; 350 :h2750 doi:10.1136/bmj.h2750
 •	Hudson, J., Fielding, S. & Ramsay, C.R. Methodology and reporting characteristics of studies using interrupted time series design in healthcare. BMC Med Res Methodol 19, 137 (2019). https://doi.org/10.1186/s12874-019-0777-x
-•	
+
 
 
