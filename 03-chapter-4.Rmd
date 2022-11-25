@@ -3,3 +3,29 @@
 Multivariate Multiple Regression is the method of modeling multiple responses, or dependent variables, with a single set of predictor variables. For example, we might want to model both math and reading SAT scores as a function of gender, race, parent income, and so forth. This allows us to evaluate the relationship of, say, gender with each score.
 Multivariate multiple regression regresses each dependent variable separately on the predictors. However, because we have multiple responses, we have to modify our hypothesis tests for regression parameters and our confidence intervals for predictions.
 
+
+### ARIMA example
+
+#Load the 'oil' dataset in the astsa library
+options(warn=-1)
+library(astsa)
+y_t = log(oil)
+
+diff_y_t = diff(y_t, 1)
+
+#Hints and Visualization of Data
+#Plot of y_t = log(oil)
+plot(y_t, main="Log of Oil Data")
+
+#Plot of diff_y_t = diff(y_t, 1)
+plot(diff_y_t, main="Difference of Order 1: Log of Oil Data")
+
+
+#### Fitting y_t to ARIMA(0,1,6) and performing diagnostics on the residuals
+sarima(y_t, 0, 1, 6)
+
+#### Fitting y_t to ARIMA(0,1,8) and performing diagnostics on the residuals
+sarima(y_t, 0, 1, 8) 
+
+#### Fitting y_t to ARIMA(0,1,9) and performing diagnostics on the residuals
+sarima(y_t, 0, 1, 9)
