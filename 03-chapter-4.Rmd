@@ -29,3 +29,85 @@ sarima(y_t, 0, 1, 8)
 
 #### Fitting y_t to ARIMA(0,1,9) and performing diagnostics on the residuals
 sarima(y_t, 0, 1, 9)
+
+
+# Choosing orders in seasonal ARIMA models
+## Load the 'UnempRate' dataset in the astsa library. Also load 'forecast' library
+options(warn=-1)
+library(astsa)
+library(forecast)
+
+
+## Main Plot
+plot(UnempRate, main = "Monthly Unemployment Rate from Jan 1948 to Nov 2016")
+
+
+
+## These plots help identify 'd', 'D', and 'S' in SARIMA(p,d,q)(P,D,Q)[S] model
+
+## Does log-transformation add more stationarity?
+plot(log(UnempRate), main = "Testing Log for Stationarity")
+
+## Does d=0, D=1 and S=12 add more stationarity?
+plot(diff(UnempRate,12), main = "Testing d=0, D=1 and S=12 for Stationarity")
+
+
+## Does d=1, D=1 and S=12 add more stationarity?
+plot(diff(diff(UnempRate,1),12), main = "Testing d=1, D=1 and S=12 for Stationarity")
+
+
+
+## The third option with d=1, D=1, and S=12 is relatively better in terms of stationarity.
+
+
+
+
+## Once we settled for d=1, D=1, and S=12, let's test their respective ACF and PACF Plots
+
+
+## ACF Plot for d=1, D=1, and S=12 
+acf(diff(diff(UnempRate,1),12), lag.max = 50, plot=TRUE, main="ACF Plot of Differenced Data")
+
+## PACF Plot for d=1, D=1, and S=12 
+pacf(diff(diff(UnempRate,1),12), lag.max = 50, plot=TRUE, main="PACF Plot of Differenced Data")
+
+
+## Acf plot cuts off at one lag for S=12 while PACF plot has exponentially decay at S=12
+
+
+## Fitting y_t to ARIMA(p,q,r,P,Q,R,S) and performing diagnostics on the residuals
+## Now test various values based on ACF and PACF plot while keeping S=12, d=1, and D=1.
+
+## In all models 'no.constant=False'
+## It is unlikely that mean of log of unemployment data is zero
+
+
+## Model 1 - (1,1,1)(2,1,1)[12]
+#sarima(y, 1,1,1,2,1,1,12,no.constant = FALSE) 
+
+
+## Model 2 - (1,1,1)(3,1,1)[12]
+#sarima(y, 1,1,1,3,1,1,12,no.constant = FALSE) 
+
+
+## Best Model based on residuals Check
+## Model 3 - (2,1,1)(0,1,1)[12]
+sarima(UnempRate, 2,1,1,0,1,1,12,no.constant = FALSE)  
+
+
+
+
+## Plot of 12-month forecast with the chosen model (2,1,1)(0,1,1)[12]
+
+sarima.for(UnempRate,12, 2,1,1,0,1,1,12, no.constant = FALSE)
+
+
+
+## Forecasting next 12 months with the chosen model (2,1,1)(0,1,1)[12]  
+
+
+sarima.for(UnempRate,12, 2,1,1,0,1,1,12,no.constant = FALSE, plot='FALSE')
+
+
+
+
