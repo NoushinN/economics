@@ -36,7 +36,7 @@ Differencing removes trends and can help achieve stationarity. Seasonal differen
 
 The code below illustrates a minimal time‑series workflow: plot the series, difference it if trend is present, then (optionally) run a stationarity test. It is written as a template so the book can render even if you do not have data or packages installed.
 
-```{r ts-stationarity-template, eval=FALSE}
+```{r ts-stationarity-template, eval=FALSE, echo=TRUE}
 # Template: check for non-stationarity and difference a series
 # y should be a numeric vector or ts object (e.g., monthly counts)
 y_ts <- ts(y, frequency = 12)

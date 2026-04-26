@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -194,6 +258,22 @@ Figure 8.1: Observed time series decomposed into trend and seasonality (illustra
 <p>Stationarity means statistical properties do not change over time. Many economic series have trends, changing variance, or evolving autocorrelation.</p>
 <p>Differencing removes trends and can help achieve stationarity. Seasonal differencing can remove repeating patterns.</p>
 <p>The code below illustrates a minimal time‑series workflow: plot the series, difference it if trend is present, then (optionally) run a stationarity test. It is written as a template so the book can render even if you do not have data or packages installed.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="time-series.html#cb2-1" tabindex="-1"></a><span class="co"># Template: check for non-stationarity and difference a series</span></span>
+<span id="cb2-2"><a href="time-series.html#cb2-2" tabindex="-1"></a><span class="co"># y should be a numeric vector or ts object (e.g., monthly counts)</span></span>
+<span id="cb2-3"><a href="time-series.html#cb2-3" tabindex="-1"></a>y_ts <span class="ot">&lt;-</span> <span class="fu">ts</span>(y, <span class="at">frequency =</span> <span class="dv">12</span>)</span>
+<span id="cb2-4"><a href="time-series.html#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="time-series.html#cb2-5" tabindex="-1"></a><span class="co"># Quick visual check</span></span>
+<span id="cb2-6"><a href="time-series.html#cb2-6" tabindex="-1"></a><span class="fu">plot</span>(y_ts, <span class="at">main =</span> <span class="st">&quot;Time series (raw)&quot;</span>)</span>
+<span id="cb2-7"><a href="time-series.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="time-series.html#cb2-8" tabindex="-1"></a><span class="co"># If trend is present, try differencing</span></span>
+<span id="cb2-9"><a href="time-series.html#cb2-9" tabindex="-1"></a>dy <span class="ot">&lt;-</span> <span class="fu">diff</span>(y_ts)</span>
+<span id="cb2-10"><a href="time-series.html#cb2-10" tabindex="-1"></a><span class="fu">plot</span>(dy, <span class="at">main =</span> <span class="st">&quot;First difference&quot;</span>)</span>
+<span id="cb2-11"><a href="time-series.html#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="time-series.html#cb2-12" tabindex="-1"></a><span class="co"># Formal test (requires tseries)</span></span>
+<span id="cb2-13"><a href="time-series.html#cb2-13" tabindex="-1"></a><span class="co"># install.packages(&quot;tseries&quot;) #if needed</span></span>
+<span id="cb2-14"><a href="time-series.html#cb2-14" tabindex="-1"></a><span class="fu">library</span>(tseries)</span>
+<span id="cb2-15"><a href="time-series.html#cb2-15" tabindex="-1"></a><span class="fu">adf.test</span>(y_ts)</span>
+<span id="cb2-16"><a href="time-series.html#cb2-16" tabindex="-1"></a><span class="fu">adf.test</span>(<span class="fu">na.omit</span>(dy))</span></code></pre></div>
 </div>
 <div id="ar-ma-and-arima-intuition" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> AR, MA, and ARIMA intuition<a href="time-series.html#ar-ma-and-arima-intuition" class="anchor-section" aria-label="Anchor link to header"></a></h2>

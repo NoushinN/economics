@@ -24,7 +24,7 @@ Figure \@ref(fig:fig-itsa-level-slope) distinguishes two common intervention eff
 
 The code below shows the standard segmented‑regression structure behind ITSA: a baseline trend, an intervention indicator (level change), and a post‑intervention trend term (slope change).
 
-```{r itsa-segmented-regression-template, eval=FALSE}
+```{r itsa-segmented-regression-template, eval=FALSE, echo=TRUE}
 # Template: segmented regression for ITSA
 # t0 = the time index where the intervention starts (e.g., month 25)
 

@@ -24,7 +24,7 @@ Figure \@ref(fig:fig-itsa-workflow) is a checklist for applied work. It helps en
 
 After fitting a segmented regression, a key check is whether residuals are autocorrelated.
 
-```{r itsa-diagnostics-template, eval=FALSE}
+```{r itsa-diagnostics-template, eval=FALSE, echo=TRUE}
 # Template: basic diagnostics after a segmented regression
 # install.packages(c("lmtest","sandwich","forecast")) if needed
 
