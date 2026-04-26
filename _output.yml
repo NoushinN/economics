@@ -1,6 +1,8 @@
 bookdown::gitbook:
   split_by: chapter
+  output_dir: "docs"
   config:
     toc:
       collapse: section
     download: ["pdf", "epub"]
+
