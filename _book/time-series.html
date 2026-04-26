@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes on Economics</title>
-  <meta name="description" content="Notes on Economics" />
+  <title>8 Time Series Forecasting Theory (AR, MA, ARMA, ARIMA) | Notes on Economics</title>
+  <meta name="description" content="8 Time Series Forecasting Theory (AR, MA, ARMA, ARIMA) | Notes on Economics" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes on Economics" />
+  <meta property="og:title" content="8 Time Series Forecasting Theory (AR, MA, ARMA, ARIMA) | Notes on Economics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes on Economics" />
+  <meta name="twitter:title" content="8 Time Series Forecasting Theory (AR, MA, ARMA, ARIMA) | Notes on Economics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="what-is-econ.html"/>
+<link rel="prev" href="multivariate.html"/>
+<link rel="next" href="causality.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -164,76 +164,53 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes on Economics</h1>
-<p class="author"><em>Noushin Nabavi</em></p>
-<p class="date"><em>2026-04-24</em></p>
-</div>
-<div id="welcome" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These notes provide an applied introduction to economics and econometrics, with an emphasis on understanding real‑world economic issues and evaluating policy interventions. The material combines economic reasoning with empirical tools commonly used in public policy, health economics, and applied social science.</p>
-<p>The focus throughout is on interpretation and judgment rather than formal derivation. Economic models and statistical methods are treated as tools for reasoning about evidence, not as ends in themselves.</p>
-<hr />
-<div id="who-this-book-is-for" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Who this book is for<a href="index.html#who-this-book-is-for" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These notes are intended for:</p>
+<div id="time-series" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)<a href="time-series.html#time-series" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Time series data record values over time. Forecasting requires understanding persistence, trend, seasonality, and whether the series is stable. Many economic series are non-stationary, so transformations are often needed.</p>
+<p>Roadmap</p>
+<p>We introduce time series components, define stationarity, and explain AR and MA intuition. We then describe ARIMA notation and a practical Box-Jenkins workflow.</p>
+<p>Learning objectives</p>
 <ul>
-<li>students in economics, public policy, health sciences, and related fields</li>
-<li>analysts and researchers working with applied economic data</li>
-<li>readers with basic quantitative literacy who want to understand how economic evidence is produced and interpreted</li>
+<li>Identify trend, seasonality, cycles, and noise in a series.</li>
+<li>Explain stationarity and why differencing can help.</li>
+<li>Describe AR and MA intuition and how ACF/PACF guide orders.</li>
+<li>Explain ARIMA(p,d,q) and seasonal extensions.</li>
+<li>Outline a workflow for building and diagnosing forecasting models.</li>
 </ul>
-<p>The book does not assume advanced mathematics. Familiarity with introductory statistics is helpful but not required for all chapters.</p>
-<hr />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ts-components"></span>
+<img src="images/07_time_series_components.png" alt="Observed time series decomposed into trend and seasonality (illustrative). Decomposition supports model selection and clarifies why differencing or seasonal adjustment may be needed." width="95%" />
+<p class="caption">
+Figure 8.1: Observed time series decomposed into trend and seasonality (illustrative). Decomposition supports model selection and clarifies why differencing or seasonal adjustment may be needed.
+</p>
 </div>
-<div id="how-the-book-is-organized" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> How the book is organized<a href="index.html#how-the-book-is-organized" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The chapters progress from concepts to methods to applications:</p>
+<p>Figure <a href="time-series.html#fig:fig-ts-components">8.1</a> shows that a series can have structure beyond random noise. Forecasting aims to model that structure without overfitting it.</p>
+<div id="components-and-visualization" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Components and visualization<a href="time-series.html#components-and-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Trend is a long-run movement. Seasonality repeats at fixed intervals. Cycles are longer fluctuations that may not repeat regularly. Noise is unpredictable variation.</p>
+<p>Visualization is the first diagnostic step. A series that looks like white noise is not forecastable beyond its mean.</p>
+</div>
+<div id="stationarity-and-differencing" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Stationarity and differencing<a href="time-series.html#stationarity-and-differencing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Stationarity means statistical properties do not change over time. Many economic series have trends, changing variance, or evolving autocorrelation.</p>
+<p>Differencing removes trends and can help achieve stationarity. Seasonal differencing can remove repeating patterns.</p>
+</div>
+<div id="ar-ma-and-arima-intuition" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> AR, MA, and ARIMA intuition<a href="time-series.html#ar-ma-and-arima-intuition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>AR models use past values. MA models use past shocks. ARMA combines both. ARIMA adds differencing when the original series is non-stationary.</p>
+<p>ACF and PACF help propose orders. Information criteria help compare models. Residual checks test whether structure remains.</p>
+<p>Common pitfalls</p>
 <ul>
-<li>Early sections introduce economic thinking, scarcity, incentives, institutions, and market structure.</li>
-<li>Middle sections cover core microeconomic and macroeconomic ideas, including policy tools.</li>
-<li>Later sections focus on empirical methods, including regression, time series analysis, and quasi‑experimental designs used for policy evaluation.</li>
+<li>Fitting ARIMA to non-stationary data without differencing.</li>
+<li>Choosing high orders that fit noise rather than signal.</li>
+<li>Ignoring seasonality when it is visually present.</li>
+<li>Treating forecasts as certainty rather than probabilistic ranges.</li>
 </ul>
-<p>Chapters are designed to be read independently, but later material builds on ideas introduced earlier.</p>
-<hr />
-</div>
-<div id="using-figures-and-visuals" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Using figures and visuals<a href="index.html#using-figures-and-visuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Visual figures are used throughout the book to anchor intuition before formal models or code are introduced. Figures are intended to:</p>
+<p>Key takeaways</p>
 <ul>
-<li>clarify relationships between economic actors and variables</li>
-<li>illustrate dynamic patterns such as trends, cycles, and interventions</li>
-<li>support interpretation of statistical results</li>
+<li>Stationarity is central for many time-series models.</li>
+<li>ACF/PACF, information criteria, and residual checks form a practical workflow.</li>
+<li>Forecasts should be evaluated for plausibility and uncertainty.</li>
 </ul>
-<p>Figures are referenced directly in the text and can be revisited as summaries of key ideas.</p>
-<hr />
-</div>
-<div id="using-r-code" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Using R code<a href="index.html#using-r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Some sections include R code to illustrate empirical workflows.</p>
-<ul>
-<li>Code chunks are included as examples and templates.</li>
-<li>Some chunks may be set with eval = FALSE so the book can render without requiring all packages or datasets.</li>
-<li>Readers who wish to run the code locally can enable evaluation after installing required packages and ensuring data availability.</li>
-</ul>
-<p>The emphasis is on understanding the logic of analysis rather than reproducing results exactly.</p>
-<hr />
-</div>
-<div id="learning-goals" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Learning goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of these notes, readers should be able to:</p>
-<ul>
-<li>explain core economic concepts and relate them to real‑world policy questions</li>
-<li>interpret common economic indicators such as GDP, inflation, and unemployment</li>
-<li>understand the logic and limitations of regression‑based analysis</li>
-<li>recognize issues of trend, autocorrelation, and stationarity in time‑series data</li>
-<li>assess policy interventions using quasi‑experimental reasoning, including interrupted time series analysis</li>
-</ul>
-<hr />
-</div>
-<div id="notes-on-scope-and-interpretation" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> Notes on scope and interpretation<a href="index.html#notes-on-scope-and-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These notes emphasize interpretation, assumptions, and context. Economic evidence is always produced within institutional, data, and modeling constraints. Throughout the book, attention is given to limitations and uncertainty alongside results.</p>
-<p>Readers are encouraged to treat the material as a foundation for critical analysis rather than as a set of mechanical procedures.</p>
 
 </div>
 </div>
@@ -242,8 +219,8 @@
           </div>
         </div>
       </div>
-
-<a href="what-is-econ.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="multivariate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="causality.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

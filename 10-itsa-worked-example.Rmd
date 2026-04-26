@@ -1,0 +1,13 @@
+
+# Interrupted Time Series Analysis (ITSA): Worked Example {#itsa-applied}
+
+This chapter sketches an applied workflow for ITSA in R.
+
+
+```{r fig-itsa-workflow, echo=FALSE, fig.cap='ITSA workflow for evaluation (conceptual).', out.width='90%'}
+knitr::include_graphics('images/10_itsa_workflow.png')
+```
+
+
+Figure \@ref(fig:fig-itsa-workflow) summarizes a practical workflow: prepare data, visualize, specify and diagnose a model, refine, and report the effect.
+

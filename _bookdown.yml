@@ -1,5 +1,14 @@
-book_filename: "economics"
+book_filename: "notes-on-economics"
 delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Chapter "
+rmd_files:
+  - "index.Rmd"
+  - "01-what-is-economics.Rmd"
+  - "02-microeconomics-essentials.Rmd"
+  - "03-macroeconomics-measurement.Rmd"
+  - "04-fiscal-monetary-policy.Rmd"
+  - "05-ols-simple-linear-regression.Rmd"
+  - "06-multivariate-modeling.Rmd"
+  - "07-time-series-forecasting.Rmd"
+  - "08-causality-policy-evaluation.Rmd"
+  - "09-interrupted-time-series-analysis.Rmd"
+  - "10-itsa-workflow.Rmd"

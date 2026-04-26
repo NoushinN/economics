@@ -1,24 +1,95 @@
---- 
+---
 title: "Notes on Economics"
 author: "Noushin Nabavi"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+output:
+  bookdown::gitbook
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "Micro- and macroeconomics concepts"
 ---
 
-# Prerequisites
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center"
+)
+```
 
-A series of notes to from several courses on economic literacy, econometrics and its applications. Through these notes, it is hoped that one will be able to comprehend and use basic econometric concepts and their applications. 
-Econometrics skills are valuable for economics, business and financial analyses, enabling us to assess the effects of different factors on the variables of interest, and how to make meaningful conclusions from various sets of data.
+# Welcome {#welcome}
 
-With the aid of notes, one should be able to: 
-(a) explain  macroeconomic challenges and current and future economical trends;   
-(b) calculate and interpret macroeconomic statistics (e.g.GDP, unemployment rates, inflation and poverty rates); and   
-(c) analyze and evaluate the use of monetary and fiscal policy to stabilize the economy (e.g.taxing policies).  
+These notes provide an applied introduction to economics and econometrics, with an emphasis on understanding real‑world economic issues and evaluating policy interventions. The material combines economic reasoning with empirical tools commonly used in public policy, health economics, and applied social science.
 
+The focus throughout is on interpretation and judgment rather than formal derivation. Economic models and statistical methods are treated as tools for reasoning about evidence, not as ends in themselves.
 
+---
 
+## Who this book is for
+
+These notes are intended for:
+
+- students in economics, public policy, health sciences, and related fields
+- analysts and researchers working with applied economic data
+- readers with basic quantitative literacy who want to understand how economic evidence is produced and interpreted
+
+The book does not assume advanced mathematics. Familiarity with introductory statistics is helpful but not required for all chapters.
+
+---
+
+## How the book is organized
+
+The chapters progress from concepts to methods to applications:
+
+- Early sections introduce economic thinking, scarcity, incentives, institutions, and market structure.
+- Middle sections cover core microeconomic and macroeconomic ideas, including policy tools.
+- Later sections focus on empirical methods, including regression, time series analysis, and quasi‑experimental designs used for policy evaluation.
+
+Chapters are designed to be read independently, but later material builds on ideas introduced earlier.
+
+---
+
+## Using figures and visuals
+
+Visual figures are used throughout the book to anchor intuition before formal models or code are introduced. Figures are intended to:
+
+- clarify relationships between economic actors and variables
+- illustrate dynamic patterns such as trends, cycles, and interventions
+- support interpretation of statistical results
+
+Figures are referenced directly in the text and can be revisited as summaries of key ideas.
+
+---
+
+## Using R code
+
+Some sections include R code to illustrate empirical workflows.
+
+- Code chunks are included as examples and templates.
+- Some chunks may be set with eval = FALSE so the book can render without requiring all packages or datasets.
+- Readers who wish to run the code locally can enable evaluation after installing required packages and ensuring data availability.
+
+The emphasis is on understanding the logic of analysis rather than reproducing results exactly.
+
+---
+
+## Learning goals
+
+By the end of these notes, readers should be able to:
+
+- explain core economic concepts and relate them to real‑world policy questions
+- interpret common economic indicators such as GDP, inflation, and unemployment
+- understand the logic and limitations of regression‑based analysis
+- recognize issues of trend, autocorrelation, and stationarity in time‑series data
+- assess policy interventions using quasi‑experimental reasoning, including interrupted time series analysis
+
+---
+
+## Notes on scope and interpretation
+
+These notes emphasize interpretation, assumptions, and context. Economic evidence is always produced within institutional, data, and modeling constraints. Throughout the book, attention is given to limitations and uncertainty alongside results.
+
+Readers are encouraged to treat the material as a foundation for critical analysis rather than as a set of mechanical procedures.

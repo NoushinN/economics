@@ -1,0 +1,48 @@
+# Interrupted Time Series Analysis (ITSA): Concepts {#itsa}
+
+Interrupted time series analysis evaluates interventions when randomization is not feasible. It uses the pre-intervention trend as a counterfactual and examines whether the post-intervention series shows an immediate level change, a slope change, or both.
+
+Roadmap
+
+We define ITSA, describe segmented regression components, then discuss assumptions and common threats. We close with extensions such as covariates, seasonality, and comparison series.
+
+Learning objectives
+
+- Define ITSA and explain when it is appropriate.
+- Interpret level and slope changes as policy effects.
+- Identify assumptions and threats such as co-interventions.
+- Understand why autocorrelation requires special handling.
+- Describe extensions such as controlled ITSA.
+
+
+```{r fig-itsa-level-slope, echo=FALSE, fig.cap='Interrupted time series showing an intervention point with both a level change and a slope change. These components map directly to segmented regression parameters.', out.width='95%'}
+knitr::include_graphics('images/09_itsa_level_slope.png')
+```
+
+
+Figure \@ref(fig:fig-itsa-level-slope) distinguishes two common intervention effects. Some policies cause immediate discontinuities; others change trends over time.
+
+## Segmented regression interpretation
+
+A basic ITSA model estimates baseline trend, an immediate shift at the intervention, and a change in slope afterward. Interpretation depends on implementation timing and theory of change.
+
+## Assumptions and threats
+
+The central assumption is that the pre-intervention trend would have continued absent the intervention. Threats include co-interventions, changes in measurement, seasonality, and regression to the mean.
+
+Autocorrelation is common in time series and can invalidate naive standard errors.
+
+## Extensions
+
+Extensions include covariates, interaction terms for heterogeneity, seasonality controls, time-series error structures, and comparison series.
+
+Common pitfalls
+
+- Declaring a causal effect without checking co-interventions.
+- Using too few pre-intervention points to assess trend.
+- Ignoring autocorrelation and seasonality.
+
+Key takeaways
+
+- ITSA is powerful when trends are stable and intervention timing is clear.
+- Diagnostics and robustness checks are essential for credible claims.

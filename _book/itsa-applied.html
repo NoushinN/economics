@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Notes on Economics</title>
-  <meta name="description" content="Notes on Economics" />
+  <title>11 Interrupted Time Series Analysis (ITSA): Worked Workflow | Notes on Economics</title>
+  <meta name="description" content="11 Interrupted Time Series Analysis (ITSA): Worked Workflow | Notes on Economics" />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Notes on Economics" />
+  <meta property="og:title" content="11 Interrupted Time Series Analysis (ITSA): Worked Workflow | Notes on Economics" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Notes on Economics" />
+  <meta name="twitter:title" content="11 Interrupted Time Series Analysis (ITSA): Worked Workflow | Notes on Economics" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="itsa.html"/>
 
-<link rel="next" href="what-is-econ.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -164,76 +164,48 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Notes on Economics</h1>
-<p class="author"><em>Noushin Nabavi</em></p>
-<p class="date"><em>2026-04-24</em></p>
-</div>
-<div id="welcome" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Welcome<a href="index.html#welcome" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>These notes provide an applied introduction to economics and econometrics, with an emphasis on understanding real‑world economic issues and evaluating policy interventions. The material combines economic reasoning with empirical tools commonly used in public policy, health economics, and applied social science.</p>
-<p>The focus throughout is on interpretation and judgment rather than formal derivation. Economic models and statistical methods are treated as tools for reasoning about evidence, not as ends in themselves.</p>
-<hr />
-<div id="who-this-book-is-for" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Who this book is for<a href="index.html#who-this-book-is-for" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These notes are intended for:</p>
+<div id="itsa-applied" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Interrupted Time Series Analysis (ITSA): Worked Workflow<a href="itsa-applied.html#itsa-applied" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter summarizes a practical workflow for implementing ITSA. The goal is to structure applied work so that assumptions are checked, diagnostics are reported, and results are communicated clearly.</p>
+<p>Roadmap</p>
+<p>We outline a step-by-step process from data preparation to model refinement and reporting. The workflow is compatible with regression-based ITSA and time-series error models.</p>
+<p>Learning objectives</p>
 <ul>
-<li>students in economics, public policy, health sciences, and related fields</li>
-<li>analysts and researchers working with applied economic data</li>
-<li>readers with basic quantitative literacy who want to understand how economic evidence is produced and interpreted</li>
+<li>Prepare and structure time-series data for ITSA.</li>
+<li>Use plots to check trends, outliers, and seasonality.</li>
+<li>Specify a segmented regression model and interpret parameters.</li>
+<li>Diagnose autocorrelation and adjust inference.</li>
+<li>Report results with uncertainty and sensitivity checks.</li>
 </ul>
-<p>The book does not assume advanced mathematics. Familiarity with introductory statistics is helpful but not required for all chapters.</p>
-<hr />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-itsa-workflow"></span>
+<img src="images/10_itsa_workflow.png" alt="Practical ITSA workflow: prepare data, visualize, specify model, check autocorrelation, refine, and report effects with uncertainty and sensitivity checks." width="95%" />
+<p class="caption">
+Figure 11.1: Practical ITSA workflow: prepare data, visualize, specify model, check autocorrelation, refine, and report effects with uncertainty and sensitivity checks.
+</p>
 </div>
-<div id="how-the-book-is-organized" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> How the book is organized<a href="index.html#how-the-book-is-organized" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The chapters progress from concepts to methods to applications:</p>
+<p>Figure <a href="itsa-applied.html#fig:fig-itsa-workflow">11.1</a> is a checklist for applied work. It helps ensure that evaluation is transparent and reproducible.</p>
+<div id="reporting-recommendations" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Reporting recommendations<a href="itsa-applied.html#reporting-recommendations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A strong ITSA report includes:</p>
 <ul>
-<li>Early sections introduce economic thinking, scarcity, incentives, institutions, and market structure.</li>
-<li>Middle sections cover core microeconomic and macroeconomic ideas, including policy tools.</li>
-<li>Later sections focus on empirical methods, including regression, time series analysis, and quasi‑experimental designs used for policy evaluation.</li>
+<li>clear definition of the intervention and timing</li>
+<li>justification for pre and post windows</li>
+<li>plots of the outcome with intervention markers</li>
+<li>model specification with level and slope terms</li>
+<li>autocorrelation diagnostics and corrected inference</li>
+<li>sensitivity analysis (alternative windows, functional forms, seasonality)</li>
 </ul>
-<p>Chapters are designed to be read independently, but later material builds on ideas introduced earlier.</p>
-<hr />
-</div>
-<div id="using-figures-and-visuals" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Using figures and visuals<a href="index.html#using-figures-and-visuals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Visual figures are used throughout the book to anchor intuition before formal models or code are introduced. Figures are intended to:</p>
+<p>Common pitfalls</p>
 <ul>
-<li>clarify relationships between economic actors and variables</li>
-<li>illustrate dynamic patterns such as trends, cycles, and interventions</li>
-<li>support interpretation of statistical results</li>
+<li>Reporting a single model with no sensitivity checks.</li>
+<li>Omitting diagnostic evidence for autocorrelation.</li>
+<li>Over-interpreting short post-intervention windows.</li>
 </ul>
-<p>Figures are referenced directly in the text and can be revisited as summaries of key ideas.</p>
-<hr />
-</div>
-<div id="using-r-code" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Using R code<a href="index.html#using-r-code" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Some sections include R code to illustrate empirical workflows.</p>
+<p>Key takeaways</p>
 <ul>
-<li>Code chunks are included as examples and templates.</li>
-<li>Some chunks may be set with eval = FALSE so the book can render without requiring all packages or datasets.</li>
-<li>Readers who wish to run the code locally can enable evaluation after installing required packages and ensuring data availability.</li>
+<li>A transparent workflow improves credibility.</li>
+<li>Sensitivity checks are part of good evaluation practice.</li>
 </ul>
-<p>The emphasis is on understanding the logic of analysis rather than reproducing results exactly.</p>
-<hr />
-</div>
-<div id="learning-goals" class="section level2 hasAnchor" number="1.5">
-<h2><span class="header-section-number">1.5</span> Learning goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>By the end of these notes, readers should be able to:</p>
-<ul>
-<li>explain core economic concepts and relate them to real‑world policy questions</li>
-<li>interpret common economic indicators such as GDP, inflation, and unemployment</li>
-<li>understand the logic and limitations of regression‑based analysis</li>
-<li>recognize issues of trend, autocorrelation, and stationarity in time‑series data</li>
-<li>assess policy interventions using quasi‑experimental reasoning, including interrupted time series analysis</li>
-</ul>
-<hr />
-</div>
-<div id="notes-on-scope-and-interpretation" class="section level2 hasAnchor" number="1.6">
-<h2><span class="header-section-number">1.6</span> Notes on scope and interpretation<a href="index.html#notes-on-scope-and-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>These notes emphasize interpretation, assumptions, and context. Economic evidence is always produced within institutional, data, and modeling constraints. Throughout the book, attention is given to limitations and uncertainty alongside results.</p>
-<p>Readers are encouraged to treat the material as a foundation for critical analysis rather than as a set of mechanical procedures.</p>
 
 </div>
 </div>
@@ -242,8 +214,8 @@
           </div>
         </div>
       </div>
+<a href="itsa.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="what-is-econ.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
