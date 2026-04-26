@@ -22,6 +22,37 @@ knitr::include_graphics('images/09_itsa_level_slope.png')
 
 Figure \@ref(fig:fig-itsa-level-slope) distinguishes two common intervention effects. Some policies cause immediate discontinuities; others change trends over time.
 
+The code below shows the standard segmented‑regression structure behind ITSA: a baseline trend, an intervention indicator (level change), and a post‑intervention trend term (slope change).
+
+```{r itsa-segmented-regression-template, eval=FALSE}
+# Template: segmented regression for ITSA
+# t0 = the time index where the intervention starts (e.g., month 25)
+
+# Example data (simulated) — replace this block with your real dataset
+set.seed(1)
+n <- 60
+t0 <- 31  # intervention starts at time point 31 (adjust as needed)
+
+df <- data.frame(
+  time = 1:n
+)
+
+# Create a simple outcome with a baseline trend + level change + slope change
+df$intervention <- ifelse(df$time >= t0, 1, 0)
+df$post_time <- pmax(0, df$time - t0 + 1)
+
+df$outcome <- 10 + 0.10*df$time + 2*df$intervention + 0.05*df$post_time + rnorm(n, 0, 0.5)
+
+# Fit segmented regression
+model_itsa <- lm(outcome ~ time + intervention + post_time, data = df)
+summary(model_itsa)
+
+# Interpretation:
+# - intervention = immediate level change at t0
+# - post_time    = change in slope after t0
+```
+
+
 ## Segmented regression interpretation
 
 A basic ITSA model estimates baseline trend, an immediate shift at the intervention, and a change in slope afterward. Interpretation depends on implementation timing and theory of change.

@@ -22,6 +22,20 @@ knitr::include_graphics('images/10_itsa_workflow.png')
 
 Figure \@ref(fig:fig-itsa-workflow) is a checklist for applied work. It helps ensure that evaluation is transparent and reproducible.
 
+After fitting a segmented regression, a key check is whether residuals are autocorrelated.
+
+```{r itsa-diagnostics-template, eval=FALSE}
+# Template: basic diagnostics after a segmented regression
+# install.packages(c("lmtest","sandwich","forecast")) if needed
+
+library(lmtest)
+library(forecast)
+
+# model_itsa is the fitted model from the segmented regression
+dwtest(model_itsa)                 # Durbin-Watson test for autocorrelation
+checkresiduals(model_itsa)         # residual plot + ACF check
+```
+
 ## Reporting recommendations
 
 A strong ITSA report includes:

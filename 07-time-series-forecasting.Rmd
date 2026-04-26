@@ -34,6 +34,27 @@ Stationarity means statistical properties do not change over time. Many economic
 
 Differencing removes trends and can help achieve stationarity. Seasonal differencing can remove repeating patterns.
 
+The code below illustrates a minimal time‑series workflow: plot the series, difference it if trend is present, then (optionally) run a stationarity test. It is written as a template so the book can render even if you do not have data or packages installed.
+
+```{r ts-stationarity-template, eval=FALSE}
+# Template: check for non-stationarity and difference a series
+# y should be a numeric vector or ts object (e.g., monthly counts)
+y_ts <- ts(y, frequency = 12)
+
+# Quick visual check
+plot(y_ts, main = "Time series (raw)")
+
+# If trend is present, try differencing
+dy <- diff(y_ts)
+plot(dy, main = "First difference")
+
+# Formal test (requires tseries)
+# install.packages("tseries") #if needed
+library(tseries)
+adf.test(y_ts)
+adf.test(na.omit(dy))
+```
+
 ## AR, MA, and ARIMA intuition
 
 AR models use past values. MA models use past shocks. ARMA combines both. ARIMA adds differencing when the original series is non-stationary.

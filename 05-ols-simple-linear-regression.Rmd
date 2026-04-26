@@ -22,6 +22,38 @@ knitr::include_graphics('images/05_ols_with_residuals.png')
 
 Figure \@ref(fig:fig-ols-resid) highlights a key lesson: interpretation depends on both the relationship and the leftover structure in residuals.
 
+The code below shows what a baseline OLS workflow looks like in practice. It is a template (not meant to run as-is) and uses robust standard errors to reflect common real‑world data issues. 
+
+```{r ols-template-robust, eval=FALSE}
+
+# Example data (simulated) — replace this block with your real series when available
+set.seed(1)
+y <- 100 + cumsum(rnorm(60, 0, 2)) + 10*sin(2*pi*(1:60)/12)  # trend + seasonality
+
+# Example data (simulated) — replace with your real dataset
+set.seed(1)
+df <- data.frame(
+  outcome = rnorm(100),
+  exposure = rbinom(100, 1, 0.5),
+  age = sample(18:90, 100, TRUE),
+  sex = sample(c("F","M"), 100, TRUE)
+)
+
+# Template: OLS as a baseline model (replace df/outcome/exposure with your variables)
+fit <- lm(outcome ~ exposure + age + sex, data = df)
+summary(fit)
+
+# If heteroskedasticity is plausible, use robust standard errors
+
+# Optional: robust standard errors
+# install.packages(c("sandwich", "lmtest")) #if not already installed
+library(sandwich)
+library(lmtest)
+
+
+coeftest(fit, vcov. = vcovHC(fit, type = "HC1"))
+```
+
 ## What OLS estimates
 
 In a simple linear regression, the coefficient summarizes average change in the outcome when the predictor changes by one unit, holding other modeled factors fixed.

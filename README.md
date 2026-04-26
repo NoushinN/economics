@@ -64,4 +64,4 @@ To render the book locally:
 
 ```r
 source("build_book.R")
-``
+```

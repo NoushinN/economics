@@ -34,6 +34,22 @@ Elasticity measures responsiveness. Price elasticity of demand is the percent ch
 
 Elasticity matters because it shapes incidence. When demand is relatively inelastic, consumers bear more of a tax burden. When supply is relatively inelastic, producers bear more. This is a key lesson for policy design: legal incidence and economic incidence are different.
 
+```{r incidence-mini-sim, echo=FALSE}
+# Simple illustration: steeper (inelastic) demand shifts more burden to consumers
+q <- seq(0, 10, length.out = 100)
+d1 <- 10 - q                 # flatter demand (more elastic)
+d2 <- 10 - 0.5*q             # steeper demand (less elastic)
+s  <- q
+
+plot(q, d1, type="l", lwd=2, ylim=c(0,10), xlab="Quantity", ylab="Price",
+     main="Incidence intuition: demand elasticity matters")
+lines(q, d2, lwd=2, lty=2)
+lines(q, s,  lwd=2)
+legend("topright",
+       legend=c("Demand (more elastic)", "Demand (less elastic)", "Supply"),
+       lty=c(1,2,1), lwd=2)
+```
+
 ## Market power in practice
 
 Market power arises when firms or buyers can influence prices. Barriers to entry, networks, scale economies, and control over inputs all contribute.
