@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -136,6 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Book of Economics</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.1</b> Who this book is for</a></li>
@@ -143,44 +147,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#using-figures-and-visuals"><i class="fa fa-check"></i><b>1.3</b> Using figures and visuals</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#using-r-code"><i class="fa fa-check"></i><b>1.4</b> Using R code</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.5</b> Learning goals</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#notes-on-scope-and-interpretation"><i class="fa fa-check"></i><b>1.6</b> Notes on scope and interpretation</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#a-note-on-interpretation-and-evidence"><i class="fa fa-check"></i><b>1.6</b> A note on interpretation and evidence</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="what-is-econ.html"><a href="what-is-econ.html"><i class="fa fa-check"></i><b>2</b> What is Economics?</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-and-opportunity-cost"><i class="fa fa-check"></i><b>2.1</b> Scarcity and opportunity cost</a></li>
-<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.2</b> Economics as evidence and as judgment</a></li>
-<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.3</b> Economic theories and assumptions</a></li>
-<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.4</b> Economic actors</a></li>
-<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.5</b> Markets and market structure</a></li>
-<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.6</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#roadmap"><i class="fa fa-check"></i><b>2.1</b> Roadmap</a></li>
+<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost"><i class="fa fa-check"></i><b>2.3</b> Scarcity, trade-offs, and opportunity cost</a></li>
+<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#incentives-and-behaviour"><i class="fa fa-check"></i><b>2.4</b> Incentives and behaviour</a></li>
+<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.5</b> Economics as evidence and as judgment</a></li>
+<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.6</b> Economic theories and assumptions</a></li>
+<li class="chapter" data-level="2.7" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.7</b> Economic actors</a></li>
+<li class="chapter" data-level="2.8" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.8</b> Markets and market structure</a></li>
+<li class="chapter" data-level="2.9" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.9</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.10" data-path="what-is-econ.html"><a href="what-is-econ.html#common-pitfalls"><i class="fa fa-check"></i><b>2.10</b> Common pitfalls</a></li>
+<li class="chapter" data-level="2.11" data-path="what-is-econ.html"><a href="what-is-econ.html#key-takeaways"><i class="fa fa-check"></i><b>2.11</b> Key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="micro.html"><a href="micro.html"><i class="fa fa-check"></i><b>3</b> Microeconomics Essentials</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.1</b> Supply, demand, and equilibrium</a></li>
-<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#elasticity-and-incidence"><i class="fa fa-check"></i><b>3.2</b> Elasticity and incidence</a></li>
-<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#market-power-in-practice"><i class="fa fa-check"></i><b>3.3</b> Market power in practice</a></li>
-<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#externalities-and-public-goods"><i class="fa fa-check"></i><b>3.4</b> Externalities and public goods</a></li>
+<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.2</b> Supply, demand, and equilibrium</a></li>
+<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#elasticity-behavioural-response-and-incidence"><i class="fa fa-check"></i><b>3.3</b> Elasticity, behavioural response, and incidence</a></li>
+<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#market-power-and-regulation"><i class="fa fa-check"></i><b>3.4</b> Market power and regulation</a></li>
+<li class="chapter" data-level="3.5" data-path="micro.html"><a href="micro.html#externalities-public-goods-and-market-failure"><i class="fa fa-check"></i><b>3.5</b> Externalities, public goods, and market failure</a></li>
+<li class="chapter" data-level="3.6" data-path="micro.html"><a href="micro.html#common-pitfalls-and-key-takeaways"><i class="fa fa-check"></i><b>3.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="macro.html"><a href="macro.html"><i class="fa fa-check"></i><b>4</b> Macroeconomics: Measurement and Trends</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#gdp-and-national-accounts"><i class="fa fa-check"></i><b>4.1</b> GDP and national accounts</a></li>
-<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#inflation-and-price-indices"><i class="fa fa-check"></i><b>4.2</b> Inflation and price indices</a></li>
-<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.3</b> Unemployment, participation, and labour markets</a></li>
-<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#growth-and-cycles"><i class="fa fa-check"></i><b>4.4</b> Growth and cycles</a></li>
-<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.5</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#gdp-economic-activity-and-national-accounts"><i class="fa fa-check"></i><b>4.2</b> GDP, economic activity, and national accounts</a></li>
+<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#inflation-prices-and-purchasing-power"><i class="fa fa-check"></i><b>4.3</b> Inflation, prices, and purchasing power</a></li>
+<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.4</b> Unemployment, participation, and labour markets</a></li>
+<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations"><i class="fa fa-check"></i><b>4.5</b> Growth, business cycles, and macroeconomic fluctuations</a></li>
+<li class="chapter" data-level="4.6" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.6</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.7" data-path="macro.html"><a href="macro.html#common-pitfalls-and-key-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="policy.html"><a href="policy.html"><i class="fa fa-check"></i><b>5</b> Fiscal and Monetary Policy</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#fiscal-policy"><i class="fa fa-check"></i><b>5.1</b> Fiscal policy</a></li>
-<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#monetary-policy"><i class="fa fa-check"></i><b>5.2</b> Monetary policy</a></li>
-<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#practical-limits-and-trade-offs"><i class="fa fa-check"></i><b>5.3</b> Practical limits and trade-offs</a></li>
+<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#fiscal-policy-deficits-and-stabilization"><i class="fa fa-check"></i><b>5.2</b> Fiscal policy, deficits, and stabilization</a></li>
+<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#monetary-policy-and-financial-conditions"><i class="fa fa-check"></i><b>5.3</b> Monetary policy and financial conditions</a></li>
+<li class="chapter" data-level="5.4" data-path="policy.html"><a href="policy.html#transmission-lags-uncertainty-and-policy-trade-offs"><i class="fa fa-check"></i><b>5.4</b> Transmission lags, uncertainty, and policy trade-offs</a></li>
+<li class="chapter" data-level="5.5" data-path="policy.html"><a href="policy.html#common-pitfalls-and-key-takeaways-2"><i class="fa fa-check"></i><b>5.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ols.html"><a href="ols.html"><i class="fa fa-check"></i><b>6</b> Ordinary Least Squares (OLS): Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.1</b> What OLS estimates</a></li>
-<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#assumptions-and-why-they-matter"><i class="fa fa-check"></i><b>6.2</b> Assumptions and why they matter</a></li>
-<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#reading-output"><i class="fa fa-check"></i><b>6.3</b> Reading output</a></li>
-<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-fixes"><i class="fa fa-check"></i><b>6.4</b> Diagnostics and practical fixes</a></li>
+<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.2</b> What OLS estimates</a></li>
+<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#residuals-assumptions-and-inference"><i class="fa fa-check"></i><b>6.3</b> Residuals, assumptions, and inference</a></li>
+<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#reading-regression-output"><i class="fa fa-check"></i><b>6.4</b> Reading regression output</a></li>
+<li class="chapter" data-level="6.5" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-responses"><i class="fa fa-check"></i><b>6.5</b> Diagnostics and practical responses</a></li>
+<li class="chapter" data-level="6.6" data-path="ols.html"><a href="ols.html#common-pitfalls-and-key-takeaways-3"><i class="fa fa-check"></i><b>6.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="multivariate.html"><a href="multivariate.html"><i class="fa fa-check"></i><b>7</b> Multivariate Modeling</a>
 <ul>
@@ -191,26 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#components-and-visualization"><i class="fa fa-check"></i><b>8.1</b> Components and visualization</a></li>
-<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.2</b> Stationarity and differencing</a></li>
-<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.3</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#learning-objectives-5"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#components-of-time-series-data"><i class="fa fa-check"></i><b>8.2</b> Components of time series data</a></li>
+<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.3</b> Stationarity and differencing</a></li>
+<li class="chapter" data-level="8.4" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.4</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.5" data-path="time-series.html"><a href="time-series.html#forecasting-workflow-and-diagnostics"><i class="fa fa-check"></i><b>8.5</b> Forecasting workflow and diagnostics</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causality.html"><a href="causality.html"><i class="fa fa-check"></i><b>9</b> Causality, Identification, and Policy Evaluation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.1</b> Threats to causal inference</a></li>
-<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#common-strategies"><i class="fa fa-check"></i><b>9.2</b> Common strategies</a></li>
-<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#practical-checklist"><i class="fa fa-check"></i><b>9.3</b> Practical checklist</a></li>
+<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#learning-objectives-6"><i class="fa fa-check"></i><b>9.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#correlation-causation-and-the-counterfactual-problem"><i class="fa fa-check"></i><b>9.2</b> Correlation, causation, and the counterfactual problem</a></li>
+<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.3</b> Threats to causal inference</a></li>
+<li class="chapter" data-level="9.4" data-path="causality.html"><a href="causality.html#common-identification-strategies"><i class="fa fa-check"></i><b>9.4</b> Common identification strategies</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="causality.html"><a href="causality.html#randomized-experiments"><i class="fa fa-check"></i><b>9.4.1</b> Randomized experiments</a></li>
+<li class="chapter" data-level="9.4.2" data-path="causality.html"><a href="causality.html#difference-in-differences"><i class="fa fa-check"></i><b>9.4.2</b> Difference-in-differences</a></li>
+<li class="chapter" data-level="9.4.3" data-path="causality.html"><a href="causality.html#instrumental-variables"><i class="fa fa-check"></i><b>9.4.3</b> Instrumental variables</a></li>
+<li class="chapter" data-level="9.4.4" data-path="causality.html"><a href="causality.html#regression-discontinuity"><i class="fa fa-check"></i><b>9.4.4</b> Regression discontinuity</a></li>
+<li class="chapter" data-level="9.4.5" data-path="causality.html"><a href="causality.html#matching-and-controls"><i class="fa fa-check"></i><b>9.4.5</b> Matching and controls</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="causality.html"><a href="causality.html#robustness-transparency-and-policy-evaluation"><i class="fa fa-check"></i><b>9.5</b> Robustness, transparency, and policy evaluation</a></li>
+<li class="chapter" data-level="9.6" data-path="causality.html"><a href="causality.html#common-pitfalls-and-key-takeaways-4"><i class="fa fa-check"></i><b>9.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="itsa.html"><a href="itsa.html"><i class="fa fa-check"></i><b>10</b> Interrupted Time Series Analysis (ITSA): Concepts</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#segmented-regression-interpretation"><i class="fa fa-check"></i><b>10.1</b> Segmented regression interpretation</a></li>
-<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats"><i class="fa fa-check"></i><b>10.2</b> Assumptions and threats</a></li>
-<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#extensions"><i class="fa fa-check"></i><b>10.3</b> Extensions</a></li>
+<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#counterfactual-trends-and-segmented-regression"><i class="fa fa-check"></i><b>10.2</b> Counterfactual trends and segmented regression</a></li>
+<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats-to-validity"><i class="fa fa-check"></i><b>10.3</b> Assumptions and threats to validity</a></li>
+<li class="chapter" data-level="10.4" data-path="itsa.html"><a href="itsa.html#extensions-and-practical-applications"><i class="fa fa-check"></i><b>10.4</b> Extensions and practical applications</a></li>
+<li class="chapter" data-level="10.5" data-path="itsa.html"><a href="itsa.html#common-pitfalls-and-key-takeaways-5"><i class="fa fa-check"></i><b>10.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="itsa-applied.html"><a href="itsa-applied.html"><i class="fa fa-check"></i><b>11</b> Interrupted Time Series Analysis (ITSA): Worked Workflow</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="itsa-applied.html"><a href="itsa-applied.html#reporting-recommendations"><i class="fa fa-check"></i><b>11.1</b> Reporting recommendations</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -230,73 +264,112 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="itsa" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">10</span> Interrupted Time Series Analysis (ITSA): Concepts<a href="itsa.html#itsa" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Interrupted time series analysis evaluates interventions when randomization is not feasible. It uses the pre-intervention trend as a counterfactual and examines whether the post-intervention series shows an immediate level change, a slope change, or both.</p>
-<p>Roadmap</p>
-<p>We define ITSA, describe segmented regression components, then discuss assumptions and common threats. We close with extensions such as covariates, seasonality, and comparison series.</p>
-<p>Learning objectives</p>
+<p>Many important policies and interventions cannot be evaluated using randomized experiments. Governments rarely randomize tax changes, healthcare reforms, environmental regulations, or public safety interventions across populations. In these situations, researchers often rely on observational designs that attempt to estimate what would have happened in the absence of the intervention.</p>
+<p>Interrupted time series analysis (ITSA) is one of the strongest quasi-experimental approaches available when interventions occur at a clearly identifiable point in time and repeated observations are available before and after implementation.</p>
+<p>The central idea behind ITSA is straightforward: the pre-intervention trend serves as the estimated counterfactual. Researchers then evaluate whether the observed post-intervention trajectory departs from that projected trend through an immediate level change, a slope change, or both.</p>
+<p>This chapter introduces the logic of interrupted time series analysis, explains segmented regression interpretation, discusses major assumptions and threats, and concludes with extensions commonly used in applied policy evaluation.</p>
+<div id="learning-objectives-7" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Learning objectives<a href="itsa.html#learning-objectives-7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
 <ul>
-<li>Define ITSA and explain when it is appropriate.</li>
-<li>Interpret level and slope changes as policy effects.</li>
-<li>Identify assumptions and threats such as co-interventions.</li>
-<li>Understand why autocorrelation requires special handling.</li>
-<li>Describe extensions such as controlled ITSA.</li>
+<li>explain the logic of interrupted time series analysis and when it is appropriate;</li>
+<li>interpret level changes and slope changes in segmented regression models;</li>
+<li>identify important assumptions and threats to validity;</li>
+<li>understand why autocorrelation and seasonality require special handling; and</li>
+<li>describe extensions such as controlled ITSA and seasonal adjustment.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-itsa-level-slope"></span>
-<img src="images/09_itsa_level_slope.png" alt="Interrupted time series showing an intervention point with both a level change and a slope change. These components map directly to segmented regression parameters." width="95%" />
+<img src="images/09_itsa_level_slope.png" alt="Interrupted time series showing an intervention point, observed post-intervention outcomes, and the projected counterfactual trend. The figure illustrates both an immediate level change and a post-intervention slope change, which correspond directly to segmented regression parameters." width="100%" />
 <p class="caption">
-Figure 10.1: Interrupted time series showing an intervention point with both a level change and a slope change. These components map directly to segmented regression parameters.
+Figure 10.1: Interrupted time series showing an intervention point, observed post-intervention outcomes, and the projected counterfactual trend. The figure illustrates both an immediate level change and a post-intervention slope change, which correspond directly to segmented regression parameters.
 </p>
 </div>
-<p>Figure <a href="itsa.html#fig:fig-itsa-level-slope">10.1</a> distinguishes two common intervention effects. Some policies cause immediate discontinuities; others change trends over time.</p>
-<p>The code below shows the standard segmented‑regression structure behind ITSA: a baseline trend, an intervention indicator (level change), and a post‑intervention trend term (slope change).</p>
+<p>Figure <a href="itsa.html#fig:fig-itsa-level-slope">10.1</a> illustrates the core logic of interrupted time series analysis. The dashed vertical line marks the intervention point. The dashed counterfactual continuation represents the trajectory that would have been expected if the intervention had not occurred, assuming the pre-intervention trend continued unchanged.</p>
+<p>The observed post-intervention series deviates from this projected trend in two important ways. First, there is an immediate jump at the intervention point, known as a <em>level change</em>. Second, the long-run trajectory after intervention differs from the original slope, creating a <em>slope change</em>. Some policies produce abrupt discontinuities, while others gradually alter the direction or rate of change over time.</p>
+<p>Unlike simple before-after comparisons, ITSA explicitly accounts for pre-existing trends. This is one of the main reasons interrupted time series designs are often more credible than simple pre/post analyses.</p>
+</div>
+<div id="counterfactual-trends-and-segmented-regression" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Counterfactual trends and segmented regression<a href="itsa.html#counterfactual-trends-and-segmented-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The strength of ITSA comes from its use of the historical trend as a counterfactual benchmark. Rather than asking only whether outcomes changed after intervention, ITSA asks whether outcomes changed <em>more than would have been expected based on prior trajectory</em>.</p>
+<p>Segmented regression is commonly used to estimate these effects statistically. A basic segmented regression model includes:
+- a baseline trend before intervention;
+- an indicator for the intervention period that estimates the immediate level change; and
+- a post-intervention time trend that estimates slope change after intervention.</p>
+<p>Figure <a href="itsa.html#fig:fig-itsa-level-slope">10.1</a> maps these concepts visually onto the segmented regression framework. The immediate vertical jump corresponds to the intervention indicator, while the divergence between the post-intervention trend and the projected counterfactual reflects the slope-change parameter.</p>
+<p>The following template illustrates a standard ITSA workflow using segmented regression.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="itsa.html#cb3-1" tabindex="-1"></a><span class="co"># Template: segmented regression for ITSA</span></span>
-<span id="cb3-2"><a href="itsa.html#cb3-2" tabindex="-1"></a><span class="co"># t0 = the time index where the intervention starts (e.g., month 25)</span></span>
+<span id="cb3-2"><a href="itsa.html#cb3-2" tabindex="-1"></a><span class="co"># t0 = the time index where the intervention starts</span></span>
 <span id="cb3-3"><a href="itsa.html#cb3-3" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="itsa.html#cb3-4" tabindex="-1"></a><span class="co"># Example data (simulated) — replace this block with your real dataset</span></span>
-<span id="cb3-5"><a href="itsa.html#cb3-5" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb3-4"><a href="itsa.html#cb3-4" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb3-5"><a href="itsa.html#cb3-5" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="itsa.html#cb3-6" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">60</span></span>
-<span id="cb3-7"><a href="itsa.html#cb3-7" tabindex="-1"></a>t0 <span class="ot">&lt;-</span> <span class="dv">31</span>  <span class="co"># intervention starts at time point 31 (adjust as needed)</span></span>
+<span id="cb3-7"><a href="itsa.html#cb3-7" tabindex="-1"></a>t0 <span class="ot">&lt;-</span> <span class="dv">31</span></span>
 <span id="cb3-8"><a href="itsa.html#cb3-8" tabindex="-1"></a></span>
 <span id="cb3-9"><a href="itsa.html#cb3-9" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb3-10"><a href="itsa.html#cb3-10" tabindex="-1"></a>  <span class="at">time =</span> <span class="dv">1</span><span class="sc">:</span>n</span>
 <span id="cb3-11"><a href="itsa.html#cb3-11" tabindex="-1"></a>)</span>
 <span id="cb3-12"><a href="itsa.html#cb3-12" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="itsa.html#cb3-13" tabindex="-1"></a><span class="co"># Create a simple outcome with a baseline trend + level change + slope change</span></span>
+<span id="cb3-13"><a href="itsa.html#cb3-13" tabindex="-1"></a><span class="co"># Intervention indicator</span></span>
 <span id="cb3-14"><a href="itsa.html#cb3-14" tabindex="-1"></a>df<span class="sc">$</span>intervention <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>time <span class="sc">&gt;=</span> t0, <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb3-15"><a href="itsa.html#cb3-15" tabindex="-1"></a>df<span class="sc">$</span>post_time <span class="ot">&lt;-</span> <span class="fu">pmax</span>(<span class="dv">0</span>, df<span class="sc">$</span>time <span class="sc">-</span> t0 <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb3-16"><a href="itsa.html#cb3-16" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="itsa.html#cb3-17" tabindex="-1"></a>df<span class="sc">$</span>outcome <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fl">0.10</span><span class="sc">*</span>df<span class="sc">$</span>time <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>df<span class="sc">$</span>intervention <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>df<span class="sc">$</span>post_time <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, <span class="fl">0.5</span>)</span>
+<span id="cb3-15"><a href="itsa.html#cb3-15" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="itsa.html#cb3-16" tabindex="-1"></a><span class="co"># Time after intervention</span></span>
+<span id="cb3-17"><a href="itsa.html#cb3-17" tabindex="-1"></a>df<span class="sc">$</span>post_time <span class="ot">&lt;-</span> <span class="fu">pmax</span>(<span class="dv">0</span>, df<span class="sc">$</span>time <span class="sc">-</span> t0 <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb3-18"><a href="itsa.html#cb3-18" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="itsa.html#cb3-19" tabindex="-1"></a><span class="co"># Fit segmented regression</span></span>
-<span id="cb3-20"><a href="itsa.html#cb3-20" tabindex="-1"></a>model_itsa <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> time <span class="sc">+</span> intervention <span class="sc">+</span> post_time, <span class="at">data =</span> df)</span>
-<span id="cb3-21"><a href="itsa.html#cb3-21" tabindex="-1"></a><span class="fu">summary</span>(model_itsa)</span>
-<span id="cb3-22"><a href="itsa.html#cb3-22" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="itsa.html#cb3-23" tabindex="-1"></a><span class="co"># Interpretation:</span></span>
-<span id="cb3-24"><a href="itsa.html#cb3-24" tabindex="-1"></a><span class="co"># - intervention = immediate level change at t0</span></span>
-<span id="cb3-25"><a href="itsa.html#cb3-25" tabindex="-1"></a><span class="co"># - post_time    = change in slope after t0</span></span></code></pre></div>
-<div id="segmented-regression-interpretation" class="section level2 hasAnchor" number="10.1">
-<h2><span class="header-section-number">10.1</span> Segmented regression interpretation<a href="itsa.html#segmented-regression-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A basic ITSA model estimates baseline trend, an immediate shift at the intervention, and a change in slope afterward. Interpretation depends on implementation timing and theory of change.</p>
+<span id="cb3-19"><a href="itsa.html#cb3-19" tabindex="-1"></a><span class="co"># Simulated outcome:</span></span>
+<span id="cb3-20"><a href="itsa.html#cb3-20" tabindex="-1"></a><span class="co"># baseline trend + level change + slope change</span></span>
+<span id="cb3-21"><a href="itsa.html#cb3-21" tabindex="-1"></a>df<span class="sc">$</span>outcome <span class="ot">&lt;-</span> <span class="dv">10</span> <span class="sc">+</span></span>
+<span id="cb3-22"><a href="itsa.html#cb3-22" tabindex="-1"></a>  <span class="fl">0.10</span> <span class="sc">*</span> df<span class="sc">$</span>time <span class="sc">+</span></span>
+<span id="cb3-23"><a href="itsa.html#cb3-23" tabindex="-1"></a>  <span class="dv">2</span> <span class="sc">*</span> df<span class="sc">$</span>intervention <span class="sc">+</span></span>
+<span id="cb3-24"><a href="itsa.html#cb3-24" tabindex="-1"></a>  <span class="fl">0.05</span> <span class="sc">*</span> df<span class="sc">$</span>post_time <span class="sc">+</span></span>
+<span id="cb3-25"><a href="itsa.html#cb3-25" tabindex="-1"></a>  <span class="fu">rnorm</span>(n, <span class="dv">0</span>, <span class="fl">0.5</span>)</span>
+<span id="cb3-26"><a href="itsa.html#cb3-26" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="itsa.html#cb3-27" tabindex="-1"></a><span class="co"># Segmented regression model</span></span>
+<span id="cb3-28"><a href="itsa.html#cb3-28" tabindex="-1"></a>model_itsa <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb3-29"><a href="itsa.html#cb3-29" tabindex="-1"></a>  outcome <span class="sc">~</span> time <span class="sc">+</span> intervention <span class="sc">+</span> post_time,</span>
+<span id="cb3-30"><a href="itsa.html#cb3-30" tabindex="-1"></a>  <span class="at">data =</span> df</span>
+<span id="cb3-31"><a href="itsa.html#cb3-31" tabindex="-1"></a>)</span>
+<span id="cb3-32"><a href="itsa.html#cb3-32" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="itsa.html#cb3-33" tabindex="-1"></a><span class="fu">summary</span>(model_itsa)</span>
+<span id="cb3-34"><a href="itsa.html#cb3-34" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="itsa.html#cb3-35" tabindex="-1"></a><span class="co"># Interpretation:</span></span>
+<span id="cb3-36"><a href="itsa.html#cb3-36" tabindex="-1"></a><span class="co"># - intervention = immediate level change</span></span>
+<span id="cb3-37"><a href="itsa.html#cb3-37" tabindex="-1"></a><span class="co"># - post_time    = slope change after intervention</span></span></code></pre></div>
+<p>In practice, interpretation should always be guided by the intervention’s theory of change. Some interventions are expected to create immediate discontinuities, while others may influence outcomes gradually over time.</p>
+<p>For example, a media campaign may have delayed behavioural effects, whereas a tax increase may alter prices immediately.</p>
 </div>
-<div id="assumptions-and-threats" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> Assumptions and threats<a href="itsa.html#assumptions-and-threats" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The central assumption is that the pre-intervention trend would have continued absent the intervention. Threats include co-interventions, changes in measurement, seasonality, and regression to the mean.</p>
-<p>Autocorrelation is common in time series and can invalidate naive standard errors.</p>
+<div id="assumptions-and-threats-to-validity" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Assumptions and threats to validity<a href="itsa.html#assumptions-and-threats-to-validity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The most important assumption in ITSA is that the pre-intervention trend would have continued in the absence of intervention. In other words, the projected counterfactual trend must be a reasonable approximation of what would have happened without policy change.</p>
+<p>Several threats can weaken this assumption.</p>
+<p>One major threat is the presence of <em>co-interventions</em>, where another policy or event occurs around the same time as the intervention. If multiple changes occur simultaneously, separating their effects becomes difficult.</p>
+<p>Changes in data collection, reporting systems, or measurement definitions may also create artificial discontinuities that resemble intervention effects.</p>
+<p>Seasonality is another important issue. Many economic, environmental, and health outcomes fluctuate systematically across months, quarters, or seasons. Ignoring these recurring patterns may bias intervention estimates.</p>
+<p>Regression to the mean can also create misleading patterns when interventions are implemented after unusually high or low observations.</p>
+<p>Importantly, interrupted time series data frequently exhibit <em>autocorrelation</em>, meaning nearby observations remain statistically dependent across time. Ignoring autocorrelation may produce standard errors that are too small and statistical significance that appears stronger than it truly is.</p>
+<p>For this reason, ITSA often requires specialized error structures or time-series corrections beyond ordinary least squares assumptions.</p>
+<p>Reliable ITSA also requires sufficient observations before and after intervention. Too few pre-intervention observations make it difficult to establish whether the baseline trend is stable, while too few post-intervention observations may obscure gradual slope changes.</p>
 </div>
-<div id="extensions" class="section level2 hasAnchor" number="10.3">
-<h2><span class="header-section-number">10.3</span> Extensions<a href="itsa.html#extensions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Extensions include covariates, interaction terms for heterogeneity, seasonality controls, time-series error structures, and comparison series.</p>
-<p>Common pitfalls</p>
-<ul>
-<li>Declaring a causal effect without checking co-interventions.</li>
-<li>Using too few pre-intervention points to assess trend.</li>
-<li>Ignoring autocorrelation and seasonality.</li>
-</ul>
-<p>Key takeaways</p>
-<ul>
-<li>ITSA is powerful when trends are stable and intervention timing is clear.</li>
-<li>Diagnostics and robustness checks are essential for credible claims.</li>
-</ul>
+<div id="extensions-and-practical-applications" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Extensions and practical applications<a href="itsa.html#extensions-and-practical-applications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Interrupted time series analysis can be extended in several important ways.</p>
+<p>Researchers may include additional covariates to adjust for changing contextual factors. Seasonal terms can account for repeating cyclical patterns, while autoregressive error structures can address autocorrelation directly.</p>
+<p>One particularly important extension is <em>controlled interrupted time series analysis</em>, where a comparison series unaffected by the intervention is included alongside the treated series. Comparison groups help distinguish intervention effects from broader system-wide changes occurring at the same time.</p>
+<p>Interaction terms may also be used to evaluate heterogeneous effects across regions, demographic groups, or institutions.</p>
+<p>In applied policy analysis, ITSA is frequently used in:
+- public health evaluation,
+- pharmaceutical policy,
+- environmental regulation,
+- healthcare utilization studies,
+- transportation safety,
+- and education reform.</p>
+<p>Because many large-scale policies are implemented at clearly identifiable dates, interrupted time series designs are often highly practical in real-world evaluation settings.</p>
+</div>
+<div id="common-pitfalls-and-key-takeaways-5" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Common pitfalls and key takeaways<a href="itsa.html#common-pitfalls-and-key-takeaways-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Several recurring mistakes can weaken interrupted time series analysis. One common problem is declaring causal effects without evaluating whether other simultaneous events may explain the observed change. Another is relying on very short pre-intervention periods that provide little evidence regarding baseline stability.</p>
+<p>Researchers may also ignore autocorrelation, seasonality, or structural breaks, leading to overly confident statistical inference.</p>
+<p>Importantly, ITSA should not be interpreted as a purely mechanical statistical procedure. Credible interpretation depends on institutional knowledge, policy timing, implementation details, and the plausibility of the counterfactual trend assumption.</p>
+<p>Overall, interrupted time series analysis is one of the most powerful quasi-experimental tools available when interventions occur at identifiable points in time and stable pre-intervention trends exist. By explicitly modeling counterfactual trajectories, ITSA provides a structured framework for evaluating policy effects in settings where randomization is impractical or impossible.</p>
 
 </div>
 </div>
@@ -321,9 +394,9 @@ Figure 10.1: Interrupted time series showing an intervention point with both a l
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
+    "github": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
@@ -336,10 +409,7 @@ gitbook.start({
     "family": "sans",
     "size": 2
   },
-  "edit": {
-    "link": null,
-    "text": null
-  },
+  "edit": null,
   "history": {
     "link": null,
     "text": null
@@ -348,7 +418,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["notes-on-economics.epub"],
+  "download": ["notes-on-economics.pdf", "notes-on-economics.epub"],
   "search": {
     "engine": "fuse",
     "options": null
@@ -360,6 +430,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

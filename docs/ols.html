@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -136,6 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Book of Economics</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.1</b> Who this book is for</a></li>
@@ -143,44 +147,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#using-figures-and-visuals"><i class="fa fa-check"></i><b>1.3</b> Using figures and visuals</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#using-r-code"><i class="fa fa-check"></i><b>1.4</b> Using R code</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.5</b> Learning goals</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#notes-on-scope-and-interpretation"><i class="fa fa-check"></i><b>1.6</b> Notes on scope and interpretation</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#a-note-on-interpretation-and-evidence"><i class="fa fa-check"></i><b>1.6</b> A note on interpretation and evidence</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="what-is-econ.html"><a href="what-is-econ.html"><i class="fa fa-check"></i><b>2</b> What is Economics?</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-and-opportunity-cost"><i class="fa fa-check"></i><b>2.1</b> Scarcity and opportunity cost</a></li>
-<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.2</b> Economics as evidence and as judgment</a></li>
-<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.3</b> Economic theories and assumptions</a></li>
-<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.4</b> Economic actors</a></li>
-<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.5</b> Markets and market structure</a></li>
-<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.6</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#roadmap"><i class="fa fa-check"></i><b>2.1</b> Roadmap</a></li>
+<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost"><i class="fa fa-check"></i><b>2.3</b> Scarcity, trade-offs, and opportunity cost</a></li>
+<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#incentives-and-behaviour"><i class="fa fa-check"></i><b>2.4</b> Incentives and behaviour</a></li>
+<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.5</b> Economics as evidence and as judgment</a></li>
+<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.6</b> Economic theories and assumptions</a></li>
+<li class="chapter" data-level="2.7" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.7</b> Economic actors</a></li>
+<li class="chapter" data-level="2.8" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.8</b> Markets and market structure</a></li>
+<li class="chapter" data-level="2.9" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.9</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.10" data-path="what-is-econ.html"><a href="what-is-econ.html#common-pitfalls"><i class="fa fa-check"></i><b>2.10</b> Common pitfalls</a></li>
+<li class="chapter" data-level="2.11" data-path="what-is-econ.html"><a href="what-is-econ.html#key-takeaways"><i class="fa fa-check"></i><b>2.11</b> Key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="micro.html"><a href="micro.html"><i class="fa fa-check"></i><b>3</b> Microeconomics Essentials</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.1</b> Supply, demand, and equilibrium</a></li>
-<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#elasticity-and-incidence"><i class="fa fa-check"></i><b>3.2</b> Elasticity and incidence</a></li>
-<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#market-power-in-practice"><i class="fa fa-check"></i><b>3.3</b> Market power in practice</a></li>
-<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#externalities-and-public-goods"><i class="fa fa-check"></i><b>3.4</b> Externalities and public goods</a></li>
+<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.2</b> Supply, demand, and equilibrium</a></li>
+<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#elasticity-behavioural-response-and-incidence"><i class="fa fa-check"></i><b>3.3</b> Elasticity, behavioural response, and incidence</a></li>
+<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#market-power-and-regulation"><i class="fa fa-check"></i><b>3.4</b> Market power and regulation</a></li>
+<li class="chapter" data-level="3.5" data-path="micro.html"><a href="micro.html#externalities-public-goods-and-market-failure"><i class="fa fa-check"></i><b>3.5</b> Externalities, public goods, and market failure</a></li>
+<li class="chapter" data-level="3.6" data-path="micro.html"><a href="micro.html#common-pitfalls-and-key-takeaways"><i class="fa fa-check"></i><b>3.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="macro.html"><a href="macro.html"><i class="fa fa-check"></i><b>4</b> Macroeconomics: Measurement and Trends</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#gdp-and-national-accounts"><i class="fa fa-check"></i><b>4.1</b> GDP and national accounts</a></li>
-<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#inflation-and-price-indices"><i class="fa fa-check"></i><b>4.2</b> Inflation and price indices</a></li>
-<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.3</b> Unemployment, participation, and labour markets</a></li>
-<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#growth-and-cycles"><i class="fa fa-check"></i><b>4.4</b> Growth and cycles</a></li>
-<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.5</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#gdp-economic-activity-and-national-accounts"><i class="fa fa-check"></i><b>4.2</b> GDP, economic activity, and national accounts</a></li>
+<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#inflation-prices-and-purchasing-power"><i class="fa fa-check"></i><b>4.3</b> Inflation, prices, and purchasing power</a></li>
+<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.4</b> Unemployment, participation, and labour markets</a></li>
+<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations"><i class="fa fa-check"></i><b>4.5</b> Growth, business cycles, and macroeconomic fluctuations</a></li>
+<li class="chapter" data-level="4.6" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.6</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.7" data-path="macro.html"><a href="macro.html#common-pitfalls-and-key-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="policy.html"><a href="policy.html"><i class="fa fa-check"></i><b>5</b> Fiscal and Monetary Policy</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#fiscal-policy"><i class="fa fa-check"></i><b>5.1</b> Fiscal policy</a></li>
-<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#monetary-policy"><i class="fa fa-check"></i><b>5.2</b> Monetary policy</a></li>
-<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#practical-limits-and-trade-offs"><i class="fa fa-check"></i><b>5.3</b> Practical limits and trade-offs</a></li>
+<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#fiscal-policy-deficits-and-stabilization"><i class="fa fa-check"></i><b>5.2</b> Fiscal policy, deficits, and stabilization</a></li>
+<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#monetary-policy-and-financial-conditions"><i class="fa fa-check"></i><b>5.3</b> Monetary policy and financial conditions</a></li>
+<li class="chapter" data-level="5.4" data-path="policy.html"><a href="policy.html#transmission-lags-uncertainty-and-policy-trade-offs"><i class="fa fa-check"></i><b>5.4</b> Transmission lags, uncertainty, and policy trade-offs</a></li>
+<li class="chapter" data-level="5.5" data-path="policy.html"><a href="policy.html#common-pitfalls-and-key-takeaways-2"><i class="fa fa-check"></i><b>5.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ols.html"><a href="ols.html"><i class="fa fa-check"></i><b>6</b> Ordinary Least Squares (OLS): Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.1</b> What OLS estimates</a></li>
-<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#assumptions-and-why-they-matter"><i class="fa fa-check"></i><b>6.2</b> Assumptions and why they matter</a></li>
-<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#reading-output"><i class="fa fa-check"></i><b>6.3</b> Reading output</a></li>
-<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-fixes"><i class="fa fa-check"></i><b>6.4</b> Diagnostics and practical fixes</a></li>
+<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.2</b> What OLS estimates</a></li>
+<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#residuals-assumptions-and-inference"><i class="fa fa-check"></i><b>6.3</b> Residuals, assumptions, and inference</a></li>
+<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#reading-regression-output"><i class="fa fa-check"></i><b>6.4</b> Reading regression output</a></li>
+<li class="chapter" data-level="6.5" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-responses"><i class="fa fa-check"></i><b>6.5</b> Diagnostics and practical responses</a></li>
+<li class="chapter" data-level="6.6" data-path="ols.html"><a href="ols.html#common-pitfalls-and-key-takeaways-3"><i class="fa fa-check"></i><b>6.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="multivariate.html"><a href="multivariate.html"><i class="fa fa-check"></i><b>7</b> Multivariate Modeling</a>
 <ul>
@@ -191,26 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#components-and-visualization"><i class="fa fa-check"></i><b>8.1</b> Components and visualization</a></li>
-<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.2</b> Stationarity and differencing</a></li>
-<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.3</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#learning-objectives-5"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#components-of-time-series-data"><i class="fa fa-check"></i><b>8.2</b> Components of time series data</a></li>
+<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.3</b> Stationarity and differencing</a></li>
+<li class="chapter" data-level="8.4" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.4</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.5" data-path="time-series.html"><a href="time-series.html#forecasting-workflow-and-diagnostics"><i class="fa fa-check"></i><b>8.5</b> Forecasting workflow and diagnostics</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causality.html"><a href="causality.html"><i class="fa fa-check"></i><b>9</b> Causality, Identification, and Policy Evaluation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.1</b> Threats to causal inference</a></li>
-<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#common-strategies"><i class="fa fa-check"></i><b>9.2</b> Common strategies</a></li>
-<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#practical-checklist"><i class="fa fa-check"></i><b>9.3</b> Practical checklist</a></li>
+<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#learning-objectives-6"><i class="fa fa-check"></i><b>9.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#correlation-causation-and-the-counterfactual-problem"><i class="fa fa-check"></i><b>9.2</b> Correlation, causation, and the counterfactual problem</a></li>
+<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.3</b> Threats to causal inference</a></li>
+<li class="chapter" data-level="9.4" data-path="causality.html"><a href="causality.html#common-identification-strategies"><i class="fa fa-check"></i><b>9.4</b> Common identification strategies</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="causality.html"><a href="causality.html#randomized-experiments"><i class="fa fa-check"></i><b>9.4.1</b> Randomized experiments</a></li>
+<li class="chapter" data-level="9.4.2" data-path="causality.html"><a href="causality.html#difference-in-differences"><i class="fa fa-check"></i><b>9.4.2</b> Difference-in-differences</a></li>
+<li class="chapter" data-level="9.4.3" data-path="causality.html"><a href="causality.html#instrumental-variables"><i class="fa fa-check"></i><b>9.4.3</b> Instrumental variables</a></li>
+<li class="chapter" data-level="9.4.4" data-path="causality.html"><a href="causality.html#regression-discontinuity"><i class="fa fa-check"></i><b>9.4.4</b> Regression discontinuity</a></li>
+<li class="chapter" data-level="9.4.5" data-path="causality.html"><a href="causality.html#matching-and-controls"><i class="fa fa-check"></i><b>9.4.5</b> Matching and controls</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="causality.html"><a href="causality.html#robustness-transparency-and-policy-evaluation"><i class="fa fa-check"></i><b>9.5</b> Robustness, transparency, and policy evaluation</a></li>
+<li class="chapter" data-level="9.6" data-path="causality.html"><a href="causality.html#common-pitfalls-and-key-takeaways-4"><i class="fa fa-check"></i><b>9.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="itsa.html"><a href="itsa.html"><i class="fa fa-check"></i><b>10</b> Interrupted Time Series Analysis (ITSA): Concepts</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#segmented-regression-interpretation"><i class="fa fa-check"></i><b>10.1</b> Segmented regression interpretation</a></li>
-<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats"><i class="fa fa-check"></i><b>10.2</b> Assumptions and threats</a></li>
-<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#extensions"><i class="fa fa-check"></i><b>10.3</b> Extensions</a></li>
+<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#counterfactual-trends-and-segmented-regression"><i class="fa fa-check"></i><b>10.2</b> Counterfactual trends and segmented regression</a></li>
+<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats-to-validity"><i class="fa fa-check"></i><b>10.3</b> Assumptions and threats to validity</a></li>
+<li class="chapter" data-level="10.4" data-path="itsa.html"><a href="itsa.html#extensions-and-practical-applications"><i class="fa fa-check"></i><b>10.4</b> Extensions and practical applications</a></li>
+<li class="chapter" data-level="10.5" data-path="itsa.html"><a href="itsa.html#common-pitfalls-and-key-takeaways-5"><i class="fa fa-check"></i><b>10.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="itsa-applied.html"><a href="itsa-applied.html"><i class="fa fa-check"></i><b>11</b> Interrupted Time Series Analysis (ITSA): Worked Workflow</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="itsa-applied.html"><a href="itsa-applied.html#reporting-recommendations"><i class="fa fa-check"></i><b>11.1</b> Reporting recommendations</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -230,80 +264,102 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="ols" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">6</span> Ordinary Least Squares (OLS): Simple Linear Regression<a href="ols.html#ols" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>OLS is a baseline method for estimating linear relationships and forming predictions. It is widely used because it is interpretable, computationally simple, and often a reasonable first approximation.</p>
-<p>Roadmap</p>
-<p>We explain what OLS estimates and how to interpret coefficients. We then discuss assumptions, common output statistics, and diagnostics. We end with practical responses when assumptions fail.</p>
-<p>Learning objectives</p>
+<p>Ordinary Least Squares (OLS) regression is one of the most widely used statistical tools for studying relationships between variables. Researchers use OLS to estimate associations, make predictions, and summarize patterns in data. OLS is popular because it is relatively simple to interpret, computationally efficient, and often provides a useful baseline model before moving to more advanced methods.</p>
+<p>In economics, public policy, environmental science, healthcare, and social research, regression models are frequently used to estimate how outcomes change with exposure to different factors. For example, researchers may study how income changes with education, how pollution affects health outcomes, or how policy interventions relate to employment or spending behaviour.</p>
+<p>However, regression models must be interpreted carefully. A model may fit the data reasonably well while still producing misleading inference if important assumptions fail. Understanding residuals, diagnostics, assumptions, and model limitations is therefore as important as interpreting coefficients themselves.</p>
+<p>This chapter explains what OLS estimates, how coefficients and residuals should be interpreted, why assumptions matter, and how diagnostics help identify potential model problems. It also emphasizes a critical principle in applied statistics: regression alone does not establish causation.</p>
+<div id="learning-objectives-4" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Learning objectives<a href="ols.html#learning-objectives-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
 <ul>
-<li>Interpret coefficients in a simple regression as conditional associations.</li>
-<li>Explain residuals and why least squares minimizes squared errors.</li>
-<li>Recognize key assumptions and why violations affect inference.</li>
-<li>Interpret common output such as R-squared, t-tests, and F-tests.</li>
-<li>Identify diagnostics for autocorrelation and non-constant variance.</li>
+<li>interpret regression coefficients as conditional associations;</li>
+<li>explain residuals and why OLS minimizes squared errors;</li>
+<li>recognize major OLS assumptions and why violations matter;</li>
+<li>interpret common regression output statistics; and</li>
+<li>identify basic diagnostic patterns and practical responses when assumptions fail.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ols-resid"></span>
-<img src="images/05_ols_with_residuals.png" alt="OLS fit and residual diagnostics. A good fit does not guarantee valid inference; residual patterns can indicate missing variables, non-linearity, or time-series dependence." width="95%" />
+<img src="images/05_ols_with_residuals.png" alt="OLS fit, residual intuition, and diagnostic patterns. Residuals represent the difference between observed and predicted values. Random residual patterns support the use of a linear model, while systematic patterns may indicate non-linearity, heteroskedasticity, omitted variables, or serial correlation." width="100%" />
 <p class="caption">
-Figure 6.1: OLS fit and residual diagnostics. A good fit does not guarantee valid inference; residual patterns can indicate missing variables, non-linearity, or time-series dependence.
+Figure 6.1: OLS fit, residual intuition, and diagnostic patterns. Residuals represent the difference between observed and predicted values. Random residual patterns support the use of a linear model, while systematic patterns may indicate non-linearity, heteroskedasticity, omitted variables, or serial correlation.
 </p>
 </div>
-<p>Figure <a href="ols.html#fig:fig-ols-resid">6.1</a> highlights a key lesson: interpretation depends on both the relationship and the leftover structure in residuals.</p>
-<p>The code below shows what a baseline OLS workflow looks like in practice. It is a template (not meant to run as-is) and uses robust standard errors to reflect common real‑world data issues.</p>
-<p>The code below shows what a baseline OLS workflow looks like in practice. It is a template (not meant to run as‑is) and uses robust standard errors to reflect common real‑world data issues.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="ols.html#cb1-1" tabindex="-1"></a><span class="co"># Example data (simulated) — replace this block with your real series when available</span></span>
+<p>Figure <a href="ols.html#fig:fig-ols-resid">6.1</a> illustrates several core ideas behind OLS regression. The upper-left panel shows observed data points together with the fitted regression line. The vertical distance between an observed value and the fitted line is called the <em>residual</em>. Residuals represent the portion of the outcome that the model does not explain.</p>
+<p>OLS chooses the regression line that minimizes the sum of squared residuals. Squaring residuals ensures that positive and negative errors do not cancel each other out and places greater weight on larger errors.</p>
+<p>The residual diagnostic plots in Figure <a href="ols.html#fig:fig-ols-resid">6.1</a> are equally important. Regression interpretation depends not only on the fitted relationship itself, but also on the remaining structure in the residuals. Random residual scatter around zero generally supports the use of a linear model with approximately constant variance. Systematic residual patterns, however, may indicate problems such as non-linearity, heteroskedasticity, omitted variables, or serial correlation.</p>
+</div>
+<div id="what-ols-estimates" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> What OLS estimates<a href="ols.html#what-ols-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In a simple linear regression, the estimated coefficient summarizes the average change in the outcome associated with a one-unit change in the predictor variable.</p>
+<p>In multiple regression models, coefficients are interpreted as <em>conditional associations</em>. This means the coefficient describes how the outcome changes with one variable while holding the other included variables constant.</p>
+<p>For example, in a regression of wages on education and experience, the education coefficient estimates the association between education and wages conditional on the level of experience included in the model.</p>
+<p>It is important to recognize that regression estimates associations, not necessarily causal effects. Two variables may move together because one causes the other, because both are influenced by a third factor, or because of reverse causality.</p>
+<p>For example, ice cream sales and drowning incidents may both increase during summer months. A regression may detect a positive association even though ice cream consumption does not cause drowning. Temperature acts as a confounding factor influencing both variables simultaneously.</p>
+<p>Because of this, causal interpretation requires careful research design rather than regression alone.</p>
+</div>
+<div id="residuals-assumptions-and-inference" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Residuals, assumptions, and inference<a href="ols.html#residuals-assumptions-and-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Residuals play a central role in regression analysis because they help evaluate whether model assumptions appear reasonable.</p>
+<p>One important assumption is <em>linearity</em>, meaning the relationship between predictors and the outcome is reasonably approximated by a linear function. Curved residual patterns may suggest that transformations or non-linear terms are needed.</p>
+<p>Another important assumption is <em>homoskedasticity</em>, which means the variance of residuals remains relatively constant across levels of the predictor variables. When residual spread changes systematically, a problem called <em>heteroskedasticity</em> occurs. Heteroskedasticity does not necessarily bias coefficient estimates, but it can produce incorrect standard errors and misleading statistical inference.</p>
+<p>Figure <a href="ols.html#fig:fig-ols-resid">6.1</a> includes an example of heteroskedasticity where residual variance changes across the range of observations.</p>
+<p>A particularly important assumption for causal interpretation is the <em>zero conditional mean assumption</em>. Informally, this means that omitted factors affecting the outcome should not be systematically correlated with included predictors. Violations often arise because of omitted variables, simultaneity, measurement error, or selection bias.</p>
+<p>For example, if ability influences both education and income but is omitted from the regression, the estimated education coefficient may partially capture the effect of ability rather than education alone.</p>
+<p>Independence of errors is another important assumption. In cross-sectional data, observations are often assumed to be independent. In time-series data, however, residuals are frequently correlated over time. This problem, known as <em>serial correlation</em> or <em>autocorrelation</em>, can distort inference if ignored.</p>
+<p>The residual examples in Figure <a href="ols.html#fig:fig-ols-resid">6.1</a> show how systematic patterns may reveal these types of problems.</p>
+</div>
+<div id="reading-regression-output" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Reading regression output<a href="ols.html#reading-regression-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Regression software typically reports several statistics that summarize model fit and uncertainty.</p>
+<p>One commonly reported statistic is <em>R-squared</em>, which measures the proportion of variation in the outcome explained by the model. A higher R-squared indicates better statistical fit, but it does not guarantee that the model is theoretically meaningful or causally valid.</p>
+<p>A model may fit the observed data well while still omitting important variables or using an incorrect functional form.</p>
+<p>Regression output also reports <em>standard errors</em>, <em>t-tests</em>, and <em>p-values</em>, which help evaluate statistical uncertainty around coefficient estimates. A t-test evaluates whether a coefficient differs significantly from zero given estimated uncertainty.</p>
+<p>The <em>F-test</em> evaluates whether groups of variables are jointly important in explaining the outcome.</p>
+<p>When comparing models, researchers may also use criteria such as AIC and BIC, which balance model fit against model complexity. These measures discourage excessive overfitting by penalizing models that include too many predictors relative to the information gained.</p>
+</div>
+<div id="diagnostics-and-practical-responses" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Diagnostics and practical responses<a href="ols.html#diagnostics-and-practical-responses" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Diagnostics help determine whether a regression model appears appropriate for the data structure and research question.</p>
+<p>Figure <a href="ols.html#fig:fig-ols-resid">6.1</a> illustrates several common residual patterns. Random scatter around zero generally supports the use of a linear specification with approximately constant variance. Curved residual patterns may indicate non-linearity, funnel-shaped patterns may suggest heteroskedasticity, and systematic time patterns may indicate autocorrelation.</p>
+<p>When assumptions appear violated, researchers often modify the model or adjust inference methods. Common responses include:</p>
+<ul>
+<li>adding relevant control variables;</li>
+<li>transforming variables using logarithms or polynomial terms;</li>
+<li>using robust standard errors;</li>
+<li>using clustered or heteroskedasticity-consistent standard errors;</li>
+<li>or choosing models better suited to the data structure, such as time-series or panel-data methods.</li>
+</ul>
+<p>Robust standard errors are especially common in applied work because real-world data frequently violate constant variance assumptions.</p>
+<p>The example below shows a simplified OLS workflow using robust standard errors.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="ols.html#cb1-1" tabindex="-1"></a><span class="co"># Example data (simulated)</span></span>
 <span id="cb1-2"><a href="ols.html#cb1-2" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb1-3"><a href="ols.html#cb1-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">+</span> <span class="fu">cumsum</span>(<span class="fu">rnorm</span>(<span class="dv">60</span>, <span class="dv">0</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">*</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">60</span>)<span class="sc">/</span><span class="dv">12</span>)</span>
-<span id="cb1-4"><a href="ols.html#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="ols.html#cb1-5" tabindex="-1"></a><span class="co"># Example data (simulated) — replace with your real dataset</span></span>
-<span id="cb1-6"><a href="ols.html#cb1-6" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb1-7"><a href="ols.html#cb1-7" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>),</span>
-<span id="cb1-8"><a href="ols.html#cb1-8" tabindex="-1"></a>  <span class="at">exposure =</span> <span class="fu">rbinom</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="fl">0.5</span>),</span>
-<span id="cb1-9"><a href="ols.html#cb1-9" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">90</span>, <span class="dv">100</span>, <span class="cn">TRUE</span>),</span>
-<span id="cb1-10"><a href="ols.html#cb1-10" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>), <span class="dv">100</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb1-11"><a href="ols.html#cb1-11" tabindex="-1"></a>)</span>
-<span id="cb1-12"><a href="ols.html#cb1-12" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="ols.html#cb1-13" tabindex="-1"></a><span class="co"># Template: OLS as a baseline model</span></span>
-<span id="cb1-14"><a href="ols.html#cb1-14" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> exposure <span class="sc">+</span> age <span class="sc">+</span> sex, <span class="at">data =</span> df)</span>
+<span id="cb1-3"><a href="ols.html#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="ols.html#cb1-4" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-5"><a href="ols.html#cb1-5" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>),</span>
+<span id="cb1-6"><a href="ols.html#cb1-6" tabindex="-1"></a>  <span class="at">exposure =</span> <span class="fu">rbinom</span>(<span class="dv">100</span>, <span class="dv">1</span>, <span class="fl">0.5</span>),</span>
+<span id="cb1-7"><a href="ols.html#cb1-7" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">90</span>, <span class="dv">100</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb1-8"><a href="ols.html#cb1-8" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">&quot;F&quot;</span>,<span class="st">&quot;M&quot;</span>), <span class="dv">100</span>, <span class="cn">TRUE</span>)</span>
+<span id="cb1-9"><a href="ols.html#cb1-9" tabindex="-1"></a>)</span>
+<span id="cb1-10"><a href="ols.html#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="ols.html#cb1-11" tabindex="-1"></a><span class="co"># Baseline OLS model</span></span>
+<span id="cb1-12"><a href="ols.html#cb1-12" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> exposure <span class="sc">+</span> age <span class="sc">+</span> sex, <span class="at">data =</span> df)</span>
+<span id="cb1-13"><a href="ols.html#cb1-13" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="ols.html#cb1-14" tabindex="-1"></a><span class="co"># Standard regression output</span></span>
 <span id="cb1-15"><a href="ols.html#cb1-15" tabindex="-1"></a><span class="fu">summary</span>(fit)</span>
 <span id="cb1-16"><a href="ols.html#cb1-16" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="ols.html#cb1-17" tabindex="-1"></a><span class="co"># Optional: robust standard errors</span></span>
-<span id="cb1-18"><a href="ols.html#cb1-18" tabindex="-1"></a><span class="co"># install.packages(c(&quot;sandwich&quot;, &quot;lmtest&quot;))</span></span>
-<span id="cb1-19"><a href="ols.html#cb1-19" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
-<span id="cb1-20"><a href="ols.html#cb1-20" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
+<span id="cb1-17"><a href="ols.html#cb1-17" tabindex="-1"></a><span class="co"># Robust standard errors</span></span>
+<span id="cb1-18"><a href="ols.html#cb1-18" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
+<span id="cb1-19"><a href="ols.html#cb1-19" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span>
+<span id="cb1-20"><a href="ols.html#cb1-20" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="ols.html#cb1-21" tabindex="-1"></a><span class="fu">coeftest</span>(fit, <span class="at">vcov. =</span> <span class="fu">vcovHC</span>(fit, <span class="at">type =</span> <span class="st">&quot;HC1&quot;</span>))</span></code></pre></div>
-<div id="what-ols-estimates" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> What OLS estimates<a href="ols.html#what-ols-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In a simple linear regression, the coefficient summarizes average change in the outcome when the predictor changes by one unit, holding other modeled factors fixed.</p>
-<p>OLS chooses coefficients to minimize the sum of squared residuals. Residuals capture what the model does not explain.</p>
+<p>This workflow reflects a common applied approach where OLS provides a baseline model and robust standard errors help account for possible heteroskedasticity.</p>
 </div>
-<div id="assumptions-and-why-they-matter" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Assumptions and why they matter<a href="ols.html#assumptions-and-why-they-matter" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Homoskedasticity implies constant error variance. When variance changes, standard errors can be wrong.</p>
-<p>Zero conditional mean is the core assumption for causal interpretation. Violations often reflect omitted variables, simultaneity, or measurement error.</p>
-<p>Independence matters for cross-sectional sampling. In time series, serial correlation is common and must be addressed.</p>
-</div>
-<div id="reading-output" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Reading output<a href="ols.html#reading-output" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>R-squared describes the share of variation explained. It does not measure causal validity.</p>
-<p>t-tests evaluate whether a coefficient differs from zero given estimated uncertainty. The F-test evaluates joint significance.</p>
-<p>AIC and BIC support model comparison by penalizing complexity.</p>
-</div>
-<div id="diagnostics-and-practical-fixes" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Diagnostics and practical fixes<a href="ols.html#diagnostics-and-practical-fixes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When assumptions fail, options include robust standard errors, adding relevant controls, transforming variables, or using models suited to the data structure.</p>
-<p>Common pitfalls</p>
-<ul>
-<li>Interpreting coefficients causally without an identification strategy.</li>
-<li>Using R-squared as a measure of truth rather than fit.</li>
-<li>Ignoring heteroskedasticity and serial correlation in inference.</li>
-<li>Overfitting with many predictors and then over-interpreting significance.</li>
-</ul>
-<p>Key takeaways</p>
-<ul>
-<li>OLS is useful but inference depends on assumptions.</li>
-<li>Diagnostics should guide whether corrections or alternative models are needed.</li>
-<li>Causal claims require design, not just regression.</li>
-</ul>
+<div id="common-pitfalls-and-key-takeaways-3" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Common pitfalls and key takeaways<a href="ols.html#common-pitfalls-and-key-takeaways-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Several common misunderstandings appear frequently in regression analysis. One is interpreting regression coefficients causally without an appropriate identification strategy or research design. Another is treating R-squared as a measure of truth rather than simply a measure of fit.</p>
+<p>Researchers may also ignore heteroskedasticity or serial correlation, leading to incorrect inference even when coefficient estimates themselves appear reasonable. Overfitting is another common problem, particularly when many predictors are included without theoretical justification.</p>
+<p>Overall, OLS regression is a powerful and widely used baseline method for analyzing relationships between variables. However, valid inference depends on assumptions, diagnostics, and research design rather than on regression output alone. Residual analysis and model diagnostics should therefore be treated as central parts of statistical interpretation rather than optional afterthoughts.</p>
+<p>Most importantly, causal claims require careful design, theory, and identification strategies—not regression alone.</p>
 
 </div>
 </div>
@@ -328,9 +384,9 @@ Figure 6.1: OLS fit and residual diagnostics. A good fit does not guarantee vali
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
+    "github": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
@@ -343,10 +399,7 @@ gitbook.start({
     "family": "sans",
     "size": 2
   },
-  "edit": {
-    "link": null,
-    "text": null
-  },
+  "edit": null,
   "history": {
     "link": null,
     "text": null
@@ -355,7 +408,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["notes-on-economics.epub"],
+  "download": ["notes-on-economics.pdf", "notes-on-economics.epub"],
   "search": {
     "engine": "fuse",
     "options": null
@@ -367,6 +420,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

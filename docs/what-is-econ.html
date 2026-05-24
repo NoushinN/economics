@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -136,6 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Book of Economics</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.1</b> Who this book is for</a></li>
@@ -143,44 +147,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#using-figures-and-visuals"><i class="fa fa-check"></i><b>1.3</b> Using figures and visuals</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#using-r-code"><i class="fa fa-check"></i><b>1.4</b> Using R code</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.5</b> Learning goals</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#notes-on-scope-and-interpretation"><i class="fa fa-check"></i><b>1.6</b> Notes on scope and interpretation</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#a-note-on-interpretation-and-evidence"><i class="fa fa-check"></i><b>1.6</b> A note on interpretation and evidence</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="what-is-econ.html"><a href="what-is-econ.html"><i class="fa fa-check"></i><b>2</b> What is Economics?</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-and-opportunity-cost"><i class="fa fa-check"></i><b>2.1</b> Scarcity and opportunity cost</a></li>
-<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.2</b> Economics as evidence and as judgment</a></li>
-<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.3</b> Economic theories and assumptions</a></li>
-<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.4</b> Economic actors</a></li>
-<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.5</b> Markets and market structure</a></li>
-<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.6</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#roadmap"><i class="fa fa-check"></i><b>2.1</b> Roadmap</a></li>
+<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost"><i class="fa fa-check"></i><b>2.3</b> Scarcity, trade-offs, and opportunity cost</a></li>
+<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#incentives-and-behaviour"><i class="fa fa-check"></i><b>2.4</b> Incentives and behaviour</a></li>
+<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.5</b> Economics as evidence and as judgment</a></li>
+<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.6</b> Economic theories and assumptions</a></li>
+<li class="chapter" data-level="2.7" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.7</b> Economic actors</a></li>
+<li class="chapter" data-level="2.8" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.8</b> Markets and market structure</a></li>
+<li class="chapter" data-level="2.9" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.9</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.10" data-path="what-is-econ.html"><a href="what-is-econ.html#common-pitfalls"><i class="fa fa-check"></i><b>2.10</b> Common pitfalls</a></li>
+<li class="chapter" data-level="2.11" data-path="what-is-econ.html"><a href="what-is-econ.html#key-takeaways"><i class="fa fa-check"></i><b>2.11</b> Key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="micro.html"><a href="micro.html"><i class="fa fa-check"></i><b>3</b> Microeconomics Essentials</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.1</b> Supply, demand, and equilibrium</a></li>
-<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#elasticity-and-incidence"><i class="fa fa-check"></i><b>3.2</b> Elasticity and incidence</a></li>
-<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#market-power-in-practice"><i class="fa fa-check"></i><b>3.3</b> Market power in practice</a></li>
-<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#externalities-and-public-goods"><i class="fa fa-check"></i><b>3.4</b> Externalities and public goods</a></li>
+<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.2</b> Supply, demand, and equilibrium</a></li>
+<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#elasticity-behavioural-response-and-incidence"><i class="fa fa-check"></i><b>3.3</b> Elasticity, behavioural response, and incidence</a></li>
+<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#market-power-and-regulation"><i class="fa fa-check"></i><b>3.4</b> Market power and regulation</a></li>
+<li class="chapter" data-level="3.5" data-path="micro.html"><a href="micro.html#externalities-public-goods-and-market-failure"><i class="fa fa-check"></i><b>3.5</b> Externalities, public goods, and market failure</a></li>
+<li class="chapter" data-level="3.6" data-path="micro.html"><a href="micro.html#common-pitfalls-and-key-takeaways"><i class="fa fa-check"></i><b>3.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="macro.html"><a href="macro.html"><i class="fa fa-check"></i><b>4</b> Macroeconomics: Measurement and Trends</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#gdp-and-national-accounts"><i class="fa fa-check"></i><b>4.1</b> GDP and national accounts</a></li>
-<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#inflation-and-price-indices"><i class="fa fa-check"></i><b>4.2</b> Inflation and price indices</a></li>
-<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.3</b> Unemployment, participation, and labour markets</a></li>
-<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#growth-and-cycles"><i class="fa fa-check"></i><b>4.4</b> Growth and cycles</a></li>
-<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.5</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#gdp-economic-activity-and-national-accounts"><i class="fa fa-check"></i><b>4.2</b> GDP, economic activity, and national accounts</a></li>
+<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#inflation-prices-and-purchasing-power"><i class="fa fa-check"></i><b>4.3</b> Inflation, prices, and purchasing power</a></li>
+<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.4</b> Unemployment, participation, and labour markets</a></li>
+<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations"><i class="fa fa-check"></i><b>4.5</b> Growth, business cycles, and macroeconomic fluctuations</a></li>
+<li class="chapter" data-level="4.6" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.6</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.7" data-path="macro.html"><a href="macro.html#common-pitfalls-and-key-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="policy.html"><a href="policy.html"><i class="fa fa-check"></i><b>5</b> Fiscal and Monetary Policy</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#fiscal-policy"><i class="fa fa-check"></i><b>5.1</b> Fiscal policy</a></li>
-<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#monetary-policy"><i class="fa fa-check"></i><b>5.2</b> Monetary policy</a></li>
-<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#practical-limits-and-trade-offs"><i class="fa fa-check"></i><b>5.3</b> Practical limits and trade-offs</a></li>
+<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#fiscal-policy-deficits-and-stabilization"><i class="fa fa-check"></i><b>5.2</b> Fiscal policy, deficits, and stabilization</a></li>
+<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#monetary-policy-and-financial-conditions"><i class="fa fa-check"></i><b>5.3</b> Monetary policy and financial conditions</a></li>
+<li class="chapter" data-level="5.4" data-path="policy.html"><a href="policy.html#transmission-lags-uncertainty-and-policy-trade-offs"><i class="fa fa-check"></i><b>5.4</b> Transmission lags, uncertainty, and policy trade-offs</a></li>
+<li class="chapter" data-level="5.5" data-path="policy.html"><a href="policy.html#common-pitfalls-and-key-takeaways-2"><i class="fa fa-check"></i><b>5.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ols.html"><a href="ols.html"><i class="fa fa-check"></i><b>6</b> Ordinary Least Squares (OLS): Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.1</b> What OLS estimates</a></li>
-<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#assumptions-and-why-they-matter"><i class="fa fa-check"></i><b>6.2</b> Assumptions and why they matter</a></li>
-<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#reading-output"><i class="fa fa-check"></i><b>6.3</b> Reading output</a></li>
-<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-fixes"><i class="fa fa-check"></i><b>6.4</b> Diagnostics and practical fixes</a></li>
+<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.2</b> What OLS estimates</a></li>
+<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#residuals-assumptions-and-inference"><i class="fa fa-check"></i><b>6.3</b> Residuals, assumptions, and inference</a></li>
+<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#reading-regression-output"><i class="fa fa-check"></i><b>6.4</b> Reading regression output</a></li>
+<li class="chapter" data-level="6.5" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-responses"><i class="fa fa-check"></i><b>6.5</b> Diagnostics and practical responses</a></li>
+<li class="chapter" data-level="6.6" data-path="ols.html"><a href="ols.html#common-pitfalls-and-key-takeaways-3"><i class="fa fa-check"></i><b>6.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="multivariate.html"><a href="multivariate.html"><i class="fa fa-check"></i><b>7</b> Multivariate Modeling</a>
 <ul>
@@ -191,26 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#components-and-visualization"><i class="fa fa-check"></i><b>8.1</b> Components and visualization</a></li>
-<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.2</b> Stationarity and differencing</a></li>
-<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.3</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#learning-objectives-5"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#components-of-time-series-data"><i class="fa fa-check"></i><b>8.2</b> Components of time series data</a></li>
+<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.3</b> Stationarity and differencing</a></li>
+<li class="chapter" data-level="8.4" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.4</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.5" data-path="time-series.html"><a href="time-series.html#forecasting-workflow-and-diagnostics"><i class="fa fa-check"></i><b>8.5</b> Forecasting workflow and diagnostics</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causality.html"><a href="causality.html"><i class="fa fa-check"></i><b>9</b> Causality, Identification, and Policy Evaluation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.1</b> Threats to causal inference</a></li>
-<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#common-strategies"><i class="fa fa-check"></i><b>9.2</b> Common strategies</a></li>
-<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#practical-checklist"><i class="fa fa-check"></i><b>9.3</b> Practical checklist</a></li>
+<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#learning-objectives-6"><i class="fa fa-check"></i><b>9.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#correlation-causation-and-the-counterfactual-problem"><i class="fa fa-check"></i><b>9.2</b> Correlation, causation, and the counterfactual problem</a></li>
+<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.3</b> Threats to causal inference</a></li>
+<li class="chapter" data-level="9.4" data-path="causality.html"><a href="causality.html#common-identification-strategies"><i class="fa fa-check"></i><b>9.4</b> Common identification strategies</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="causality.html"><a href="causality.html#randomized-experiments"><i class="fa fa-check"></i><b>9.4.1</b> Randomized experiments</a></li>
+<li class="chapter" data-level="9.4.2" data-path="causality.html"><a href="causality.html#difference-in-differences"><i class="fa fa-check"></i><b>9.4.2</b> Difference-in-differences</a></li>
+<li class="chapter" data-level="9.4.3" data-path="causality.html"><a href="causality.html#instrumental-variables"><i class="fa fa-check"></i><b>9.4.3</b> Instrumental variables</a></li>
+<li class="chapter" data-level="9.4.4" data-path="causality.html"><a href="causality.html#regression-discontinuity"><i class="fa fa-check"></i><b>9.4.4</b> Regression discontinuity</a></li>
+<li class="chapter" data-level="9.4.5" data-path="causality.html"><a href="causality.html#matching-and-controls"><i class="fa fa-check"></i><b>9.4.5</b> Matching and controls</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="causality.html"><a href="causality.html#robustness-transparency-and-policy-evaluation"><i class="fa fa-check"></i><b>9.5</b> Robustness, transparency, and policy evaluation</a></li>
+<li class="chapter" data-level="9.6" data-path="causality.html"><a href="causality.html#common-pitfalls-and-key-takeaways-4"><i class="fa fa-check"></i><b>9.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="itsa.html"><a href="itsa.html"><i class="fa fa-check"></i><b>10</b> Interrupted Time Series Analysis (ITSA): Concepts</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#segmented-regression-interpretation"><i class="fa fa-check"></i><b>10.1</b> Segmented regression interpretation</a></li>
-<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats"><i class="fa fa-check"></i><b>10.2</b> Assumptions and threats</a></li>
-<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#extensions"><i class="fa fa-check"></i><b>10.3</b> Extensions</a></li>
+<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#counterfactual-trends-and-segmented-regression"><i class="fa fa-check"></i><b>10.2</b> Counterfactual trends and segmented regression</a></li>
+<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats-to-validity"><i class="fa fa-check"></i><b>10.3</b> Assumptions and threats to validity</a></li>
+<li class="chapter" data-level="10.4" data-path="itsa.html"><a href="itsa.html#extensions-and-practical-applications"><i class="fa fa-check"></i><b>10.4</b> Extensions and practical applications</a></li>
+<li class="chapter" data-level="10.5" data-path="itsa.html"><a href="itsa.html#common-pitfalls-and-key-takeaways-5"><i class="fa fa-check"></i><b>10.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="itsa-applied.html"><a href="itsa-applied.html"><i class="fa fa-check"></i><b>11</b> Interrupted Time Series Analysis (ITSA): Worked Workflow</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="itsa-applied.html"><a href="itsa-applied.html#reporting-recommendations"><i class="fa fa-check"></i><b>11.1</b> Reporting recommendations</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -230,65 +264,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="what-is-econ" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> What is Economics?<a href="what-is-econ.html#what-is-econ" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Economics studies how people and organizations make choices under scarcity. Scarcity implies trade-offs, and those trade-offs are shaped by institutions, incentives, information, and power. This chapter builds a shared vocabulary for the rest of the book.</p>
-<p>Roadmap</p>
-<p>This chapter moves from definitions to values, then to economic actors and markets. It ends by connecting market structure and market failure to why policy evaluation matters.</p>
-<p>Learning objectives</p>
+<p>Economics studies how individuals, organizations, and governments make choices under conditions of scarcity. Because resources are limited, every choice involves trade-offs. These trade-offs are shaped not only by prices and resources, but also by institutions, incentives, information, social norms, and power.</p>
+<p>Economics is therefore not only about money or markets. It is also about how societies organize production, distribute resources, manage risk, and define what counts as a desirable outcome. Questions about housing affordability, healthcare access, environmental degradation, taxation, inflation, and climate policy are all economic questions because they involve competing objectives under limited resources.</p>
+<p>For example, during a drought, water may need to be allocated among households, agriculture, ecosystems, and industry. Economics helps analyze who receives water, who bears the costs, what incentives exist, and how institutions shape the outcome.</p>
+<p>This chapter introduces core concepts and vocabulary used throughout the rest of the book.</p>
+<div id="roadmap" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Roadmap<a href="what-is-econ.html#roadmap" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The chapter begins with scarcity and opportunity cost, then introduces the role of incentives, values, institutions, and information in economic reasoning. It next examines economic actors and market structures before concluding with market failure and the role of policy evaluation.</p>
+</div>
+<div id="learning-objectives" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Learning objectives<a href="what-is-econ.html#learning-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
 <ul>
-<li>Define scarcity, opportunity cost, and incentives.</li>
-<li>Explain why economic evaluation involves values such as efficiency and fairness.</li>
-<li>Compare broad traditions of economic thought and their information assumptions.</li>
-<li>Identify key actors and describe how their objectives can differ.</li>
-<li>Recognize common market structures and what they imply for power.</li>
+<li>define scarcity, opportunity cost, and incentives;</li>
+<li>explain why economic evaluation involves both evidence and values;</li>
+<li>compare broad economic traditions and their assumptions;</li>
+<li>identify major economic actors and explain how their objectives differ; and</li>
+<li>explain why market failures matter in applied policy analysis.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-econ-system"></span>
-<img src="images/01_econ_system_map.png" alt="Economic system overview showing households, firms, markets, and the state. Use this map as a guide for where policy and evidence enter the system." width="95%" />
+<img src="images/01_econ_system_map.png" alt="Economic system overview showing households, firms, markets and institutions, the state, and civil society. The diagram highlights flows of resources, incentives, information, regulation, and power within the economy." width="100%" />
 <p class="caption">
-Figure 2.1: Economic system overview showing households, firms, markets, and the state. Use this map as a guide for where policy and evidence enter the system.
+Figure 2.1: Economic system overview showing households, firms, markets and institutions, the state, and civil society. The diagram highlights flows of resources, incentives, information, regulation, and power within the economy.
 </p>
 </div>
-<p>Figure <a href="what-is-econ.html#fig:fig-econ-system">2.1</a> is a high-level map. It is not a model with numbers; it is a way to organize thinking. In applied work, disagreements often come from different assumptions about which arrows are strong, which are weak, and which are constrained by institutions.</p>
-<div id="scarcity-and-opportunity-cost" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Scarcity and opportunity cost<a href="what-is-econ.html#scarcity-and-opportunity-cost" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Scarcity means that resources (time, money, labour, land, attention, public budgets) are limited relative to what people want or need. Opportunity cost captures the idea that choosing one option usually means giving up another. In policy contexts, opportunity costs can be non-monetary, such as foregone services, worse health outcomes, or environmental degradation.</p>
-<p>In applied analysis, opportunity cost is often the difference between a world with an intervention and a world without it. That is why counterfactual reasoning is central later in the book.</p>
+<p>Figure <a href="what-is-econ.html#fig:fig-econ-system">2.1</a> presents a high-level view of the economic system. The figure is not a mathematical model. Instead, it is a conceptual map showing how economic actors interact through flows of labour, goods, services, taxes, regulation, information, incentives, and social norms.</p>
+<p>The figure also emphasizes that markets do not operate in isolation. Economic activity occurs within broader institutional systems that include laws, governance structures, political systems, and cultural norms. In applied economics, disagreements often arise because people make different assumptions about which relationships are most important, which actors hold power, and which constraints matter most.</p>
 </div>
-<div id="economics-as-evidence-and-as-judgment" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Economics as evidence and as judgment<a href="what-is-econ.html#economics-as-evidence-and-as-judgment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Economics uses data and models to explain patterns, but it also uses criteria to judge outcomes.</p>
-<p>Efficiency is one criterion, but it comes in more than one form. Narrow efficiency focuses on maximizing outputs for given inputs. Broader efficiency can incorporate system waste, spillovers, and long-run sustainability.</p>
-<p>Fairness, trust, freedom, and equality appear when policies affect different groups differently. In practice, many debates are really about which values are prioritized and what trade-offs are acceptable.</p>
+<div id="scarcity-trade-offs-and-opportunity-cost" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Scarcity, trade-offs, and opportunity cost<a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Scarcity means that resources are limited relative to human wants and needs. These resources include money, labour, time, land, energy, institutional capacity, public budgets, and even attention.</p>
+<p>Because resources are limited, choices must be made. Choosing one option usually means giving up another. This forgone alternative is called the <em>opportunity cost</em>.</p>
+<p>For example, spending public funds on transportation infrastructure may reduce the funding available for healthcare or education. Protecting environmentally sensitive land may reduce opportunities for industrial development or resource extraction. Similarly, a student who spends time studying gives up leisure time or paid employment.</p>
+<p>Opportunity costs are not always monetary. In policy contexts, they may include environmental degradation, reduced trust, poorer health outcomes, or lost social opportunities.</p>
+<p>In applied economic analysis, opportunity cost is often evaluated by comparing a world <em>with</em> an intervention to a world <em>without</em> it. This comparison is called a <em>counterfactual</em>, and it becomes central later in the book.</p>
 </div>
-<div id="economic-theories-and-assumptions" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Economic theories and assumptions<a href="what-is-econ.html#economic-theories-and-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Different traditions emphasize different mechanisms. Social and institutional perspectives highlight that markets are embedded in social norms and legal rules. Post-Keynesian approaches emphasize uncertainty, market power, and effective demand. Neoclassical approaches often start from idealized markets and then add frictions.</p>
-<p>These traditions differ in how they treat information. Closed-information assumptions make cost-benefit analysis easier but can omit hard-to-measure impacts. Open-information approaches encourage wider evidence but can be harder to summarize.</p>
+<div id="incentives-and-behaviour" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Incentives and behaviour<a href="what-is-econ.html#incentives-and-behaviour" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Incentives influence how individuals and organizations respond to policies, prices, risks, and information. Incentives may be financial, legal, social, political, or psychological.</p>
+<p>For example, taxes on pollution attempt to discourage environmentally harmful activities, while subsidies for renewable energy attempt to encourage cleaner forms of production. Wage levels influence labour supply decisions, and social recognition may encourage volunteering or cooperation.</p>
+<p>Economists often study how changes in incentives alter behaviour. However, incentives do not operate independently from social systems. Behaviour is also shaped by institutions, culture, laws, information, and unequal power relationships.</p>
 </div>
-<div id="economic-actors" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Economic actors<a href="what-is-econ.html#economic-actors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Households, firms, the state, and community actors have different objectives. Firms may pursue profit, market share, stability, or stakeholder goals. States can pursue growth, stability, redistribution, and provision of public goods. Community actors can stabilize local systems through cooperation, mutual aid, and governance.</p>
-<p>Households are rarely a single decision-maker. Household bargaining, risk pooling, caregiving, and division of labour can affect labour supply, consumption, and health outcomes.</p>
+<div id="economics-as-evidence-and-as-judgment" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Economics as evidence and as judgment<a href="what-is-econ.html#economics-as-evidence-and-as-judgment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Economics uses evidence, data, and models to explain patterns and evaluate decisions. At the same time, economics also involves judgments about what outcomes are desirable.</p>
+<p>One common criterion is <em>efficiency</em>, although efficiency can be interpreted in different ways. A narrow interpretation focuses on maximizing outputs for a given set of inputs. Broader interpretations may include long-term sustainability, resilience, spillover effects, and system-wide impacts.</p>
+<p>Economic evaluation also involves values such as fairness, equality, freedom, stability, and environmental sustainability. Many policy debates are ultimately disagreements about which values should receive priority and what trade-offs are considered acceptable.</p>
+<p>For example, a policy may increase total economic output while simultaneously increasing inequality. In such cases, disagreements are often not about the evidence itself, but about how outcomes should be evaluated.</p>
 </div>
-<div id="markets-and-market-structure" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Markets and market structure<a href="what-is-econ.html#markets-and-market-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Market structure shapes prices, entry, innovation, and power. Monopoly and monopsony concentrate power on one side of the market. Oligopoly creates strategic interaction among large sellers. Monopolistic competition is common in differentiated goods and services. Perfect competition is a benchmark that helps organize reasoning, even if it is rarely fully met.</p>
+<div id="economic-theories-and-assumptions" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Economic theories and assumptions<a href="what-is-econ.html#economic-theories-and-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Different economic traditions emphasize different mechanisms and assumptions.</p>
+<p>Neoclassical economics often begins with simplified models of competitive markets, rational decision-making, and price-driven coordination. These models are useful because they provide clear analytical frameworks and benchmarks for comparison. However, real-world economies frequently depart from these idealized assumptions.</p>
+<p>Institutional and social approaches emphasize that markets are embedded within legal systems, political structures, social norms, and historical relationships. From this perspective, property rights, governance systems, trust, and power are central parts of economic analysis rather than background conditions.</p>
+<p>Post-Keynesian approaches place greater emphasis on uncertainty, instability, financial systems, market power, and effective demand. These perspectives often argue that economies do not naturally move toward stable equilibrium and may require active policy intervention.</p>
+<p>Economic theories also differ in how they treat information. Some approaches rely on simplified assumptions where actors possess relatively complete information and markets can be analyzed using formal models. Other approaches emphasize uncertainty, incomplete information, bounded rationality, and social complexity.</p>
+<p>These differences matter because policy conclusions often depend heavily on assumptions about behaviour, information, and institutions.</p>
 </div>
-<div id="market-failure-and-why-it-matters" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Market failure and why it matters<a href="what-is-econ.html#market-failure-and-why-it-matters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Market failures include market power, information problems, externalities, public goods, and missing markets. Many health and social policy questions arise because markets do not naturally deliver equitable or efficient outcomes.</p>
-<p>Common pitfalls</p>
-<ul>
-<li>Treating efficiency as the only objective and ignoring distribution.</li>
-<li>Assuming markets are competitive when market power is present.</li>
-<li>Using a narrow cost-benefit frame when important impacts are unmeasured.</li>
-<li>Forgetting that households and communities are actors, not background.</li>
-</ul>
-<p>Key takeaways</p>
-<ul>
-<li>Economics is about choices under scarcity and the trade-offs those choices create.</li>
-<li>Values and institutions shape what is measured and what counts as success.</li>
-<li>Market structure is a practical way to think about power and policy needs.</li>
-</ul>
+<div id="economic-actors" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Economic actors<a href="what-is-econ.html#economic-actors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Economic systems involve multiple actors with different objectives and constraints. Figure <a href="what-is-econ.html#fig:fig-econ-system">2.1</a> highlights how these actors interact through flows of resources, information, incentives, regulation, and social influence.</p>
+<p>Households supply labour, consume goods and services, save, borrow, and make decisions under uncertainty. Households are rarely a single unified decision-maker. Bargaining, caregiving responsibilities, unequal income distribution, and risk-sharing arrangements within households can affect labour supply, education, consumption, and health outcomes.</p>
+<p>Firms produce goods and services using labour, capital, technology, and natural resources. Although profit is often important, firms may also pursue market share, long-term stability, innovation, political influence, or stakeholder objectives.</p>
+<p>Governments influence economic activity through taxation, regulation, public services, infrastructure investment, redistribution, and legal enforcement. The state also shapes markets by defining property rights, enforcing contracts, and responding to market failures.</p>
+<p>Community organizations, non-profit groups, Indigenous governments, cooperatives, advocacy groups, and social networks also play important economic roles. These actors can provide mutual aid, influence norms, advocate for policy change, stabilize communities, and build social trust.</p>
+</div>
+<div id="markets-and-market-structure" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Markets and market structure<a href="what-is-econ.html#markets-and-market-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Markets coordinate exchanges between buyers and sellers. However, markets differ greatly in structure, competitiveness, and power distribution.</p>
+<p>Perfect competition assumes many buyers and sellers, relatively complete information, and free entry and exit. It is primarily a theoretical benchmark used to organize economic reasoning, even though real-world markets rarely meet all of these conditions.</p>
+<p>A monopoly exists when a single seller dominates a market, while a monopsony occurs when a single buyer holds substantial market power. Oligopolies involve a small number of large firms whose decisions affect one another strategically. Monopolistic competition is common in differentiated goods and services where many firms compete but products are not identical.</p>
+<p>Market structure is not only about prices and efficiency. It is also about bargaining power, political influence, innovation, and who has control over economic outcomes.</p>
+</div>
+<div id="market-failure-and-why-it-matters" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> Market failure and why it matters<a href="what-is-econ.html#market-failure-and-why-it-matters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Market failures occur when markets alone do not produce socially desirable outcomes.</p>
+<p>One common example is <em>externalities</em>, where actions impose costs or benefits on others that are not reflected in market prices. Pollution and climate change are examples of negative externalities, while vaccination programs may generate positive externalities.</p>
+<p>Another example involves <em>public goods</em>, which are difficult to exclude people from using and are often underprovided by markets. Examples include flood protection, national defense, and some forms of public health infrastructure.</p>
+<p>Markets may also function poorly when one side possesses more information than another. These information problems are common in healthcare, insurance, and financial systems. Concentrated market power can also reduce competition, distort prices, limit innovation, and increase inequality.</p>
+<p>Some socially valuable goods or risks may lack functioning markets altogether. Ecosystem services, biodiversity protection, and unpaid caregiving work are examples of activities that are often difficult to measure or price adequately within conventional markets.</p>
+<p>Many policy questions arise precisely because markets do not automatically generate equitable, efficient, or sustainable outcomes.</p>
+</div>
+<div id="common-pitfalls" class="section level2 hasAnchor" number="2.10">
+<h2><span class="header-section-number">2.10</span> Common pitfalls<a href="what-is-econ.html#common-pitfalls" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A common mistake in economic analysis is treating efficiency as the only policy objective while ignoring equity and distributional impacts. Another is assuming that markets are competitive when significant market power exists. Analysts may also overlook the importance of institutions, governance systems, historical context, or unequal bargaining power.</p>
+<p>Narrow cost-benefit frameworks can become misleading when important social or environmental impacts are difficult to measure. Similarly, treating households and communities as passive background conditions rather than active economic actors can lead to incomplete analysis.</p>
+</div>
+<div id="key-takeaways" class="section level2 hasAnchor" number="2.11">
+<h2><span class="header-section-number">2.11</span> Key takeaways<a href="what-is-econ.html#key-takeaways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Economics studies how societies make choices under scarcity and how those choices create trade-offs. Economic outcomes are shaped not only by prices and resources, but also by institutions, incentives, information, and power.</p>
+<p>Markets operate within broader political, legal, and social systems, and market structure strongly influences efficiency, bargaining power, and policy outcomes. Because markets do not always produce socially desirable results, governments and institutions often intervene to address market failures and broader social objectives.</p>
 
 </div>
 </div>
@@ -313,9 +378,9 @@ Figure 2.1: Economic system overview showing households, firms, markets, and the
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
+    "github": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
@@ -328,10 +393,7 @@ gitbook.start({
     "family": "sans",
     "size": 2
   },
-  "edit": {
-    "link": null,
-    "text": null
-  },
+  "edit": null,
   "history": {
     "link": null,
     "text": null
@@ -340,7 +402,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["notes-on-economics.epub"],
+  "download": ["notes-on-economics.pdf", "notes-on-economics.epub"],
   "search": {
     "engine": "fuse",
     "options": null
@@ -352,6 +414,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

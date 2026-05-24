@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -136,6 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Book of Economics</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.1</b> Who this book is for</a></li>
@@ -143,44 +147,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#using-figures-and-visuals"><i class="fa fa-check"></i><b>1.3</b> Using figures and visuals</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#using-r-code"><i class="fa fa-check"></i><b>1.4</b> Using R code</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.5</b> Learning goals</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#notes-on-scope-and-interpretation"><i class="fa fa-check"></i><b>1.6</b> Notes on scope and interpretation</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#a-note-on-interpretation-and-evidence"><i class="fa fa-check"></i><b>1.6</b> A note on interpretation and evidence</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="what-is-econ.html"><a href="what-is-econ.html"><i class="fa fa-check"></i><b>2</b> What is Economics?</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-and-opportunity-cost"><i class="fa fa-check"></i><b>2.1</b> Scarcity and opportunity cost</a></li>
-<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.2</b> Economics as evidence and as judgment</a></li>
-<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.3</b> Economic theories and assumptions</a></li>
-<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.4</b> Economic actors</a></li>
-<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.5</b> Markets and market structure</a></li>
-<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.6</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#roadmap"><i class="fa fa-check"></i><b>2.1</b> Roadmap</a></li>
+<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost"><i class="fa fa-check"></i><b>2.3</b> Scarcity, trade-offs, and opportunity cost</a></li>
+<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#incentives-and-behaviour"><i class="fa fa-check"></i><b>2.4</b> Incentives and behaviour</a></li>
+<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.5</b> Economics as evidence and as judgment</a></li>
+<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.6</b> Economic theories and assumptions</a></li>
+<li class="chapter" data-level="2.7" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.7</b> Economic actors</a></li>
+<li class="chapter" data-level="2.8" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.8</b> Markets and market structure</a></li>
+<li class="chapter" data-level="2.9" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.9</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.10" data-path="what-is-econ.html"><a href="what-is-econ.html#common-pitfalls"><i class="fa fa-check"></i><b>2.10</b> Common pitfalls</a></li>
+<li class="chapter" data-level="2.11" data-path="what-is-econ.html"><a href="what-is-econ.html#key-takeaways"><i class="fa fa-check"></i><b>2.11</b> Key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="micro.html"><a href="micro.html"><i class="fa fa-check"></i><b>3</b> Microeconomics Essentials</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.1</b> Supply, demand, and equilibrium</a></li>
-<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#elasticity-and-incidence"><i class="fa fa-check"></i><b>3.2</b> Elasticity and incidence</a></li>
-<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#market-power-in-practice"><i class="fa fa-check"></i><b>3.3</b> Market power in practice</a></li>
-<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#externalities-and-public-goods"><i class="fa fa-check"></i><b>3.4</b> Externalities and public goods</a></li>
+<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.2</b> Supply, demand, and equilibrium</a></li>
+<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#elasticity-behavioural-response-and-incidence"><i class="fa fa-check"></i><b>3.3</b> Elasticity, behavioural response, and incidence</a></li>
+<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#market-power-and-regulation"><i class="fa fa-check"></i><b>3.4</b> Market power and regulation</a></li>
+<li class="chapter" data-level="3.5" data-path="micro.html"><a href="micro.html#externalities-public-goods-and-market-failure"><i class="fa fa-check"></i><b>3.5</b> Externalities, public goods, and market failure</a></li>
+<li class="chapter" data-level="3.6" data-path="micro.html"><a href="micro.html#common-pitfalls-and-key-takeaways"><i class="fa fa-check"></i><b>3.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="macro.html"><a href="macro.html"><i class="fa fa-check"></i><b>4</b> Macroeconomics: Measurement and Trends</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#gdp-and-national-accounts"><i class="fa fa-check"></i><b>4.1</b> GDP and national accounts</a></li>
-<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#inflation-and-price-indices"><i class="fa fa-check"></i><b>4.2</b> Inflation and price indices</a></li>
-<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.3</b> Unemployment, participation, and labour markets</a></li>
-<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#growth-and-cycles"><i class="fa fa-check"></i><b>4.4</b> Growth and cycles</a></li>
-<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.5</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#gdp-economic-activity-and-national-accounts"><i class="fa fa-check"></i><b>4.2</b> GDP, economic activity, and national accounts</a></li>
+<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#inflation-prices-and-purchasing-power"><i class="fa fa-check"></i><b>4.3</b> Inflation, prices, and purchasing power</a></li>
+<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.4</b> Unemployment, participation, and labour markets</a></li>
+<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations"><i class="fa fa-check"></i><b>4.5</b> Growth, business cycles, and macroeconomic fluctuations</a></li>
+<li class="chapter" data-level="4.6" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.6</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.7" data-path="macro.html"><a href="macro.html#common-pitfalls-and-key-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="policy.html"><a href="policy.html"><i class="fa fa-check"></i><b>5</b> Fiscal and Monetary Policy</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#fiscal-policy"><i class="fa fa-check"></i><b>5.1</b> Fiscal policy</a></li>
-<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#monetary-policy"><i class="fa fa-check"></i><b>5.2</b> Monetary policy</a></li>
-<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#practical-limits-and-trade-offs"><i class="fa fa-check"></i><b>5.3</b> Practical limits and trade-offs</a></li>
+<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#fiscal-policy-deficits-and-stabilization"><i class="fa fa-check"></i><b>5.2</b> Fiscal policy, deficits, and stabilization</a></li>
+<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#monetary-policy-and-financial-conditions"><i class="fa fa-check"></i><b>5.3</b> Monetary policy and financial conditions</a></li>
+<li class="chapter" data-level="5.4" data-path="policy.html"><a href="policy.html#transmission-lags-uncertainty-and-policy-trade-offs"><i class="fa fa-check"></i><b>5.4</b> Transmission lags, uncertainty, and policy trade-offs</a></li>
+<li class="chapter" data-level="5.5" data-path="policy.html"><a href="policy.html#common-pitfalls-and-key-takeaways-2"><i class="fa fa-check"></i><b>5.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ols.html"><a href="ols.html"><i class="fa fa-check"></i><b>6</b> Ordinary Least Squares (OLS): Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.1</b> What OLS estimates</a></li>
-<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#assumptions-and-why-they-matter"><i class="fa fa-check"></i><b>6.2</b> Assumptions and why they matter</a></li>
-<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#reading-output"><i class="fa fa-check"></i><b>6.3</b> Reading output</a></li>
-<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-fixes"><i class="fa fa-check"></i><b>6.4</b> Diagnostics and practical fixes</a></li>
+<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.2</b> What OLS estimates</a></li>
+<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#residuals-assumptions-and-inference"><i class="fa fa-check"></i><b>6.3</b> Residuals, assumptions, and inference</a></li>
+<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#reading-regression-output"><i class="fa fa-check"></i><b>6.4</b> Reading regression output</a></li>
+<li class="chapter" data-level="6.5" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-responses"><i class="fa fa-check"></i><b>6.5</b> Diagnostics and practical responses</a></li>
+<li class="chapter" data-level="6.6" data-path="ols.html"><a href="ols.html#common-pitfalls-and-key-takeaways-3"><i class="fa fa-check"></i><b>6.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="multivariate.html"><a href="multivariate.html"><i class="fa fa-check"></i><b>7</b> Multivariate Modeling</a>
 <ul>
@@ -191,26 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#components-and-visualization"><i class="fa fa-check"></i><b>8.1</b> Components and visualization</a></li>
-<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.2</b> Stationarity and differencing</a></li>
-<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.3</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#learning-objectives-5"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#components-of-time-series-data"><i class="fa fa-check"></i><b>8.2</b> Components of time series data</a></li>
+<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.3</b> Stationarity and differencing</a></li>
+<li class="chapter" data-level="8.4" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.4</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.5" data-path="time-series.html"><a href="time-series.html#forecasting-workflow-and-diagnostics"><i class="fa fa-check"></i><b>8.5</b> Forecasting workflow and diagnostics</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causality.html"><a href="causality.html"><i class="fa fa-check"></i><b>9</b> Causality, Identification, and Policy Evaluation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.1</b> Threats to causal inference</a></li>
-<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#common-strategies"><i class="fa fa-check"></i><b>9.2</b> Common strategies</a></li>
-<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#practical-checklist"><i class="fa fa-check"></i><b>9.3</b> Practical checklist</a></li>
+<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#learning-objectives-6"><i class="fa fa-check"></i><b>9.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#correlation-causation-and-the-counterfactual-problem"><i class="fa fa-check"></i><b>9.2</b> Correlation, causation, and the counterfactual problem</a></li>
+<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.3</b> Threats to causal inference</a></li>
+<li class="chapter" data-level="9.4" data-path="causality.html"><a href="causality.html#common-identification-strategies"><i class="fa fa-check"></i><b>9.4</b> Common identification strategies</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="causality.html"><a href="causality.html#randomized-experiments"><i class="fa fa-check"></i><b>9.4.1</b> Randomized experiments</a></li>
+<li class="chapter" data-level="9.4.2" data-path="causality.html"><a href="causality.html#difference-in-differences"><i class="fa fa-check"></i><b>9.4.2</b> Difference-in-differences</a></li>
+<li class="chapter" data-level="9.4.3" data-path="causality.html"><a href="causality.html#instrumental-variables"><i class="fa fa-check"></i><b>9.4.3</b> Instrumental variables</a></li>
+<li class="chapter" data-level="9.4.4" data-path="causality.html"><a href="causality.html#regression-discontinuity"><i class="fa fa-check"></i><b>9.4.4</b> Regression discontinuity</a></li>
+<li class="chapter" data-level="9.4.5" data-path="causality.html"><a href="causality.html#matching-and-controls"><i class="fa fa-check"></i><b>9.4.5</b> Matching and controls</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="causality.html"><a href="causality.html#robustness-transparency-and-policy-evaluation"><i class="fa fa-check"></i><b>9.5</b> Robustness, transparency, and policy evaluation</a></li>
+<li class="chapter" data-level="9.6" data-path="causality.html"><a href="causality.html#common-pitfalls-and-key-takeaways-4"><i class="fa fa-check"></i><b>9.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="itsa.html"><a href="itsa.html"><i class="fa fa-check"></i><b>10</b> Interrupted Time Series Analysis (ITSA): Concepts</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#segmented-regression-interpretation"><i class="fa fa-check"></i><b>10.1</b> Segmented regression interpretation</a></li>
-<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats"><i class="fa fa-check"></i><b>10.2</b> Assumptions and threats</a></li>
-<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#extensions"><i class="fa fa-check"></i><b>10.3</b> Extensions</a></li>
+<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#counterfactual-trends-and-segmented-regression"><i class="fa fa-check"></i><b>10.2</b> Counterfactual trends and segmented regression</a></li>
+<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats-to-validity"><i class="fa fa-check"></i><b>10.3</b> Assumptions and threats to validity</a></li>
+<li class="chapter" data-level="10.4" data-path="itsa.html"><a href="itsa.html#extensions-and-practical-applications"><i class="fa fa-check"></i><b>10.4</b> Extensions and practical applications</a></li>
+<li class="chapter" data-level="10.5" data-path="itsa.html"><a href="itsa.html#common-pitfalls-and-key-takeaways-5"><i class="fa fa-check"></i><b>10.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="itsa-applied.html"><a href="itsa-applied.html"><i class="fa fa-check"></i><b>11</b> Interrupted Time Series Analysis (ITSA): Worked Workflow</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="itsa-applied.html"><a href="itsa-applied.html#reporting-recommendations"><i class="fa fa-check"></i><b>11.1</b> Reporting recommendations</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -230,49 +264,108 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="causality" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">9</span> Causality, Identification, and Policy Evaluation<a href="causality.html#causality" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Policy analysis often asks causal questions: what is the effect of a policy, program, or exposure on an outcome? Answering this requires a credible counterfactual.</p>
-<p>Roadmap</p>
-<p>We explain why correlation is not causation, then outline common identification strategies and a checklist for evaluating evidence.</p>
-<p>Learning objectives</p>
+<p>Policymakers and researchers are often interested in causal questions rather than simple associations. Instead of asking whether two variables move together, policy evaluation typically asks whether a policy, program, intervention, or exposure actually caused an outcome to change.</p>
+<p>Examples include questions such as:
+- Did a training program increase employment?
+- Did a carbon tax reduce emissions?
+- Did a healthcare intervention improve patient outcomes?
+- Did new policing policies reduce crime?</p>
+<p>Answering these questions requires more than statistical correlation. The central challenge in causal inference is determining what would have happened in the absence of the intervention. This unobserved alternative is called the <em>counterfactual</em>.</p>
+<p>Because the same individual, region, or organization cannot simultaneously experience both treatment and non-treatment at the same time, causal inference requires strategies that approximate the missing counterfactual as credibly as possible.</p>
+<p>This chapter introduces the logic of counterfactual reasoning, explains major threats to causal interpretation, and outlines common identification strategies used in applied policy evaluation.</p>
+<div id="learning-objectives-6" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Learning objectives<a href="causality.html#learning-objectives-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
 <ul>
-<li>Define counterfactual reasoning and why it is central.</li>
-<li>Identify major threats to causal interpretation.</li>
-<li>Describe common identification strategies and when they are plausible.</li>
-<li>Use a checklist to assess credibility and robustness.</li>
+<li>explain why counterfactual reasoning is central to causal inference;</li>
+<li>identify major threats to causal interpretation;</li>
+<li>describe common identification strategies and their assumptions; and</li>
+<li>evaluate the credibility and robustness of causal evidence.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-identification"></span>
-<img src="images/08_identification_strategies.png" alt="Identification strategies for causal inference. Different designs create different approximations to the counterfactual; credibility depends on assumptions and context." width="95%" />
+<img src="images/08_identification_strategies.png" alt="Identification strategies for causal inference. Different research designs approximate the missing counterfactual under different assumptions. Credible causal inference depends not only on statistical models, but also on research design, assumptions, and robustness checks." width="100%" />
 <p class="caption">
-Figure 9.1: Identification strategies for causal inference. Different designs create different approximations to the counterfactual; credibility depends on assumptions and context.
+Figure 9.1: Identification strategies for causal inference. Different research designs approximate the missing counterfactual under different assumptions. Credible causal inference depends not only on statistical models, but also on research design, assumptions, and robustness checks.
 </p>
 </div>
-<p>Figure <a href="causality.html#fig:fig-identification">9.1</a> summarizes major strategies. The right choice depends on what variation exists and what assumptions are defensible.</p>
-<div id="threats-to-causal-inference" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Threats to causal inference<a href="causality.html#threats-to-causal-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Correlation can reflect reverse causality, omitted variables, selection, and measurement error. In applied work, these threats are often present simultaneously.</p>
+<p>Figure <a href="causality.html#fig:fig-identification">9.1</a> summarizes the central problem of causal inference and several common strategies used to address it. The left panel illustrates the <em>counterfactual problem</em>: for each unit, we observe either the treated outcome or the untreated outcome, but never both simultaneously.</p>
+<p>The remaining panels show how different identification strategies attempt to approximate the missing counterfactual using different forms of comparison. Some approaches rely on random assignment, while others exploit thresholds, timing differences, external variation, or carefully selected comparison groups.</p>
+<p>Importantly, Figure <a href="causality.html#fig:fig-identification">9.1</a> also highlights that all identification strategies depend on assumptions. Credibility therefore depends not only on statistical estimation, but also on whether the assumptions are plausible in the policy context being studied.</p>
 </div>
-<div id="common-strategies" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Common strategies<a href="causality.html#common-strategies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Randomized experiments use assignment to balance factors.</p>
-<p>Difference-in-differences uses changes over time between treated and comparison groups.</p>
-<p>Instrumental variables use a variable that shifts treatment but affects outcomes only through treatment.</p>
-<p>Regression discontinuity uses thresholds to create local comparisons.</p>
-<p>Matching and controls attempt to compare similar units but rely on strong assumptions.</p>
+<div id="correlation-causation-and-the-counterfactual-problem" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Correlation, causation, and the counterfactual problem<a href="causality.html#correlation-causation-and-the-counterfactual-problem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Correlation alone does not establish causation. Two variables may move together because one causes the other, because causality operates in the reverse direction, or because both variables are influenced by a third factor.</p>
+<p>For example, regions with more hospitals may also have higher mortality rates, not because hospitals increase mortality, but because hospitals are often concentrated in areas with sicker populations. Similarly, education and income are positively associated, but part of this relationship may reflect factors such as family background, ability, or social networks.</p>
+<p>The key challenge in causal inference is that we never directly observe the same unit both with and without treatment at the same moment in time. The unobserved outcome without treatment is the missing counterfactual.</p>
+<p>Causal inference therefore requires constructing a comparison that approximates what would have happened in the absence of treatment. Different identification strategies attempt to create this comparison in different ways.</p>
+<p>Figure <a href="causality.html#fig:fig-identification">9.1</a> places the counterfactual problem at the center because all causal designs ultimately attempt to approximate this missing comparison.</p>
 </div>
-<div id="practical-checklist" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Practical checklist<a href="causality.html#practical-checklist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A credible evaluation should state the causal question, define the counterfactual, explain assumptions, test robustness, and interpret uncertainty.</p>
-<p>Common pitfalls</p>
-<ul>
-<li>Treating statistical significance as proof of causality.</li>
-<li>Using controls without considering causal pathways.</li>
-<li>Ignoring policy implementation details that break design assumptions.</li>
-</ul>
-<p>Key takeaways</p>
-<ul>
-<li>Causal inference depends on design, not only models.</li>
-<li>A clear counterfactual and transparent assumptions improve credibility.</li>
-</ul>
+<div id="threats-to-causal-inference" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Threats to causal inference<a href="causality.html#threats-to-causal-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Several common problems can distort causal interpretation.</p>
+<p>One important threat is <em>reverse causality</em>, where the outcome itself influences treatment. For example, poor health may reduce income, but low income may also worsen health outcomes.</p>
+<p>Another major issue is <em>omitted variable bias</em> or <em>confounding</em>. Confounding occurs when a third factor affects both treatment assignment and outcomes. If important confounding variables are omitted from the analysis, estimated effects may become biased.</p>
+<p><em>Selection bias</em> is also common in policy evaluation. Individuals who receive treatment may differ systematically from those who do not. For example, motivated individuals may be more likely to participate in training programs, making simple comparisons misleading.</p>
+<p>Measurement error can further distort estimates if variables are measured inaccurately or inconsistently across groups or time periods.</p>
+<p>These threats often occur simultaneously in real-world policy settings, which is why research design is central to credible causal analysis.</p>
+</div>
+<div id="common-identification-strategies" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Common identification strategies<a href="causality.html#common-identification-strategies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Different identification strategies attempt to create credible comparisons under different assumptions.</p>
+<div id="randomized-experiments" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Randomized experiments<a href="causality.html#randomized-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Randomized experiments assign treatment randomly across units. Randomization helps balance both observed and unobserved characteristics between treated and control groups, making the groups comparable on average.</p>
+<p>Because treatment assignment is independent of participant characteristics, randomized experiments are often considered the strongest design for internal validity. However, experiments may still face challenges such as attrition, non-compliance, ethical constraints, or limited external validity.</p>
+<p>Figure <a href="causality.html#fig:fig-identification">9.1</a> illustrates how randomized assignment attempts to create a valid counterfactual through balanced comparison groups.</p>
+</div>
+<div id="difference-in-differences" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> Difference-in-differences<a href="causality.html#difference-in-differences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Difference-in-differences (DiD) compares changes over time between treated and comparison groups. Instead of comparing levels directly, DiD estimates whether outcomes changed differently after treatment relative to a comparison group.</p>
+<p>The key assumption is the <em>parallel trends assumption</em>, which states that treated and comparison groups would have followed similar trends in the absence of treatment.</p>
+<p>Difference-in-differences designs are widely used in policy evaluation because many real-world policies are implemented at different times or across different jurisdictions.</p>
+</div>
+<div id="instrumental-variables" class="section level3 hasAnchor" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> Instrumental variables<a href="causality.html#instrumental-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Instrumental variable (IV) methods use external variation that affects treatment assignment but influences outcomes only through treatment itself.</p>
+<p>A valid instrument must satisfy two key conditions:
+- it must affect treatment assignment (<em>relevance</em>); and
+- it must not directly affect the outcome except through treatment (<em>exclusion restriction</em>).</p>
+<p>Instrumental variables are especially useful when treatment selection is endogenous or affected by unobserved factors.</p>
+<p>Figure <a href="causality.html#fig:fig-identification">9.1</a> emphasizes that IV methods rely heavily on strong assumptions regarding the instrument’s validity.</p>
+</div>
+<div id="regression-discontinuity" class="section level3 hasAnchor" number="9.4.4">
+<h3><span class="header-section-number">9.4.4</span> Regression discontinuity<a href="causality.html#regression-discontinuity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Regression discontinuity (RD) designs exploit thresholds or cutoffs that determine treatment assignment. Units just above and below the threshold are assumed to be comparable except for treatment exposure.</p>
+<p>For example, scholarship eligibility based on test scores may create a discontinuity where students near the cutoff are very similar but receive different treatment status.</p>
+<p>RD designs often produce highly credible local causal estimates when manipulation around the threshold is limited.</p>
+</div>
+<div id="matching-and-controls" class="section level3 hasAnchor" number="9.4.5">
+<h3><span class="header-section-number">9.4.5</span> Matching and controls<a href="causality.html#matching-and-controls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Matching methods and regression controls attempt to compare treated units with observationally similar control units.</p>
+<p>These methods can improve comparability when rich covariate information is available. However, matching approaches can only account for observed characteristics. Unobserved confounding may still bias results.</p>
+<p>Controls should also not be added mechanically. Variables affected by the treatment itself may introduce <em>post-treatment bias</em> and distort causal interpretation.</p>
+</div>
+</div>
+<div id="robustness-transparency-and-policy-evaluation" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Robustness, transparency, and policy evaluation<a href="causality.html#robustness-transparency-and-policy-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Credible policy evaluation requires more than estimating a statistically significant coefficient. Researchers must clearly define the causal question, justify assumptions, explain the counterfactual, and evaluate robustness.</p>
+<p>Figure <a href="causality.html#fig:fig-identification">9.1</a> includes a practical evaluation checklist emphasizing transparency, robustness checks, uncertainty reporting, and discussion of limitations.</p>
+<p>Robustness checks may include:
+- alternative model specifications;
+- placebo tests;
+- sensitivity analysis;
+- alternative control groups;
+- or different variable definitions.</p>
+<p>Researchers should also discuss implementation details, spillovers, timing issues, and institutional context because these factors may affect whether identification assumptions remain credible.</p>
+<p>Importantly, statistical significance alone is not proof of causality. A statistically significant result may still be biased if the identification strategy is weak or assumptions are implausible.</p>
+<p>Similarly, causal evidence should always be interpreted together with uncertainty, effect magnitude, external validity, and policy relevance.</p>
+</div>
+<div id="common-pitfalls-and-key-takeaways-4" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> Common pitfalls and key takeaways<a href="causality.html#common-pitfalls-and-key-takeaways-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Several common mistakes appear repeatedly in applied policy analysis. One is treating correlation as evidence of causation without addressing confounding or selection bias. Another is relying heavily on statistical models while giving insufficient attention to research design and assumptions.</p>
+<p>Researchers may also use controls mechanically without considering causal pathways, or selectively report significant findings while omitting robustness checks and non-significant results.</p>
+<p>Overall, causal inference depends fundamentally on design rather than statistical modeling alone. A credible counterfactual, transparent assumptions, and careful robustness analysis are central to trustworthy policy evaluation.</p>
+<p>Different identification strategies approximate the counterfactual in different ways, and no single method is universally best. The appropriate strategy depends on the policy question, available variation, institutional context, and the plausibility of the required assumptions.</p>
 
 </div>
 </div>
@@ -297,9 +390,9 @@ Figure 9.1: Identification strategies for causal inference. Different designs cr
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
+    "github": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
@@ -312,10 +405,7 @@ gitbook.start({
     "family": "sans",
     "size": 2
   },
-  "edit": {
-    "link": null,
-    "text": null
-  },
+  "edit": null,
   "history": {
     "link": null,
     "text": null
@@ -324,7 +414,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["notes-on-economics.epub"],
+  "download": ["notes-on-economics.pdf", "notes-on-economics.epub"],
   "search": {
     "engine": "fuse",
     "options": null
@@ -336,6 +426,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

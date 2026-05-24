@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -136,6 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Book of Economics</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.1</b> Who this book is for</a></li>
@@ -143,44 +147,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#using-figures-and-visuals"><i class="fa fa-check"></i><b>1.3</b> Using figures and visuals</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#using-r-code"><i class="fa fa-check"></i><b>1.4</b> Using R code</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.5</b> Learning goals</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#notes-on-scope-and-interpretation"><i class="fa fa-check"></i><b>1.6</b> Notes on scope and interpretation</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#a-note-on-interpretation-and-evidence"><i class="fa fa-check"></i><b>1.6</b> A note on interpretation and evidence</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="what-is-econ.html"><a href="what-is-econ.html"><i class="fa fa-check"></i><b>2</b> What is Economics?</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-and-opportunity-cost"><i class="fa fa-check"></i><b>2.1</b> Scarcity and opportunity cost</a></li>
-<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.2</b> Economics as evidence and as judgment</a></li>
-<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.3</b> Economic theories and assumptions</a></li>
-<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.4</b> Economic actors</a></li>
-<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.5</b> Markets and market structure</a></li>
-<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.6</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#roadmap"><i class="fa fa-check"></i><b>2.1</b> Roadmap</a></li>
+<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost"><i class="fa fa-check"></i><b>2.3</b> Scarcity, trade-offs, and opportunity cost</a></li>
+<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#incentives-and-behaviour"><i class="fa fa-check"></i><b>2.4</b> Incentives and behaviour</a></li>
+<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.5</b> Economics as evidence and as judgment</a></li>
+<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.6</b> Economic theories and assumptions</a></li>
+<li class="chapter" data-level="2.7" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.7</b> Economic actors</a></li>
+<li class="chapter" data-level="2.8" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.8</b> Markets and market structure</a></li>
+<li class="chapter" data-level="2.9" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.9</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.10" data-path="what-is-econ.html"><a href="what-is-econ.html#common-pitfalls"><i class="fa fa-check"></i><b>2.10</b> Common pitfalls</a></li>
+<li class="chapter" data-level="2.11" data-path="what-is-econ.html"><a href="what-is-econ.html#key-takeaways"><i class="fa fa-check"></i><b>2.11</b> Key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="micro.html"><a href="micro.html"><i class="fa fa-check"></i><b>3</b> Microeconomics Essentials</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.1</b> Supply, demand, and equilibrium</a></li>
-<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#elasticity-and-incidence"><i class="fa fa-check"></i><b>3.2</b> Elasticity and incidence</a></li>
-<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#market-power-in-practice"><i class="fa fa-check"></i><b>3.3</b> Market power in practice</a></li>
-<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#externalities-and-public-goods"><i class="fa fa-check"></i><b>3.4</b> Externalities and public goods</a></li>
+<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.2</b> Supply, demand, and equilibrium</a></li>
+<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#elasticity-behavioural-response-and-incidence"><i class="fa fa-check"></i><b>3.3</b> Elasticity, behavioural response, and incidence</a></li>
+<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#market-power-and-regulation"><i class="fa fa-check"></i><b>3.4</b> Market power and regulation</a></li>
+<li class="chapter" data-level="3.5" data-path="micro.html"><a href="micro.html#externalities-public-goods-and-market-failure"><i class="fa fa-check"></i><b>3.5</b> Externalities, public goods, and market failure</a></li>
+<li class="chapter" data-level="3.6" data-path="micro.html"><a href="micro.html#common-pitfalls-and-key-takeaways"><i class="fa fa-check"></i><b>3.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="macro.html"><a href="macro.html"><i class="fa fa-check"></i><b>4</b> Macroeconomics: Measurement and Trends</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#gdp-and-national-accounts"><i class="fa fa-check"></i><b>4.1</b> GDP and national accounts</a></li>
-<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#inflation-and-price-indices"><i class="fa fa-check"></i><b>4.2</b> Inflation and price indices</a></li>
-<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.3</b> Unemployment, participation, and labour markets</a></li>
-<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#growth-and-cycles"><i class="fa fa-check"></i><b>4.4</b> Growth and cycles</a></li>
-<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.5</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#gdp-economic-activity-and-national-accounts"><i class="fa fa-check"></i><b>4.2</b> GDP, economic activity, and national accounts</a></li>
+<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#inflation-prices-and-purchasing-power"><i class="fa fa-check"></i><b>4.3</b> Inflation, prices, and purchasing power</a></li>
+<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.4</b> Unemployment, participation, and labour markets</a></li>
+<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations"><i class="fa fa-check"></i><b>4.5</b> Growth, business cycles, and macroeconomic fluctuations</a></li>
+<li class="chapter" data-level="4.6" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.6</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.7" data-path="macro.html"><a href="macro.html#common-pitfalls-and-key-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="policy.html"><a href="policy.html"><i class="fa fa-check"></i><b>5</b> Fiscal and Monetary Policy</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#fiscal-policy"><i class="fa fa-check"></i><b>5.1</b> Fiscal policy</a></li>
-<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#monetary-policy"><i class="fa fa-check"></i><b>5.2</b> Monetary policy</a></li>
-<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#practical-limits-and-trade-offs"><i class="fa fa-check"></i><b>5.3</b> Practical limits and trade-offs</a></li>
+<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#fiscal-policy-deficits-and-stabilization"><i class="fa fa-check"></i><b>5.2</b> Fiscal policy, deficits, and stabilization</a></li>
+<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#monetary-policy-and-financial-conditions"><i class="fa fa-check"></i><b>5.3</b> Monetary policy and financial conditions</a></li>
+<li class="chapter" data-level="5.4" data-path="policy.html"><a href="policy.html#transmission-lags-uncertainty-and-policy-trade-offs"><i class="fa fa-check"></i><b>5.4</b> Transmission lags, uncertainty, and policy trade-offs</a></li>
+<li class="chapter" data-level="5.5" data-path="policy.html"><a href="policy.html#common-pitfalls-and-key-takeaways-2"><i class="fa fa-check"></i><b>5.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ols.html"><a href="ols.html"><i class="fa fa-check"></i><b>6</b> Ordinary Least Squares (OLS): Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.1</b> What OLS estimates</a></li>
-<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#assumptions-and-why-they-matter"><i class="fa fa-check"></i><b>6.2</b> Assumptions and why they matter</a></li>
-<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#reading-output"><i class="fa fa-check"></i><b>6.3</b> Reading output</a></li>
-<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-fixes"><i class="fa fa-check"></i><b>6.4</b> Diagnostics and practical fixes</a></li>
+<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.2</b> What OLS estimates</a></li>
+<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#residuals-assumptions-and-inference"><i class="fa fa-check"></i><b>6.3</b> Residuals, assumptions, and inference</a></li>
+<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#reading-regression-output"><i class="fa fa-check"></i><b>6.4</b> Reading regression output</a></li>
+<li class="chapter" data-level="6.5" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-responses"><i class="fa fa-check"></i><b>6.5</b> Diagnostics and practical responses</a></li>
+<li class="chapter" data-level="6.6" data-path="ols.html"><a href="ols.html#common-pitfalls-and-key-takeaways-3"><i class="fa fa-check"></i><b>6.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="multivariate.html"><a href="multivariate.html"><i class="fa fa-check"></i><b>7</b> Multivariate Modeling</a>
 <ul>
@@ -191,26 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#components-and-visualization"><i class="fa fa-check"></i><b>8.1</b> Components and visualization</a></li>
-<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.2</b> Stationarity and differencing</a></li>
-<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.3</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#learning-objectives-5"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#components-of-time-series-data"><i class="fa fa-check"></i><b>8.2</b> Components of time series data</a></li>
+<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.3</b> Stationarity and differencing</a></li>
+<li class="chapter" data-level="8.4" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.4</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.5" data-path="time-series.html"><a href="time-series.html#forecasting-workflow-and-diagnostics"><i class="fa fa-check"></i><b>8.5</b> Forecasting workflow and diagnostics</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causality.html"><a href="causality.html"><i class="fa fa-check"></i><b>9</b> Causality, Identification, and Policy Evaluation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.1</b> Threats to causal inference</a></li>
-<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#common-strategies"><i class="fa fa-check"></i><b>9.2</b> Common strategies</a></li>
-<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#practical-checklist"><i class="fa fa-check"></i><b>9.3</b> Practical checklist</a></li>
+<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#learning-objectives-6"><i class="fa fa-check"></i><b>9.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#correlation-causation-and-the-counterfactual-problem"><i class="fa fa-check"></i><b>9.2</b> Correlation, causation, and the counterfactual problem</a></li>
+<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.3</b> Threats to causal inference</a></li>
+<li class="chapter" data-level="9.4" data-path="causality.html"><a href="causality.html#common-identification-strategies"><i class="fa fa-check"></i><b>9.4</b> Common identification strategies</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="causality.html"><a href="causality.html#randomized-experiments"><i class="fa fa-check"></i><b>9.4.1</b> Randomized experiments</a></li>
+<li class="chapter" data-level="9.4.2" data-path="causality.html"><a href="causality.html#difference-in-differences"><i class="fa fa-check"></i><b>9.4.2</b> Difference-in-differences</a></li>
+<li class="chapter" data-level="9.4.3" data-path="causality.html"><a href="causality.html#instrumental-variables"><i class="fa fa-check"></i><b>9.4.3</b> Instrumental variables</a></li>
+<li class="chapter" data-level="9.4.4" data-path="causality.html"><a href="causality.html#regression-discontinuity"><i class="fa fa-check"></i><b>9.4.4</b> Regression discontinuity</a></li>
+<li class="chapter" data-level="9.4.5" data-path="causality.html"><a href="causality.html#matching-and-controls"><i class="fa fa-check"></i><b>9.4.5</b> Matching and controls</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="causality.html"><a href="causality.html#robustness-transparency-and-policy-evaluation"><i class="fa fa-check"></i><b>9.5</b> Robustness, transparency, and policy evaluation</a></li>
+<li class="chapter" data-level="9.6" data-path="causality.html"><a href="causality.html#common-pitfalls-and-key-takeaways-4"><i class="fa fa-check"></i><b>9.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="itsa.html"><a href="itsa.html"><i class="fa fa-check"></i><b>10</b> Interrupted Time Series Analysis (ITSA): Concepts</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#segmented-regression-interpretation"><i class="fa fa-check"></i><b>10.1</b> Segmented regression interpretation</a></li>
-<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats"><i class="fa fa-check"></i><b>10.2</b> Assumptions and threats</a></li>
-<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#extensions"><i class="fa fa-check"></i><b>10.3</b> Extensions</a></li>
+<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#counterfactual-trends-and-segmented-regression"><i class="fa fa-check"></i><b>10.2</b> Counterfactual trends and segmented regression</a></li>
+<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats-to-validity"><i class="fa fa-check"></i><b>10.3</b> Assumptions and threats to validity</a></li>
+<li class="chapter" data-level="10.4" data-path="itsa.html"><a href="itsa.html#extensions-and-practical-applications"><i class="fa fa-check"></i><b>10.4</b> Extensions and practical applications</a></li>
+<li class="chapter" data-level="10.5" data-path="itsa.html"><a href="itsa.html#common-pitfalls-and-key-takeaways-5"><i class="fa fa-check"></i><b>10.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="itsa-applied.html"><a href="itsa-applied.html"><i class="fa fa-check"></i><b>11</b> Interrupted Time Series Analysis (ITSA): Worked Workflow</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="itsa-applied.html"><a href="itsa-applied.html#reporting-recommendations"><i class="fa fa-check"></i><b>11.1</b> Reporting recommendations</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -230,68 +264,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="time-series" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">8</span> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)<a href="time-series.html#time-series" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Time series data record values over time. Forecasting requires understanding persistence, trend, seasonality, and whether the series is stable. Many economic series are non-stationary, so transformations are often needed.</p>
-<p>Roadmap</p>
-<p>We introduce time series components, define stationarity, and explain AR and MA intuition. We then describe ARIMA notation and a practical Box-Jenkins workflow.</p>
-<p>Learning objectives</p>
+<p>Time series data record observations sequentially through time. Unlike cross-sectional data, where observations are often treated as independent, time series observations are usually connected to past values and past shocks. Forecasting therefore requires understanding how patterns evolve over time and whether those patterns are stable enough to support prediction.</p>
+<p>Economic, environmental, financial, and public health data frequently exhibit trends, cycles, persistence, and seasonal behaviour. Monthly unemployment rates, annual GDP, river discharge, inflation, electricity demand, and disease incidence are all examples of time series data.</p>
+<p>Forecasting models attempt to capture systematic structure while avoiding overfitting random fluctuations. Good forecasting therefore depends not only on model selection, but also on understanding the underlying behaviour of the series itself.</p>
+<p>This chapter introduces the main components of time series data, explains the idea of stationarity, develops intuition for autoregressive and moving-average models, and concludes with the logic of ARIMA forecasting and practical diagnostic workflows.</p>
+<div id="learning-objectives-5" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Learning objectives<a href="time-series.html#learning-objectives-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
 <ul>
-<li>Identify trend, seasonality, cycles, and noise in a series.</li>
-<li>Explain stationarity and why differencing can help.</li>
-<li>Describe AR and MA intuition and how ACF/PACF guide orders.</li>
-<li>Explain ARIMA(p,d,q) and seasonal extensions.</li>
-<li>Outline a workflow for building and diagnosing forecasting models.</li>
+<li>identify trend, seasonality, cycles, and noise in a time series;</li>
+<li>explain stationarity and why differencing may be necessary;</li>
+<li>describe the intuition behind AR and MA processes;</li>
+<li>interpret ARIMA notation and seasonal extensions; and</li>
+<li>outline a practical forecasting workflow using diagnostics and residual checks.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ts-components"></span>
-<img src="images/07_time_series_components.png" alt="Observed time series decomposed into trend and seasonality (illustrative). Decomposition supports model selection and clarifies why differencing or seasonal adjustment may be needed." width="95%" />
+<img src="images/07_time_series_components.png" alt="Illustrative decomposition of a time series into trend and seasonal components. The observed series combines long-run growth, repeating seasonal fluctuations, and random variation. Decomposition helps identify structure and supports decisions about differencing, seasonal adjustment, and model selection." width="100%" />
 <p class="caption">
-Figure 8.1: Observed time series decomposed into trend and seasonality (illustrative). Decomposition supports model selection and clarifies why differencing or seasonal adjustment may be needed.
+Figure 8.1: Illustrative decomposition of a time series into trend and seasonal components. The observed series combines long-run growth, repeating seasonal fluctuations, and random variation. Decomposition helps identify structure and supports decisions about differencing, seasonal adjustment, and model selection.
 </p>
 </div>
-<p>Figure <a href="time-series.html#fig:fig-ts-components">8.1</a> shows that a series can have structure beyond random noise. Forecasting aims to model that structure without overfitting it.</p>
-<div id="components-and-visualization" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Components and visualization<a href="time-series.html#components-and-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Trend is a long-run movement. Seasonality repeats at fixed intervals. Cycles are longer fluctuations that may not repeat regularly. Noise is unpredictable variation.</p>
-<p>Visualization is the first diagnostic step. A series that looks like white noise is not forecastable beyond its mean.</p>
+<p>Figure <a href="time-series.html#fig:fig-ts-components">8.1</a> illustrates one of the central ideas in forecasting: observed time series often contain multiple overlapping components rather than pure randomness. The blue line represents the observed data, while the trend and seasonal components help explain systematic movement over time.</p>
+<p>The upward-sloping trend in Figure <a href="time-series.html#fig:fig-ts-components">8.1</a> reflects long-run growth, while the repeating oscillations represent seasonality. Forecasting models attempt to capture these predictable structures without fitting random noise too aggressively.</p>
 </div>
-<div id="stationarity-and-differencing" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Stationarity and differencing<a href="time-series.html#stationarity-and-differencing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Stationarity means statistical properties do not change over time. Many economic series have trends, changing variance, or evolving autocorrelation.</p>
-<p>Differencing removes trends and can help achieve stationarity. Seasonal differencing can remove repeating patterns.</p>
-<p>The code below illustrates a minimal time‑series workflow: plot the series, difference it if trend is present, then (optionally) run a stationarity test. It is written as a template so the book can render even if you do not have data or packages installed.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="time-series.html#cb2-1" tabindex="-1"></a><span class="co"># Template: check for non-stationarity and difference a series</span></span>
-<span id="cb2-2"><a href="time-series.html#cb2-2" tabindex="-1"></a><span class="co"># y should be a numeric vector or ts object (e.g., monthly counts)</span></span>
-<span id="cb2-3"><a href="time-series.html#cb2-3" tabindex="-1"></a>y_ts <span class="ot">&lt;-</span> <span class="fu">ts</span>(y, <span class="at">frequency =</span> <span class="dv">12</span>)</span>
-<span id="cb2-4"><a href="time-series.html#cb2-4" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="time-series.html#cb2-5" tabindex="-1"></a><span class="co"># Quick visual check</span></span>
-<span id="cb2-6"><a href="time-series.html#cb2-6" tabindex="-1"></a><span class="fu">plot</span>(y_ts, <span class="at">main =</span> <span class="st">&quot;Time series (raw)&quot;</span>)</span>
-<span id="cb2-7"><a href="time-series.html#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="time-series.html#cb2-8" tabindex="-1"></a><span class="co"># If trend is present, try differencing</span></span>
-<span id="cb2-9"><a href="time-series.html#cb2-9" tabindex="-1"></a>dy <span class="ot">&lt;-</span> <span class="fu">diff</span>(y_ts)</span>
-<span id="cb2-10"><a href="time-series.html#cb2-10" tabindex="-1"></a><span class="fu">plot</span>(dy, <span class="at">main =</span> <span class="st">&quot;First difference&quot;</span>)</span>
-<span id="cb2-11"><a href="time-series.html#cb2-11" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="time-series.html#cb2-12" tabindex="-1"></a><span class="co"># Formal test (requires tseries)</span></span>
-<span id="cb2-13"><a href="time-series.html#cb2-13" tabindex="-1"></a><span class="co"># install.packages(&quot;tseries&quot;) #if needed</span></span>
+<div id="components-of-time-series-data" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Components of time series data<a href="time-series.html#components-of-time-series-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Time series data are often described as combinations of several components.</p>
+<p>A <em>trend</em> represents long-run movement in the series. Economic growth, population increase, technological progress, and climate warming are examples of trend behaviour.</p>
+<p><em>Seasonality</em> refers to patterns that repeat at regular intervals such as months, quarters, or days of the week. Retail sales often increase during holidays, electricity demand may rise during winter or summer months, and tourism activity frequently follows seasonal cycles.</p>
+<p><em>Cycles</em> are longer-term fluctuations that do not necessarily repeat at fixed intervals. Business cycles are a common example. Unlike seasonality, cyclical behaviour may vary substantially in duration and magnitude.</p>
+<p>The remaining variation is often described as <em>noise</em> or <em>irregular variation</em>. This component represents unpredictable shocks and random fluctuations that forecasting models may not explain well.</p>
+<p>Visualization is one of the most important first steps in time-series analysis. Plotting the series often reveals trends, structural breaks, changing variance, or seasonality before formal modeling begins.</p>
+<p>A series that resembles pure white noise contains little predictable structure and is difficult to forecast beyond its historical average.</p>
+</div>
+<div id="stationarity-and-differencing" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Stationarity and differencing<a href="time-series.html#stationarity-and-differencing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Many time-series methods assume that the statistical properties of the series remain relatively stable over time. This property is known as <em>stationarity</em>.</p>
+<p>Informally, a stationary series has a stable mean, stable variance, and stable autocorrelation structure through time. In contrast, many real-world economic and environmental series exhibit trends, changing variance, or evolving dependence structures.</p>
+<p>Non-stationary data can create misleading statistical relationships and unstable forecasts. For this reason, transforming the series is often necessary before fitting forecasting models.</p>
+<p>One common transformation is <em>differencing</em>, which removes long-run trend behaviour by analyzing changes between consecutive observations rather than the original levels themselves.</p>
+<p>For example, instead of modeling GDP directly, analysts may model changes in GDP from one period to the next.</p>
+<p>Seasonal differencing can also remove repeating seasonal patterns by subtracting observations from previous seasonal periods.</p>
+<p>Figure <a href="time-series.html#fig:fig-ts-components">8.1</a> illustrates why differencing may be useful. The upward trend and recurring seasonal fluctuations suggest that the original series may not satisfy stationarity assumptions in its raw form.</p>
+<p>The following template illustrates a simple workflow for visually checking stationarity and applying differencing.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="time-series.html#cb2-1" tabindex="-1"></a><span class="co"># Example time series object</span></span>
+<span id="cb2-2"><a href="time-series.html#cb2-2" tabindex="-1"></a>y_ts <span class="ot">&lt;-</span> <span class="fu">ts</span>(y, <span class="at">frequency =</span> <span class="dv">12</span>)</span>
+<span id="cb2-3"><a href="time-series.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="time-series.html#cb2-4" tabindex="-1"></a><span class="co"># Plot original series</span></span>
+<span id="cb2-5"><a href="time-series.html#cb2-5" tabindex="-1"></a><span class="fu">plot</span>(y_ts, <span class="at">main =</span> <span class="st">&quot;Time series (raw)&quot;</span>)</span>
+<span id="cb2-6"><a href="time-series.html#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="time-series.html#cb2-7" tabindex="-1"></a><span class="co"># First differencing</span></span>
+<span id="cb2-8"><a href="time-series.html#cb2-8" tabindex="-1"></a>dy <span class="ot">&lt;-</span> <span class="fu">diff</span>(y_ts)</span>
+<span id="cb2-9"><a href="time-series.html#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="time-series.html#cb2-10" tabindex="-1"></a><span class="co"># Plot differenced series</span></span>
+<span id="cb2-11"><a href="time-series.html#cb2-11" tabindex="-1"></a><span class="fu">plot</span>(dy, <span class="at">main =</span> <span class="st">&quot;First difference&quot;</span>)</span>
+<span id="cb2-12"><a href="time-series.html#cb2-12" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="time-series.html#cb2-13" tabindex="-1"></a><span class="co"># Optional formal stationarity test</span></span>
 <span id="cb2-14"><a href="time-series.html#cb2-14" tabindex="-1"></a><span class="fu">library</span>(tseries)</span>
-<span id="cb2-15"><a href="time-series.html#cb2-15" tabindex="-1"></a><span class="fu">adf.test</span>(y_ts)</span>
-<span id="cb2-16"><a href="time-series.html#cb2-16" tabindex="-1"></a><span class="fu">adf.test</span>(<span class="fu">na.omit</span>(dy))</span></code></pre></div>
+<span id="cb2-15"><a href="time-series.html#cb2-15" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="time-series.html#cb2-16" tabindex="-1"></a><span class="fu">adf.test</span>(y_ts)</span>
+<span id="cb2-17"><a href="time-series.html#cb2-17" tabindex="-1"></a><span class="fu">adf.test</span>(<span class="fu">na.omit</span>(dy))</span></code></pre></div>
+<p>Visual inspection remains important even when formal tests are used. Statistical tests may have limited power in small samples or produce conflicting conclusions when structural breaks or seasonal patterns are present.</p>
 </div>
-<div id="ar-ma-and-arima-intuition" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> AR, MA, and ARIMA intuition<a href="time-series.html#ar-ma-and-arima-intuition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>AR models use past values. MA models use past shocks. ARMA combines both. ARIMA adds differencing when the original series is non-stationary.</p>
-<p>ACF and PACF help propose orders. Information criteria help compare models. Residual checks test whether structure remains.</p>
-<p>Common pitfalls</p>
+<div id="ar-ma-and-arima-intuition" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> AR, MA, and ARIMA intuition<a href="time-series.html#ar-ma-and-arima-intuition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Many forecasting models are built around the idea that current values depend on past values and past shocks.</p>
+<p>An <em>autoregressive</em> (AR) model assumes that the current value depends on previous observations in the series itself. For example, unemployment this month may depend partly on unemployment last month.</p>
+<p>A <em>moving-average</em> (MA) model instead assumes that current values depend on past shocks or forecast errors. In this framework, temporary disturbances can continue to influence the series for several periods.</p>
+<p>An <em>ARMA</em> model combines both autoregressive and moving-average behaviour. These models are useful when the series is already stationary.</p>
+<p>Many real-world series, however, are non-stationary. <em>ARIMA</em> models extend ARMA models by adding differencing to remove trend behaviour before modeling the remaining structure.</p>
+<p>The notation ARIMA<span class="math inline">\((p,d,q)\)</span> summarizes the model structure:</p>
 <ul>
-<li>Fitting ARIMA to non-stationary data without differencing.</li>
-<li>Choosing high orders that fit noise rather than signal.</li>
-<li>Ignoring seasonality when it is visually present.</li>
-<li>Treating forecasts as certainty rather than probabilistic ranges.</li>
+<li><span class="math inline">\(p\)</span> represents the autoregressive order;</li>
+<li><span class="math inline">\(d\)</span> represents the degree of differencing; and</li>
+<li><span class="math inline">\(q\)</span> represents the moving-average order.</li>
 </ul>
-<p>Key takeaways</p>
-<ul>
-<li>Stationarity is central for many time-series models.</li>
-<li>ACF/PACF, information criteria, and residual checks form a practical workflow.</li>
-<li>Forecasts should be evaluated for plausibility and uncertainty.</li>
-</ul>
+<p>Seasonal extensions such as SARIMA models add additional seasonal autoregressive, differencing, and moving-average components.</p>
+<p>Autocorrelation diagnostics help guide model selection. The <em>autocorrelation function</em> (ACF) measures correlation between observations separated by different time lags, while the <em>partial autocorrelation function</em> (PACF) measures correlation after controlling for intermediate lags.</p>
+<p>Analysts often examine ACF and PACF plots together with information criteria such as AIC and BIC to propose candidate model orders.</p>
+</div>
+<div id="forecasting-workflow-and-diagnostics" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Forecasting workflow and diagnostics<a href="time-series.html#forecasting-workflow-and-diagnostics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Time-series forecasting is typically an iterative process rather than a single modeling step.</p>
+<p>A common workflow begins with visualization and decomposition to identify trend, seasonality, structural breaks, and unusual observations. The series may then be transformed or differenced to improve stationarity.</p>
+<p>After selecting candidate models, analysts estimate parameters and evaluate residual diagnostics. Good forecasting models should leave residuals that resemble white noise, meaning that little systematic structure remains unexplained.</p>
+<p>Residual autocorrelation, changing variance, or remaining seasonality may indicate that the model is incomplete or misspecified.</p>
+<p>Forecast evaluation should also consider plausibility and uncertainty rather than focusing only on point forecasts. Forecast intervals are often more informative than single predicted values because uncertainty generally increases further into the future.</p>
+<p>Overfitting is another important concern. Highly complex models may fit historical data extremely well while performing poorly on future observations. Forecasting therefore requires balancing flexibility with generalization.</p>
+<p>Several common pitfalls appear repeatedly in applied forecasting work. Analysts may fit ARIMA models to clearly non-stationary data without differencing, ignore visible seasonality, or select excessively high model orders that fit noise rather than meaningful structure.</p>
+<p>It is also important not to treat forecasts as certainty. Forecasts are probabilistic statements shaped by assumptions, historical patterns, and model limitations.</p>
+<p>Overall, time-series forecasting combines statistical modeling with careful diagnostic reasoning. Trend, seasonality, persistence, and shocks all shape how time series evolve over time. Effective forecasting therefore depends not only on choosing a model, but also on understanding the structure and stability of the underlying process.</p>
 
 </div>
 </div>
@@ -316,9 +378,9 @@ Figure 8.1: Observed time series decomposed into trend and seasonality (illustra
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
+    "github": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
@@ -331,10 +393,7 @@ gitbook.start({
     "family": "sans",
     "size": 2
   },
-  "edit": {
-    "link": null,
-    "text": null
-  },
+  "edit": null,
   "history": {
     "link": null,
     "text": null
@@ -343,7 +402,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["notes-on-economics.epub"],
+  "download": ["notes-on-economics.pdf", "notes-on-economics.epub"],
   "search": {
     "engine": "fuse",
     "options": null
@@ -355,6 +414,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

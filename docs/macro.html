@@ -124,6 +124,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -136,6 +137,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./">Book of Economics</a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i><b>1.1</b> Who this book is for</a></li>
@@ -143,44 +147,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#using-figures-and-visuals"><i class="fa fa-check"></i><b>1.3</b> Using figures and visuals</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#using-r-code"><i class="fa fa-check"></i><b>1.4</b> Using R code</a></li>
 <li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#learning-goals"><i class="fa fa-check"></i><b>1.5</b> Learning goals</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#notes-on-scope-and-interpretation"><i class="fa fa-check"></i><b>1.6</b> Notes on scope and interpretation</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#a-note-on-interpretation-and-evidence"><i class="fa fa-check"></i><b>1.6</b> A note on interpretation and evidence</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="what-is-econ.html"><a href="what-is-econ.html"><i class="fa fa-check"></i><b>2</b> What is Economics?</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-and-opportunity-cost"><i class="fa fa-check"></i><b>2.1</b> Scarcity and opportunity cost</a></li>
-<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.2</b> Economics as evidence and as judgment</a></li>
-<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.3</b> Economic theories and assumptions</a></li>
-<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.4</b> Economic actors</a></li>
-<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.5</b> Markets and market structure</a></li>
-<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.6</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.1" data-path="what-is-econ.html"><a href="what-is-econ.html#roadmap"><i class="fa fa-check"></i><b>2.1</b> Roadmap</a></li>
+<li class="chapter" data-level="2.2" data-path="what-is-econ.html"><a href="what-is-econ.html#learning-objectives"><i class="fa fa-check"></i><b>2.2</b> Learning objectives</a></li>
+<li class="chapter" data-level="2.3" data-path="what-is-econ.html"><a href="what-is-econ.html#scarcity-trade-offs-and-opportunity-cost"><i class="fa fa-check"></i><b>2.3</b> Scarcity, trade-offs, and opportunity cost</a></li>
+<li class="chapter" data-level="2.4" data-path="what-is-econ.html"><a href="what-is-econ.html#incentives-and-behaviour"><i class="fa fa-check"></i><b>2.4</b> Incentives and behaviour</a></li>
+<li class="chapter" data-level="2.5" data-path="what-is-econ.html"><a href="what-is-econ.html#economics-as-evidence-and-as-judgment"><i class="fa fa-check"></i><b>2.5</b> Economics as evidence and as judgment</a></li>
+<li class="chapter" data-level="2.6" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-theories-and-assumptions"><i class="fa fa-check"></i><b>2.6</b> Economic theories and assumptions</a></li>
+<li class="chapter" data-level="2.7" data-path="what-is-econ.html"><a href="what-is-econ.html#economic-actors"><i class="fa fa-check"></i><b>2.7</b> Economic actors</a></li>
+<li class="chapter" data-level="2.8" data-path="what-is-econ.html"><a href="what-is-econ.html#markets-and-market-structure"><i class="fa fa-check"></i><b>2.8</b> Markets and market structure</a></li>
+<li class="chapter" data-level="2.9" data-path="what-is-econ.html"><a href="what-is-econ.html#market-failure-and-why-it-matters"><i class="fa fa-check"></i><b>2.9</b> Market failure and why it matters</a></li>
+<li class="chapter" data-level="2.10" data-path="what-is-econ.html"><a href="what-is-econ.html#common-pitfalls"><i class="fa fa-check"></i><b>2.10</b> Common pitfalls</a></li>
+<li class="chapter" data-level="2.11" data-path="what-is-econ.html"><a href="what-is-econ.html#key-takeaways"><i class="fa fa-check"></i><b>2.11</b> Key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="micro.html"><a href="micro.html"><i class="fa fa-check"></i><b>3</b> Microeconomics Essentials</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.1</b> Supply, demand, and equilibrium</a></li>
-<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#elasticity-and-incidence"><i class="fa fa-check"></i><b>3.2</b> Elasticity and incidence</a></li>
-<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#market-power-in-practice"><i class="fa fa-check"></i><b>3.3</b> Market power in practice</a></li>
-<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#externalities-and-public-goods"><i class="fa fa-check"></i><b>3.4</b> Externalities and public goods</a></li>
+<li class="chapter" data-level="3.1" data-path="micro.html"><a href="micro.html#learning-objectives-1"><i class="fa fa-check"></i><b>3.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="micro.html"><a href="micro.html#supply-demand-and-equilibrium"><i class="fa fa-check"></i><b>3.2</b> Supply, demand, and equilibrium</a></li>
+<li class="chapter" data-level="3.3" data-path="micro.html"><a href="micro.html#elasticity-behavioural-response-and-incidence"><i class="fa fa-check"></i><b>3.3</b> Elasticity, behavioural response, and incidence</a></li>
+<li class="chapter" data-level="3.4" data-path="micro.html"><a href="micro.html#market-power-and-regulation"><i class="fa fa-check"></i><b>3.4</b> Market power and regulation</a></li>
+<li class="chapter" data-level="3.5" data-path="micro.html"><a href="micro.html#externalities-public-goods-and-market-failure"><i class="fa fa-check"></i><b>3.5</b> Externalities, public goods, and market failure</a></li>
+<li class="chapter" data-level="3.6" data-path="micro.html"><a href="micro.html#common-pitfalls-and-key-takeaways"><i class="fa fa-check"></i><b>3.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="macro.html"><a href="macro.html"><i class="fa fa-check"></i><b>4</b> Macroeconomics: Measurement and Trends</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#gdp-and-national-accounts"><i class="fa fa-check"></i><b>4.1</b> GDP and national accounts</a></li>
-<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#inflation-and-price-indices"><i class="fa fa-check"></i><b>4.2</b> Inflation and price indices</a></li>
-<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.3</b> Unemployment, participation, and labour markets</a></li>
-<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#growth-and-cycles"><i class="fa fa-check"></i><b>4.4</b> Growth and cycles</a></li>
-<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.5</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.1" data-path="macro.html"><a href="macro.html#learning-objectives-2"><i class="fa fa-check"></i><b>4.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="macro.html"><a href="macro.html#gdp-economic-activity-and-national-accounts"><i class="fa fa-check"></i><b>4.2</b> GDP, economic activity, and national accounts</a></li>
+<li class="chapter" data-level="4.3" data-path="macro.html"><a href="macro.html#inflation-prices-and-purchasing-power"><i class="fa fa-check"></i><b>4.3</b> Inflation, prices, and purchasing power</a></li>
+<li class="chapter" data-level="4.4" data-path="macro.html"><a href="macro.html#unemployment-participation-and-labour-markets"><i class="fa fa-check"></i><b>4.4</b> Unemployment, participation, and labour markets</a></li>
+<li class="chapter" data-level="4.5" data-path="macro.html"><a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations"><i class="fa fa-check"></i><b>4.5</b> Growth, business cycles, and macroeconomic fluctuations</a></li>
+<li class="chapter" data-level="4.6" data-path="macro.html"><a href="macro.html#distribution-poverty-and-inequality"><i class="fa fa-check"></i><b>4.6</b> Distribution, poverty, and inequality</a></li>
+<li class="chapter" data-level="4.7" data-path="macro.html"><a href="macro.html#common-pitfalls-and-key-takeaways-1"><i class="fa fa-check"></i><b>4.7</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="policy.html"><a href="policy.html"><i class="fa fa-check"></i><b>5</b> Fiscal and Monetary Policy</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#fiscal-policy"><i class="fa fa-check"></i><b>5.1</b> Fiscal policy</a></li>
-<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#monetary-policy"><i class="fa fa-check"></i><b>5.2</b> Monetary policy</a></li>
-<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#practical-limits-and-trade-offs"><i class="fa fa-check"></i><b>5.3</b> Practical limits and trade-offs</a></li>
+<li class="chapter" data-level="5.1" data-path="policy.html"><a href="policy.html#learning-objectives-3"><i class="fa fa-check"></i><b>5.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="policy.html"><a href="policy.html#fiscal-policy-deficits-and-stabilization"><i class="fa fa-check"></i><b>5.2</b> Fiscal policy, deficits, and stabilization</a></li>
+<li class="chapter" data-level="5.3" data-path="policy.html"><a href="policy.html#monetary-policy-and-financial-conditions"><i class="fa fa-check"></i><b>5.3</b> Monetary policy and financial conditions</a></li>
+<li class="chapter" data-level="5.4" data-path="policy.html"><a href="policy.html#transmission-lags-uncertainty-and-policy-trade-offs"><i class="fa fa-check"></i><b>5.4</b> Transmission lags, uncertainty, and policy trade-offs</a></li>
+<li class="chapter" data-level="5.5" data-path="policy.html"><a href="policy.html#common-pitfalls-and-key-takeaways-2"><i class="fa fa-check"></i><b>5.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="ols.html"><a href="ols.html"><i class="fa fa-check"></i><b>6</b> Ordinary Least Squares (OLS): Simple Linear Regression</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.1</b> What OLS estimates</a></li>
-<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#assumptions-and-why-they-matter"><i class="fa fa-check"></i><b>6.2</b> Assumptions and why they matter</a></li>
-<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#reading-output"><i class="fa fa-check"></i><b>6.3</b> Reading output</a></li>
-<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-fixes"><i class="fa fa-check"></i><b>6.4</b> Diagnostics and practical fixes</a></li>
+<li class="chapter" data-level="6.1" data-path="ols.html"><a href="ols.html#learning-objectives-4"><i class="fa fa-check"></i><b>6.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="ols.html"><a href="ols.html#what-ols-estimates"><i class="fa fa-check"></i><b>6.2</b> What OLS estimates</a></li>
+<li class="chapter" data-level="6.3" data-path="ols.html"><a href="ols.html#residuals-assumptions-and-inference"><i class="fa fa-check"></i><b>6.3</b> Residuals, assumptions, and inference</a></li>
+<li class="chapter" data-level="6.4" data-path="ols.html"><a href="ols.html#reading-regression-output"><i class="fa fa-check"></i><b>6.4</b> Reading regression output</a></li>
+<li class="chapter" data-level="6.5" data-path="ols.html"><a href="ols.html#diagnostics-and-practical-responses"><i class="fa fa-check"></i><b>6.5</b> Diagnostics and practical responses</a></li>
+<li class="chapter" data-level="6.6" data-path="ols.html"><a href="ols.html#common-pitfalls-and-key-takeaways-3"><i class="fa fa-check"></i><b>6.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="multivariate.html"><a href="multivariate.html"><i class="fa fa-check"></i><b>7</b> Multivariate Modeling</a>
 <ul>
@@ -191,26 +208,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series Forecasting Theory (AR, MA, ARMA, ARIMA)</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#components-and-visualization"><i class="fa fa-check"></i><b>8.1</b> Components and visualization</a></li>
-<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.2</b> Stationarity and differencing</a></li>
-<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.3</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.1" data-path="time-series.html"><a href="time-series.html#learning-objectives-5"><i class="fa fa-check"></i><b>8.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="time-series.html"><a href="time-series.html#components-of-time-series-data"><i class="fa fa-check"></i><b>8.2</b> Components of time series data</a></li>
+<li class="chapter" data-level="8.3" data-path="time-series.html"><a href="time-series.html#stationarity-and-differencing"><i class="fa fa-check"></i><b>8.3</b> Stationarity and differencing</a></li>
+<li class="chapter" data-level="8.4" data-path="time-series.html"><a href="time-series.html#ar-ma-and-arima-intuition"><i class="fa fa-check"></i><b>8.4</b> AR, MA, and ARIMA intuition</a></li>
+<li class="chapter" data-level="8.5" data-path="time-series.html"><a href="time-series.html#forecasting-workflow-and-diagnostics"><i class="fa fa-check"></i><b>8.5</b> Forecasting workflow and diagnostics</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="causality.html"><a href="causality.html"><i class="fa fa-check"></i><b>9</b> Causality, Identification, and Policy Evaluation</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.1</b> Threats to causal inference</a></li>
-<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#common-strategies"><i class="fa fa-check"></i><b>9.2</b> Common strategies</a></li>
-<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#practical-checklist"><i class="fa fa-check"></i><b>9.3</b> Practical checklist</a></li>
+<li class="chapter" data-level="9.1" data-path="causality.html"><a href="causality.html#learning-objectives-6"><i class="fa fa-check"></i><b>9.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="causality.html"><a href="causality.html#correlation-causation-and-the-counterfactual-problem"><i class="fa fa-check"></i><b>9.2</b> Correlation, causation, and the counterfactual problem</a></li>
+<li class="chapter" data-level="9.3" data-path="causality.html"><a href="causality.html#threats-to-causal-inference"><i class="fa fa-check"></i><b>9.3</b> Threats to causal inference</a></li>
+<li class="chapter" data-level="9.4" data-path="causality.html"><a href="causality.html#common-identification-strategies"><i class="fa fa-check"></i><b>9.4</b> Common identification strategies</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="causality.html"><a href="causality.html#randomized-experiments"><i class="fa fa-check"></i><b>9.4.1</b> Randomized experiments</a></li>
+<li class="chapter" data-level="9.4.2" data-path="causality.html"><a href="causality.html#difference-in-differences"><i class="fa fa-check"></i><b>9.4.2</b> Difference-in-differences</a></li>
+<li class="chapter" data-level="9.4.3" data-path="causality.html"><a href="causality.html#instrumental-variables"><i class="fa fa-check"></i><b>9.4.3</b> Instrumental variables</a></li>
+<li class="chapter" data-level="9.4.4" data-path="causality.html"><a href="causality.html#regression-discontinuity"><i class="fa fa-check"></i><b>9.4.4</b> Regression discontinuity</a></li>
+<li class="chapter" data-level="9.4.5" data-path="causality.html"><a href="causality.html#matching-and-controls"><i class="fa fa-check"></i><b>9.4.5</b> Matching and controls</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="causality.html"><a href="causality.html#robustness-transparency-and-policy-evaluation"><i class="fa fa-check"></i><b>9.5</b> Robustness, transparency, and policy evaluation</a></li>
+<li class="chapter" data-level="9.6" data-path="causality.html"><a href="causality.html#common-pitfalls-and-key-takeaways-4"><i class="fa fa-check"></i><b>9.6</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="itsa.html"><a href="itsa.html"><i class="fa fa-check"></i><b>10</b> Interrupted Time Series Analysis (ITSA): Concepts</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#segmented-regression-interpretation"><i class="fa fa-check"></i><b>10.1</b> Segmented regression interpretation</a></li>
-<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats"><i class="fa fa-check"></i><b>10.2</b> Assumptions and threats</a></li>
-<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#extensions"><i class="fa fa-check"></i><b>10.3</b> Extensions</a></li>
+<li class="chapter" data-level="10.1" data-path="itsa.html"><a href="itsa.html#learning-objectives-7"><i class="fa fa-check"></i><b>10.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="itsa.html"><a href="itsa.html#counterfactual-trends-and-segmented-regression"><i class="fa fa-check"></i><b>10.2</b> Counterfactual trends and segmented regression</a></li>
+<li class="chapter" data-level="10.3" data-path="itsa.html"><a href="itsa.html#assumptions-and-threats-to-validity"><i class="fa fa-check"></i><b>10.3</b> Assumptions and threats to validity</a></li>
+<li class="chapter" data-level="10.4" data-path="itsa.html"><a href="itsa.html#extensions-and-practical-applications"><i class="fa fa-check"></i><b>10.4</b> Extensions and practical applications</a></li>
+<li class="chapter" data-level="10.5" data-path="itsa.html"><a href="itsa.html#common-pitfalls-and-key-takeaways-5"><i class="fa fa-check"></i><b>10.5</b> Common pitfalls and key takeaways</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="itsa-applied.html"><a href="itsa-applied.html"><i class="fa fa-check"></i><b>11</b> Interrupted Time Series Analysis (ITSA): Worked Workflow</a>
 <ul>
 <li class="chapter" data-level="11.1" data-path="itsa-applied.html"><a href="itsa-applied.html#reporting-recommendations"><i class="fa fa-check"></i><b>11.1</b> Reporting recommendations</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -230,59 +264,77 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="macro" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">4</span> Macroeconomics: Measurement and Trends<a href="macro.html#macro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Macroeconomics studies the economy as a whole. It focuses on measurement, growth, inflation, labour markets, and cycles. This chapter emphasizes what indicators mean and what they miss.</p>
-<p>Roadmap</p>
-<p>We introduce GDP, inflation, and unemployment measurement. We then discuss growth versus cycles and explain why distribution and inequality matter for interpreting macro indicators.</p>
-<p>Learning objectives</p>
+<p>Macroeconomics studies the economy as a whole. It focuses on broad economic conditions such as growth, inflation, unemployment, financial stability, and business cycles. Macroeconomics helps explain why economies expand, slow down, experience recessions, or recover from crises. It also examines how economic conditions affect households, firms, governments, and regions differently.</p>
+<p>Unlike microeconomics, which studies individual markets and decisions, macroeconomics looks at aggregate outcomes across the economy. Policymakers use macroeconomic indicators to guide decisions about interest rates, taxation, government spending, employment policy, and social programs. However, macroeconomic indicators are imperfect measures. Understanding what they capture—and what they miss—is central to responsible economic interpretation.</p>
+<p>This chapter introduces major macroeconomic indicators, including GDP, inflation, and unemployment, and explains how they are measured and interpreted. It then distinguishes long-run economic growth from short-run business cycles before examining why distribution and inequality matter for understanding macroeconomic performance.</p>
+<div id="learning-objectives-2" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Learning objectives<a href="macro.html#learning-objectives-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>By the end of this chapter, you should be able to:</p>
 <ul>
-<li>Describe what GDP measures and what it misses.</li>
-<li>Explain how inflation is measured and why indices can differ.</li>
-<li>Interpret unemployment and participation and understand limitations.</li>
-<li>Distinguish long-run growth from short-run business cycles.</li>
-<li>Explain why distribution affects macro interpretation and policy.</li>
+<li>describe what GDP measures and what it does not measure;</li>
+<li>explain how inflation is measured and why price indices can differ;</li>
+<li>interpret unemployment and labour force participation measures;</li>
+<li>distinguish long-run economic growth from short-run business cycles; and</li>
+<li>explain why distribution and inequality matter for macroeconomic interpretation and policy.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-macro-dashboard"></span>
-<img src="images/03_macro_dashboard.png" alt="Illustrative dashboard of macro indicators. Multi-dimensional indicators help distinguish growth, price stability, and labour market conditions." width="95%" />
+<img src="images/03_macro_dashboard.png" alt="Illustrative dashboard of macroeconomic indicators. GDP, inflation, and unemployment capture different dimensions of economic conditions and often move differently over time. Recession shading highlights how macroeconomic shocks affect multiple indicators simultaneously." width="100%" />
 <p class="caption">
-Figure 4.1: Illustrative dashboard of macro indicators. Multi-dimensional indicators help distinguish growth, price stability, and labour market conditions.
+Figure 4.1: Illustrative dashboard of macroeconomic indicators. GDP, inflation, and unemployment capture different dimensions of economic conditions and often move differently over time. Recession shading highlights how macroeconomic shocks affect multiple indicators simultaneously.
 </p>
 </div>
-<p>Figure <a href="macro.html#fig:fig-macro-dashboard">4.1</a> is a reminder that macro conditions rarely move in one direction. Stabilization policy often manages trade-offs.</p>
-<div id="gdp-and-national-accounts" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> GDP and national accounts<a href="macro.html#gdp-and-national-accounts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>GDP is the value of final goods and services produced within a country over a period. It is useful as a measure of activity, but it is not a measure of welfare.</p>
-<p>GDP can miss unpaid care work, distribution, environmental costs, and quality change. It can also rise due to rebuilding after shocks, complicating interpretation.</p>
+<p>Figure <a href="macro.html#fig:fig-macro-dashboard">4.1</a> presents a simplified macroeconomic dashboard. The figure highlights an important principle in macroeconomics: no single indicator tells the entire story of the economy. Economic growth, inflation, and unemployment often move differently over time, creating trade-offs for policymakers and households.</p>
+<p>The figure also illustrates that macroeconomic indicators are connected but not identical. GDP reflects overall economic activity, inflation reflects changes in prices, and unemployment reflects labour market conditions. During recessions, GDP growth may slow or decline while unemployment rises. Inflation may increase, decrease, or remain relatively stable depending on the source of the shock.</p>
+<p>Macroeconomic interpretation therefore requires examining multiple indicators together rather than relying on a single measure.</p>
 </div>
-<div id="inflation-and-price-indices" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Inflation and price indices<a href="macro.html#inflation-and-price-indices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Inflation measures average price changes. The CPI is common, but results depend on the basket, substitution, quality adjustment, and treatment of housing.</p>
-<p>Inflation is not just a statistic; it affects purchasing power, wages, and distribution. High inflation can shift resources unpredictably, while disinflation can be associated with unemployment depending on conditions.</p>
+<div id="gdp-economic-activity-and-national-accounts" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> GDP, economic activity, and national accounts<a href="macro.html#gdp-economic-activity-and-national-accounts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Gross Domestic Product (GDP) measures the value of final goods and services produced within a country over a given period. GDP is widely used because it provides a broad indicator of economic activity and allows comparisons across time and countries.</p>
+<p>Economists often distinguish between <em>nominal GDP</em> and <em>real GDP</em>. Nominal GDP is measured using current market prices, while real GDP adjusts for inflation. Real GDP is generally more useful for analyzing changes in production and living standards over time because it removes the effects of changing prices.</p>
+<p>GDP per capita is also commonly used as a rough measure of average living standards. However, GDP and GDP per capita are not measures of overall well-being. They capture market activity, but they do not fully reflect quality of life, environmental sustainability, inequality, unpaid labour, or social conditions.</p>
+<p>For example, unpaid caregiving and household work contribute substantially to society but are often excluded from GDP because no market transaction occurs. Similarly, environmental degradation may accompany rising GDP even when long-term ecological conditions worsen.</p>
+<p>GDP can also become difficult to interpret after disasters or economic shocks. Rebuilding after floods, fires, or wars may increase measured economic activity even though overall welfare has declined.</p>
+<p>As a result, GDP is best understood as a measure of economic production rather than a complete measure of social progress.</p>
 </div>
-<div id="unemployment-participation-and-labour-markets" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Unemployment, participation, and labour markets<a href="macro.html#unemployment-participation-and-labour-markets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Unemployment depends on definitions of job search and labour force participation. Participation can change due to demographics, discouragement, caregiving, and education.</p>
-<p>Complementary measures include underemployment, long-term unemployment, and employment-to-population ratios.</p>
+<div id="inflation-prices-and-purchasing-power" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Inflation, prices, and purchasing power<a href="macro.html#inflation-prices-and-purchasing-power" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Inflation measures the average change in prices over time. The Consumer Price Index (CPI) is one of the most commonly used inflation measures and is based on the cost of a representative basket of goods and services purchased by households.</p>
+<p>However, inflation measurement involves important methodological choices. Inflation estimates depend on the composition of the consumption basket, substitution between goods, quality adjustments, and the treatment of housing and other major expenses.</p>
+<p>Different households may therefore experience inflation differently. For example, rising housing or food costs may affect low-income households more severely because these expenses represent a larger share of their budgets.</p>
+<p>Inflation is not simply a statistical measure; it affects purchasing power, wages, savings, borrowing, investment decisions, and distributional outcomes. Moderate inflation is often considered manageable, but high or unstable inflation can create uncertainty and redistribute resources unpredictably across groups.</p>
+<p>At the same time, reducing inflation too aggressively may slow economic activity and increase unemployment depending on economic conditions. Central banks therefore often attempt to balance price stability with broader macroeconomic objectives.</p>
+<p>In Figure <a href="macro.html#fig:fig-macro-dashboard">4.1</a>, the dashed line in the inflation panel represents a typical inflation target. Inflation fluctuates around this target over time, reflecting changing economic conditions, supply disruptions, policy responses, and expectations.</p>
 </div>
-<div id="growth-and-cycles" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Growth and cycles<a href="macro.html#growth-and-cycles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Growth reflects long-run productivity, capital accumulation, technology, and human capital. Business cycles are fluctuations around trend caused by demand shocks, supply shocks, financial conditions, and expectations.</p>
+<div id="unemployment-participation-and-labour-markets" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Unemployment, participation, and labour markets<a href="macro.html#unemployment-participation-and-labour-markets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Unemployment measures the share of the labour force that is without work but actively searching for employment. Although widely used, unemployment statistics depend heavily on definitions and measurement choices.</p>
+<p>A person who stops actively searching for work may no longer be counted as unemployed even if labour market conditions remain weak. Labour force participation can also change because of retirement, education, caregiving responsibilities, discouragement, illness, or demographic shifts.</p>
+<p>For this reason, economists often examine several labour market indicators together rather than relying solely on the unemployment rate. Complementary measures include labour force participation, employment-to-population ratios, underemployment, long-term unemployment, and wage growth.</p>
+<p>Figure <a href="macro.html#fig:fig-macro-dashboard">4.1</a> shows how unemployment tends to rise during recessions as firms reduce hiring or lay off workers. However, labour market recovery may occur more slowly than GDP recovery because firms often remain cautious about hiring after economic shocks.</p>
+<p>Labour market conditions also differ substantially across regions, industries, education levels, age groups, and demographic categories. Aggregate unemployment rates can therefore hide important inequalities within the economy.</p>
 </div>
-<div id="distribution-poverty-and-inequality" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Distribution, poverty, and inequality<a href="macro.html#distribution-poverty-and-inequality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Distribution matters because aggregate indicators can hide divergent experiences across groups and regions. Poverty measures depend on thresholds and cost-of-living. Inequality can be summarized using percentiles, ratios, and indices.</p>
-<p>Common pitfalls</p>
-<ul>
-<li>Treating GDP growth as equivalent to improved well-being.</li>
-<li>Interpreting inflation without considering what is driving it.</li>
-<li>Using unemployment alone without participation and underemployment.</li>
-<li>Ignoring distribution when summarizing macro performance.</li>
-</ul>
-<p>Key takeaways</p>
-<ul>
-<li>Macro indicators are useful but incomplete; interpretation requires context.</li>
-<li>Growth and cycles have different causes and policy implications.</li>
-<li>Distributional analysis strengthens macroeconomic assessment.</li>
-</ul>
+<div id="growth-business-cycles-and-macroeconomic-fluctuations" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Growth, business cycles, and macroeconomic fluctuations<a href="macro.html#growth-business-cycles-and-macroeconomic-fluctuations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Macroeconomists distinguish between long-run economic growth and short-run business cycles.</p>
+<p>Long-run growth reflects increases in productive capacity over time and is influenced by factors such as technological progress, education, infrastructure, productivity, institutional quality, and capital accumulation. Sustained growth is important because it affects long-term living standards and fiscal capacity.</p>
+<p>Business cycles, in contrast, refer to shorter-term fluctuations around long-run trends. Economies experience periods of expansion and contraction due to changes in consumer demand, investment, financial conditions, supply disruptions, expectations, and policy decisions.</p>
+<p>Recessions are periods of declining economic activity that are often associated with falling production and rising unemployment. Recoveries occur when economic activity begins to expand again.</p>
+<p>The shaded recession areas in Figure <a href="macro.html#fig:fig-macro-dashboard">4.1</a> illustrate how macroeconomic shocks can affect several indicators simultaneously. GDP growth may weaken, unemployment may rise, and inflation may behave differently depending on the source of the shock.</p>
+<p>Understanding the distinction between growth and cycles is important because they often require different policy responses. Policies designed to stabilize short-run recessions may differ from policies aimed at improving long-run productivity and living standards.</p>
+</div>
+<div id="distribution-poverty-and-inequality" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Distribution, poverty, and inequality<a href="macro.html#distribution-poverty-and-inequality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Aggregate indicators such as GDP growth or inflation averages can conceal very different experiences across households, industries, and regions. Distribution therefore plays an essential role in macroeconomic interpretation.</p>
+<p>An economy may experience overall growth while some groups face stagnant wages, rising living costs, or declining employment opportunities. Similarly, inflation may affect households unevenly depending on their spending patterns and financial situations.</p>
+<p>Poverty measures also depend on how thresholds are defined and how cost-of-living differences are treated across regions. Inequality can be measured using percentiles, income ratios, wealth shares, or statistical indices such as the Gini coefficient.</p>
+<p>Distributional analysis strengthens macroeconomic assessment because it helps identify who benefits from economic growth, who bears economic risks, and how policies affect different groups.</p>
+<p>Figure <a href="macro.html#fig:fig-macro-dashboard">4.1</a> reinforces this point by emphasizing that macroeconomic indicators are averages. While these measures are useful, they do not fully capture differences in lived experience across the population.</p>
+</div>
+<div id="common-pitfalls-and-key-takeaways-1" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Common pitfalls and key takeaways<a href="macro.html#common-pitfalls-and-key-takeaways-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One common mistake in macroeconomic analysis is treating GDP growth as equivalent to improved social well-being. Another is interpreting inflation without considering what is driving price changes or which groups are most affected. Analysts may also rely too heavily on unemployment statistics without examining labour force participation, underemployment, or wage conditions.</p>
+<p>It is equally important to remember that macroeconomic indicators are interconnected. Policies designed to improve one outcome may influence others, creating trade-offs among growth, inflation, employment, and distribution.</p>
+<p>Overall, macroeconomic indicators provide valuable information about economic conditions, but they require careful interpretation and context. Growth and business cycles have different causes and policy implications, and distributional analysis is essential for understanding how macroeconomic outcomes affect people differently across society.</p>
 
 </div>
 </div>
@@ -307,9 +359,9 @@ Figure 4.1: Illustrative dashboard of macro indicators. Multi-dimensional indica
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
   "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
+    "github": true,
+    "facebook": false,
+    "twitter": false,
     "linkedin": false,
     "weibo": false,
     "instapaper": false,
@@ -322,10 +374,7 @@ gitbook.start({
     "family": "sans",
     "size": 2
   },
-  "edit": {
-    "link": null,
-    "text": null
-  },
+  "edit": null,
   "history": {
     "link": null,
     "text": null
@@ -334,7 +383,7 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["notes-on-economics.epub"],
+  "download": ["notes-on-economics.pdf", "notes-on-economics.epub"],
   "search": {
     "engine": "fuse",
     "options": null
@@ -346,6 +395,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
