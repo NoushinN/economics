@@ -1,7 +1,23 @@
 bookdown::gitbook:
-  output_dir: "docs"
+  css: style.css
   split_by: chapter
   config:
     toc:
-      collapse: section
+      before: |
+        <li><a href="./">Book of Economics</a></li>
+      after: |
+        <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+    edit: null
     download: ["pdf", "epub"]
+    sharing:
+      github: true
+      facebook: false
+      twitter: false
+
+bookdown::pdf_book:
+  latex_engine: xelatex
+  keep_tex: true
+  toc: true
+  number_sections: true
+
+bookdown::epub_book: default
