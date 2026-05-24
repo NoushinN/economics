@@ -13,3 +13,5 @@ rmd_files:
   - "08-causality-policy-evaluation.Rmd"
   - "09-interrupted-time-series-analysis.Rmd"
   - "10-itsa-workflow.Rmd"
+  - "11-evidence-policy-and-interpretation.Rmd"
+

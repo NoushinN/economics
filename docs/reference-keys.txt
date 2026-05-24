@@ -86,3 +86,8 @@ extensions-and-practical-applications
 common-pitfalls-and-key-takeaways-5
 itsa-applied
 reporting-recommendations
+evidence-policy
+learning-objectives-8
+theory-evidence-and-causal-reasoning
+assumptions-uncertainty-and-real-world-complexity
+interpretation-communication-and-final-reflections
