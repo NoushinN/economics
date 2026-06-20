@@ -81,3 +81,11 @@ Economic and statistical models simplify reality. Throughout the book, emphasis 
 Economic evidence is always produced within data, measurement, and modeling constraints. Readers are encouraged to approach results critically, paying attention to the assumptions underlying models and the limitations of available evidence.
 
 The goal of the book is not to present economic analysis as a mechanical procedure, but rather as a structured framework for reasoning about complex real-world problems.
+
+## Citation
+
+If referencing this project, please cite:
+
+Nabavi, N. *Notes on Economics: Applied Economics, Econometrics, and Policy Evaluation*. 
+
+Bookdown project. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20737021.svg)](https://doi.org/10.5281/zenodo.20737021)

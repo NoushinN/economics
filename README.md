@@ -65,3 +65,11 @@ To render the book locally:
 ```r
 source("build_book.R")
 ```
+
+## Citation
+
+If referencing this project, please cite:
+
+Nabavi, N. *Notes on Economics: Applied Economics, Econometrics, and Policy Evaluation*. 
+
+Bookdown project. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20737021.svg)](https://doi.org/10.5281/zenodo.20737021)
